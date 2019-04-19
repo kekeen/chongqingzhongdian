@@ -166,10 +166,16 @@ gulp.task('copy', function(){
       './app/libs/icheck/skins/**'
     ])
     .pipe(gulp.dest('./dist/libs/icheck/skins'));
+
     //  gulp.src([
-    //   './app/libs/font-awesome-4.7.0/**'
+    //   './app/libs/datetimepicker/**'
     // ])
-    // .pipe(gulp.dest('./dist/libs/font-awesome-4.7.0'));
+    // .pipe(gulp.dest('./dist/libs/datetimepicker'));
+    
+    // gulp.src([
+    //   './app/libs/jquery.paging/**'
+    // ])
+    // .pipe(gulp.dest('./dist/libs/jquery.paging'));
 
 
 
