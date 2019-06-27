@@ -2,15 +2,24 @@
     "site": "ejs-demo",
     "styles": [
         "../css/custom-bootstrap.css",
-        "../css/normalize.css",
-        "../libs/icheck/skins/flat/_all.css",
-        "../css/global.css"
+        "../libs/font-awesome-4.7.0/css/font-awesome.min.css",
+        "../libs/icheck/flat/_all.css",
+        "../libs/datetimepicker/jquery.datetimepicker.min.css",
+        "../css/ui-paging-container.css",
+        "../css/global.css",
+        "../css/temple.css"
     ],
     "scripts": [
         "../libs/jquery/jquery.min.js",
-        "../libs/bootstrap/dist/bootstrap.min.js",
+        "../libs/bootstrap/dist/js/bootstrap.min.js",
+        "../libs/My97DatePicker/WdatePicker.js",
         "../libs/icheck/icheck.min.js",
         "../libs/nicescroll/jquery.nicescroll.js",
+        "../libs/laydate/laydate.js",
+        "../libs/datetimepicker/jquery.datetimepicker.full.min.js",
+        "../libs/echarts/echarts.js",
+        "../libs/echarts/echarts-wordcloud.min.js",
+        "../libs/echarts/china.js",
         "../js/global.js"
     ]
 }

@@ -1,0 +1,12 @@
+{
+  "title": "重庆重点对象-重点事件-暴乱事件",
+  "zdsjbr":true,
+  "styles": [
+       "../css/table.css",
+       "../css/layout.css",
+       "../css/cq_zddx.css"
+  ],
+  "scripts":[
+      "../js/table.js"
+  ]
+}

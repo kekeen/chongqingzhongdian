@@ -1,0 +1,833 @@
+<%- include('../templates/head') %>
+<body>
+<%- include('../templates/header') %>
+<div class="content case cqzdr">
+	<%- include('../templates/zddx-zdsj-left') %>
+	<div class="zddx-right zdr-oths zdr-bj-box">
+		<div class="zddx-right-box">
+			<div class="zddx-right-title clearfix">
+				<div class="title-aleft">
+					<h3>添加重点事件</h3>
+				</div>
+			</div>
+			<div class="zdr-bj-con nicescroll">
+				<ul class="clearfix">
+					<li class="pull-left">
+						<label class="bj-left w20"><i class="red">*</i> 标题：</label>
+						<div class="bj-right">
+							<input class="u-ipt" type="text" placeholder="必填,字数限制15个字符" maxlength="15">
+						</div>
+					</li>
+					<li class="pull-left">
+						<label class="bj-left w20">创建时间：</label>
+						<div class="bj-right">
+							<p class="oths-establish">2018-06-11</p>
+						</div>
+					</li>
+					<li class="pull-left">
+						<label class="bj-left w20">事件涉及地区：</label>
+						<div class="bj-right">
+							<div class="dropdown pull-left">
+								<button class="u-btn dropdown-toggle bs-drops" type="button">请选择标准地名（省、市、区、街道<span class="caret"></span></button>
+								<div class="day-show">
+									<div class="hd switch-a clearfix">
+										<input class="ichoose j-pres active" placeholder="省份">
+										<input class="ichoose j-citys"  placeholder="城市">
+										<input class="ichoose j-county" placeholder="区">
+										<input class="ichoose j-street" placeholder="街道">
+									</div>
+									<ul class="switch-show first bd clearfix">
+										<li class="li1">不限</li>
+										<li>
+											<div class="lf-letter">A-G</div>
+											<div class="rf-text">
+												<span>安徽省</span>
+												<span>北京市</span>
+												<span>重庆市</span>
+												<span>福建省</span>
+												<span>广东省</span>
+												<span>广西藏族自治区</span>
+												<span>甘肃省</span>
+											</div>
+										</li>
+										<li>
+											<div class="lf-letter">H-K</div>
+											<div class="rf-text">
+												<span>河北省</span>
+												<span>黑龙江省</span>
+												<span>河南省</span>
+												<span>湖北省</span>
+												<span>湖南省</span>
+												<span>海南省</span>
+												<span>吉林省</span>
+												<span>江苏省</span>
+												<span>江西省</span>
+											</div>
+										</li>
+										<li>
+											<div class="lf-letter">L-S</div>
+											<div class="rf-text">
+												<span>辽宁省</span>
+												<span>内蒙古自治区</span>
+												<span>宁夏回族自治区</span>
+												<span>青海省</span>
+												<span>山西省</span>
+												<span>上海市</span>
+												<span>山东省</span>
+												<span>四川省</span>
+												<span>陕西省</span>
+											</div>
+										</li>
+										<li>
+											<div class="lf-letter">T-Z</div>
+											<div class="rf-text">
+												<span>天津市</span>
+												<span>西藏自治区</span>
+												<span>新疆维吾尔自治区</span>
+												<span>云南省</span>
+												<span>浙江省</span>
+											</div>
+										</li>
+									</ul>
+									<ul class="switch-show bd clearfix">
+										<li class="li1">不限</li>
+										<li>
+											<div class="lf-letter">A-G</div>
+											<div class="rf-text">
+												<span>安庆市</span>
+												<span>蚌埠市</span>
+												<span>滁州市</span>
+												<span>池州市</span>
+												<span>阜阳市</span>
+											</div>
+										</li>
+										<li>
+											<div class="lf-letter">H-K</div>
+											<div class="rf-text">
+												<span>合肥市</span>
+											</div>
+										</li>
+										<li>
+											<div class="lf-letter">L-S</div>
+											<div class="rf-text">
+												<span>六安市</span>
+											</div>
+										</li>
+										<li>
+											<div class="lf-letter">T-Z</div>
+											<div class="rf-text">
+												<span>宣城市</span>
+												<span>亳州市</span>
+											</div>
+										</li>
+									</ul>
+									<ul class="switch-show bd clearfix">
+										<li class="li1">不限</li>
+										<li>
+											<div class="lf-letter">A-G</div>
+											<div class="rf-text">
+												<span>定远县</span>
+												<span>凤阳县</span>
+											</div>
+										</li>
+										<li>
+											<div class="lf-letter">T-Z</div>
+											<div class="rf-text">
+												<span>天长市</span>
+											</div>
+										</li>
+									</ul>
+									<div class="modal-footer">
+										<button id="btn" type="button" class="btn" data-dismiss="modal" aria-label="Close">取消</button>
+										<button id="btn" type="button" class="btn yes">确定</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="pull-left">
+						<label class="bj-left w20">创建人：</label>
+						<div class="bj-right">
+							<p class="oths-establish">cjdd</p>
+						</div>
+					</li>
+					<li class="pull-left">
+						<label class="bj-left w20"><i class="red">*</i> 事件分组：</label>
+						<div class="bj-right">
+							<!--<div class="u-zd involve objWords input-change" data-toggle="modal"
+							     data-target="#myModal2">
+								<input type="text" class="input-blue"  placeholder="请选择标准事件分类" readonly />
+								<div class="span-show hide site"></div>
+								<em class="triangle-ds"></em>
+							</div>-->
+							<div class="dropdown pull-left">
+								<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">请选择<span class="caret"></span></button>
+								<ul class="dropdown-menu">
+									<li><a href="javascript:;">分组1</a></li>
+									<li><a href="javascript:;">分组2</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="pull-left">
+						<label class="bj-left w20">事件时间：</label>
+						<div class="bj-right">
+							<input class="time-range u-ipt" type="text" placeholder="输入事件的发生时间，精确到时分">
+						</div>
+					</li>
+					<li class="pull-left">
+						<div class="bj-left w10"><i class="red">*</i> 事件关键词：</div>
+						<div class="bj-right">
+							<input class="u-ipt" type="text" placeholder="最大长度字符为15字符" maxlength="15">
+							<div class="n-hd-tip">
+								<span class="n-circle">
+								    <i>?</i>
+							    </span>
+								<div class="n-tip-txt">
+									例子：（重庆|北京)+（幼儿园虐童）例子的配置结果为：结果页面
+									的文章必须同时出现“重庆和幼儿园虐童 两个词语”或者“北京和
+									幼儿园虐童 两个词语“如配置一些较长的，不常见的词组，使用中
+									括号 [ ] 把词组括起来.这样数据会更精确。
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="pull-left w100">
+						<label class="bj-left w20">事件描述：</label>
+						<div class="bj-right">
+							<textarea class="us" placeholder="最大长度限制为200" maxlength="200"></textarea>
+						</div>
+					</li>
+					<li class="pull-left w100 fjsc">
+						<label class="bj-left w20">附件上传：</label>
+						<div class="g-upload-wrap">
+						    <input type="file" class="upload-pic" value="上传图片">
+						    <i class="soutu-icon upload-icon"></i>
+						</div>
+						<div style="color: #8DA5C1;margin-top: 5px;">（附件大小不超过20MB)</div></br>
+						<div class="xs xs1">照片09987554如55255.JPG   <i></i></div>
+						<div class="xs xs2">照片09987554如55255.JPG   <i></i></div>
+					</li>
+					<li class="involve-person pull-left">
+						<label class="bj-left w20">涉及重点人：
+							<div class="n-hd-tip n-s-tip">
+								<span class="n-circle">
+								    <i>?</i>
+							    </span>
+								<div class="n-tip-txt">
+									关联重点人上限人数为5人
+								</div>
+							</div>
+						</label>
+						<div class="invo-all">
+							<div class="invo-search">
+								<input type="text" placeholder="检索重点人">
+							</div>
+							<div class="u-pd nicescroll">
+								<div class="jstree"></div>
+							</div>
+						</div>
+					</li>
+					<li class="involve-key pull-left">
+						<label class="bj-left w20">
+							关联重点阵地：
+							<div class="n-hd-tip n-s-tip2">
+							<span class="n-circle">
+								    <i>?</i>
+							    </span>
+								<div class="n-tip-txt">
+									一次关联阵地的每
+									个媒体类型上限为
+									5组。
+								</div>
+							</div>
+						</label>
+						<div class="key-websit">
+							<div class="hd switch-a clearfix">
+								<a href="javascript:void(0)" class="active">网站</a>
+								<a href="javascript:void(0)">微博</a>
+								<a href="javascript:void(0)">微信</a>
+							</div>
+							<div class="invo-search">
+								<input type="text" placeholder="检索网站类型或组名">
+							</div>
+							<div class="switch-show first bd u-pd nicescroll">
+								<div class="jstree2"></div>
+							</div>
+							<div class="switch-show bd u-pd nicescroll">
+								<div class="jstree3"></div>
+							</div>
+							<div class="switch-show bd u-pd nicescroll">
+								<div class="jstree4"></div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="inline-button clearfix" style="padding-bottom: 32px;">
+					<a href="javascript:;" class="active" data-toggle="modal" data-target="#close">取消</a>
+					<a href="javascript:;" class="active">确定</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="myModal2">
+	<div class="modal-dialog" role="document" style="width:600px">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title">涉及事件</h4>
+			</div>
+			<div class="modal-body">
+				<table class="tc-table">
+					<tr class="switch-a">
+						<td style="padding-bottom: 0">
+							<div class="hd-tab clearfix" style="padding-top: 18px;">
+								<div class="lf-text">
+									<a href="javascript:;" class="a-btn active">舆情分类</a>
+									<a href="javascript:;" class="a-btn">舆情定性</a>
+									<a href="javascript:;" class="a-btn">部门</a>
+								</div>
+								<div class="r-down pull-right">
+									<i class="fa fa-angle-down"></i>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr class="switch-show first">
+						<td style="padding-top: 0">
+							<div class="bd-tab xzyz3 nicescroll">
+								<label><input type="checkbox" />社会民生1</label>
+								<label><input type="checkbox" />社会民生2</label>
+								<label><input type="checkbox" />社会民生3</label>
+								<label><input type="checkbox" />社会民生4</label>
+								<label><input type="checkbox" />社会民生5</label>
+								<label><input type="checkbox" />社会民生6</label>
+								<label><input type="checkbox" />社会民生7</label>
+								<label><input type="checkbox" />社会民生8</label>
+								<label><input type="checkbox" />社会民生9</label>
+								<label><input type="checkbox" />社会民生10</label>
+								<label><input type="checkbox" />社会民生11</label>
+								<label><input type="checkbox" />社会民生12</label>
+								<label><input type="checkbox" />社会民生13</label>
+								<label><input type="checkbox" />社会民生12</label>
+								<label><input type="checkbox" />社会民生13</label>
+								<label><input type="checkbox" />社会民生12</label>
+								<label><input type="checkbox" />社会民生13</label>
+								<label><input type="checkbox" />社会民生12</label>
+								<label><input type="checkbox" />社会民生13</label>
+								<label><input type="checkbox" />社会民生12</label>
+								<label><input type="checkbox" />社会民生13</label>
+								<label><input type="checkbox" />社会民生12</label>
+								<label><input type="checkbox" />社会民生13</label>
+								<label><input type="checkbox" />社会民生12</label>
+								<label><input type="checkbox" />社会民生13</label>
+								<label><input type="checkbox" />社会民生12</label>
+								<label><input type="checkbox" />社会民生13</label>
+							</div>
+							<div class="pull-right" id="xuanzeNub3">您最多可选择10个标签，目前已经选择：<span class="red"><em></em>5</span>个</div>
+						</td>
+					</tr>
+					<tr class="switch-show">
+						<td style="padding-top: 0">
+							<div class="bd-tab xzyz4 nicescroll">
+								<label><input type="checkbox" />社会民生1</label>
+								<label><input type="checkbox" />社会民生2</label>
+								<label><input type="checkbox" />社会民生3</label>
+								<label><input type="checkbox" />社会民生4</label>
+								<label><input type="checkbox" />社会民生5</label>
+								<label><input type="checkbox" />社会民生6</label>
+								<label><input type="checkbox" />社会民生7</label>
+								<label><input type="checkbox" />社会民生8</label>
+								<label><input type="checkbox" />社会民生9</label>
+								<label><input type="checkbox" />社会民生10</label>
+								<label><input type="checkbox" />社会民生11</label>
+								<label><input type="checkbox" />社会民生12</label>
+								<label><input type="checkbox" />社会民生13</label>
+								<label><input type="checkbox" />社会民生12</label>
+								<label><input type="checkbox" />社会民生13</label>
+								<label><input type="checkbox" />社会民生12</label>
+								<label><input type="checkbox" />社会民生13</label>
+								<label><input type="checkbox" />社会民生12</label>
+								<label><input type="checkbox" />社会民生13</label>
+								<label><input type="checkbox" />社会民生12</label>
+								<label><input type="checkbox" />社会民生13</label>
+								<label><input type="checkbox" />社会民生12</label>
+								<label><input type="checkbox" />社会民生12</label>
+								<label><input type="checkbox" />社会民生13</label>
+							</div>
+							<div class="pull-right" id="xuanzeNub4">您最多可选择10个标签，目前已经选择：<span class="red"><em></em>5</span>个</div>
+						</td>
+					</tr>
+					<tr class="switch-show">
+						<td style="padding-top: 0">
+							<div class="bd-tab xzyz5 nicescroll">
+								<label><input type="checkbox" />社会民生1</label>
+								<label><input type="checkbox" />社会民生2</label>
+								<label><input type="checkbox" />社会民生3</label>
+								<label><input type="checkbox" />社会民生4</label>
+								<label><input type="checkbox" />社会民生5</label>
+								<label><input type="checkbox" />社会民生6</label>
+								<label><input type="checkbox" />社会民生7</label>
+								<label><input type="checkbox" />社会民生8</label>
+								<label><input type="checkbox" />社会民生9</label>
+								<label><input type="checkbox" />社会民生10</label>
+								<label><input type="checkbox" />社会民生11</label>
+							</div>
+							<div class="pull-right" id="xuanzeNub5">您最多可选择10个标签，目前已经选择：<span class="red"><em></em>5</span>个</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<button id="btn" type="button" class="btn" data-dismiss="modal" aria-label="Close">取消</button>
+				<button id="btn" type="button" class="btn yes" data-dismiss="modal">确定</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="involveSpan">
+	<div class="modal-dialog" role="document" style="width:600px">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title">涉及事件</h4>
+			</div>
+			<div class="modal-body">
+				<textarea class="form-control" disabled="" style="background: #fff;cursor: default;height: 315px;">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</textarea>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
+<%- include('../templates/foot') %>
+<script>
+	$(function () {
+		// 涉及地区
+		region();
+		function region(){
+			$('.zdr-oths .bs-drops').click(function(event) {
+				event.stopPropagation();
+				$(this).siblings('.day-show').toggle();
+			});
+			$('.day-show').click(function(event) {
+				event.stopPropagation();
+			});
+			$(document).click(function(){
+				$('.day-show').hide();
+			})
+			
+		}
+		// 点击对应显示
+		$('.switch-a a').click(function() {
+			var index = $(this).index();
+			$(this).addClass('active').siblings().removeClass('active');
+			$(this).closest('.switch-a').siblings('.switch-show').hide();
+			$(this).closest('.switch-a').siblings('.switch-show').eq(index).show();
+		});
+		$(".switch-a input").focus(function(){
+			var index = $(this).index()
+			$(this).addClass('active').siblings().removeClass('active')
+			$(this).closest('.switch-a').siblings('.switch-show').hide();
+			$(this).closest('.switch-a').siblings('.switch-show').eq(index).show();
+		});
+		
+		
+		// 涉及事件
+		involve();
+		function involve() {
+			$('#myModal2 .yes').on('click', function() {
+				var text = new Array()
+				$('#myModal2 label').each(function(index,el) {
+					if($(el).find('.icheckbox_flat-blue').hasClass('checked')){
+						var label = $(el).text();
+						text.push(label)
+						return text
+					}
+				});
+				for (var i = 0; i < text.length; i++) {
+					var spanShow =`<span data-toggle="modal" data-target="#involveSpan">`+ text[i] +`<i>×</i></span>`
+					$('.span-show').append(spanShow);
+				}
+				if ($('.span-show').find('span').length == 0) {
+					$('.span-show').css('margin-top', 0);
+					$('.span-show').siblings('input').removeClass('hide');
+					$('.triangle-ds').removeClass('hide');
+				} else {
+					$('.span-show').css('margin-top', 10);
+					$('.span-show').siblings('input').addClass('hide');
+					$('.span-show').parent().find('.triangle-ds').addClass('hide');
+				}
+				$('.span-show').removeClass('hide');
+			});
+			$('.r-down').click(function() {
+				$(this).toggleClass('on');
+				if($(this).hasClass('on')) {
+					$(this).siblings('.lf-text').css({
+						'height':'auto',
+						'overflow':'inherit'
+					})
+				} else {
+					$(this).siblings('.lf-text').css({
+						'height': 38,
+						'overflow':'hidden'
+					})
+				}
+			});
+			$('.involve').on('click', '.span-show span',function(event) {
+				event.stopPropagation();
+				$('#involveSpan').modal('show')
+			});
+			$('.zdr-oths .u-zd').on('click','i', function(){
+				event.stopPropagation();
+				$(this).parent().remove();
+			})
+		}
+		// 树
+		$('.jstree').jstree({'plugins':["wholerow","checkbox"], 'core' : {
+				'data' : [
+					{
+						"text" : "事业人物",
+						"state" : { "opened" : false },
+						"children" : [
+							{
+								"text" : "刘俊智",
+								"icon" : "../images/wp/wp-wpy.png"
+							},
+							{
+								"text" : "李永恒",
+								"icon" : "../images/wp/wp-wpy.png"
+							},
+							{
+								"text" : "赖晓涛",
+								"icon" : "../images/wp/wp-wpy.png"
+							}
+						]
+					},
+					{
+						"text" : "分组3",
+						"state" : { "opened" : false },
+						"children" : [
+							{
+								"text" : "刘俊智",
+								"icon" : "../images/wp/wp-wpy.png"
+							},
+							{
+								"text" : "李永恒",
+								"icon" : "../images/wp/wp-wpy.png"
+							},
+							{
+								"text" : "赖晓涛",
+								"icon" : "../images/wp/wp-wpy.png"
+							}
+						]
+					},
+					{
+						"text" : "分组4",
+						"state" : { "opened" : false },
+						"children" : [
+							{
+								"text" : "刘俊智",
+								"icon" : "../images/wp/wp-wpy.png"
+							},
+							{
+								"text" : "李永恒",
+								"icon" : "../images/wp/wp-wpy.png"
+							},
+							{
+								"text" : "赖晓涛",
+								"icon" : "../images/wp/wp-wpy.png"
+							},
+							{
+								"text" : "景穆严",
+								"icon" : "../images/wp/wp-wpy.png"
+							},
+							{
+								"text" : "人物1",
+								"icon" : "../images/wp/wp-wpy.png"
+							},
+							{
+								"text" : "人物2",
+								"icon" : "../images/wp/wp-wpy.png"
+							}
+						]
+					}
+				
+				]
+			}});
+		
+		$('.jstree2').jstree({'plugins':["wholerow","checkbox"], 'core' : {
+				'data' : [
+					{
+						"text" : "值班组",
+						"state" : { "opened" : false },
+						"children" : [
+							{
+								"text" : "A类",
+								"icon":false,
+							},
+							{
+								"text" : "B类",
+								"icon":false,
+							},
+							{
+								"text" : "C类",
+								"icon":false,
+							}
+						]
+					},
+					{
+						"text" : "分组3",
+						"state" : { "opened" : false },
+						"children" : [
+							{
+								"text" : "刘俊智",
+								"icon":false,
+							},
+							{
+								"text" : "李永恒",
+								"icon":false,
+								
+							},
+							{
+								"text" : "赖晓涛",
+								"icon":false,
+							}
+						]
+					},
+					{
+						"text" : "分组4",
+						"state" : { "opened" : false },
+						"children" : [
+							{
+								"text" : "刘俊智",
+								"icon":false,
+							},
+							{
+								"text" : "李永恒",
+								"icon":false,
+							},
+							{
+								"text" : "赖晓涛",
+								"icon":false,
+							},
+							{
+								"text" : "景穆严",
+								"icon":false,
+							},
+							{
+								"text" : "人物1",
+								"icon":false,
+							},
+							{
+								"text" : "人物2",
+								"icon":false,
+							}
+						]
+					}
+				
+				]
+			}});
+		
+		$('.jstree3').jstree({'plugins':["wholerow","checkbox"], 'core' : {
+				'data' : [
+					{
+						"text" : "微博组",
+						"state" : { "opened" : false },
+						"children" : [
+							{
+								"text" : "A类",
+								"icon":false,
+							},
+							{
+								"text" : "B类",
+								"icon":false,
+							},
+							{
+								"text" : "C类",
+								"icon":false,
+							}
+						]
+					},
+					{
+						"text" : "分组3",
+						"state" : { "opened" : false },
+						"children" : [
+							{
+								"text" : "刘俊智",
+								"icon":false,
+							},
+							{
+								"text" : "李永恒",
+								"icon":false,
+								
+							},
+							{
+								"text" : "赖晓涛",
+								"icon":false,
+							}
+						]
+					},
+					{
+						"text" : "分组4",
+						"state" : { "opened" : false },
+						"children" : [
+							{
+								"text" : "刘俊智",
+								"icon":false,
+							},
+							{
+								"text" : "李永恒",
+								"icon":false,
+							},
+							{
+								"text" : "赖晓涛",
+								"icon":false,
+							},
+							{
+								"text" : "景穆严",
+								"icon":false,
+							},
+							{
+								"text" : "人物1",
+								"icon":false,
+							},
+							{
+								"text" : "人物2",
+								"icon":false,
+							}
+						]
+					}
+				
+				]
+			}});
+		
+		$('.jstree4').jstree({'plugins':["wholerow","checkbox"], 'core' : {
+				'data' : [
+					{
+						"text" : "微信组",
+						"state" : { "opened" : false },
+						"children" : [
+							{
+								"text" : "A类",
+								"icon":false,
+							},
+							{
+								"text" : "B类",
+								"icon":false,
+							},
+							{
+								"text" : "C类",
+								"icon":false,
+							}
+						]
+					},
+					{
+						"text" : "分组3",
+						"state" : { "opened" : false },
+						"children" : [
+							{
+								"text" : "刘俊智",
+								"icon":false,
+							},
+							{
+								"text" : "李永恒",
+								"icon":false,
+								
+							},
+							{
+								"text" : "赖晓涛",
+								"icon":false,
+							}
+						]
+					},
+					{
+						"text" : "分组4",
+						"state" : { "opened" : false },
+						"children" : [
+							{
+								"text" : "刘俊智",
+								"icon":false,
+							},
+							{
+								"text" : "李永恒",
+								"icon":false,
+							},
+							{
+								"text" : "赖晓涛",
+								"icon":false,
+							},
+							{
+								"text" : "景穆严",
+								"icon":false,
+							},
+							{
+								"text" : "人物1",
+								"icon":false,
+							},
+							{
+								"text" : "人物2",
+								"icon":false,
+							}
+						]
+					}
+				
+				]
+			}});
+		//语种选择
+		yzxz();
+		function yzxz(){
+			$(".xzyz").on("ifChecked",'input',function(event){
+				var i_length= $('.xzyz input[type=checkbox]:checked').length;
+				
+				$("#xuanzeNub2 span").text(i_length);
+				if(i_length>=10){
+					$("#xuanzeNub2 span").text(10);
+					$(".xzyz input").iCheck('disable')
+				}
+			});
+			
+			$(".xzyz3").on("ifChecked",'input',function(event){
+				var i_length= $('.xzyz3 input[type=checkbox]:checked').length;
+				
+				$("#xuanzeNub3 span").text(i_length);
+				if(i_length>=10){
+					$("#xuanzeNub3 span").text(10);
+					$(".xzyz3 input").iCheck('disable')
+				}
+			})
+			
+			$(".xzyz4").on("ifChecked",'input',function(event){
+				var i_length= $('.xzyz4 input[type=checkbox]:checked').length;
+				
+				$("#xuanzeNub4 span").text(i_length);
+				if(i_length>=10){
+					$("#xuanzeNub4 span").text(10);
+					$(".xzyz4 input").iCheck('disable')
+				}
+			})
+			
+			$(".xzyz5").on("ifChecked",'input',function(event){
+				var i_length= $('.xzyz5 input[type=checkbox]:checked').length;
+				
+				$("#xuanzeNub5 span").text(i_length);
+				if(i_length>=10){
+					$("#xuanzeNub5 span").text(10);
+					$(".xzyz5 input").iCheck('disable')
+				}
+			})
+			
+		}
+		
+		// 来源站点
+		$('.site').on('click', 'span i', function(event) {
+			event.stopPropagation();
+			$(this).parent('span').remove();
+			if ($('.span-show').find('span').length == 0) {
+				$('.span-show').css('margin-top', 0);
+				$('.span-show').siblings('input').removeClass('hide');
+				$('.triangle-ds').removeClass('hide');
+			}
+		})
+	})
+</script>

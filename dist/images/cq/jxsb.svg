@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="25px" viewBox="0 0 28 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-1.9%" y="-12.5%" width="103.9%" height="135.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.302960824 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="A-1-1-快速上报--URL-解析失败" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-639.000000, -1040.000000)">
+        <g id="Toast_Error" filter="url(#filter-1)" transform="translate(619.000000, 1030.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M43.769614,26.875 L34.9540582,12.5795455 C34.4921077,11.8068182 33.4912149,11.8068182 33.0292644,12.5795455 L24.2137086,26.875 C23.6747663,27.7636364 24.2137086,29 25.1761055,29 L42.8072171,29 C43.769614,29 44.3470522,27.7636364 43.769614,26.875 Z M33.9916613,25.9090909 C33.3372314,25.9090909 32.836785,25.4068182 32.836785,24.75 C32.836785,24.0931818 33.3372314,23.5909091 33.9916613,23.5909091 C34.6460912,23.5909091 35.1465376,24.0931818 35.1465376,24.75 C35.1465376,25.4068182 34.6460912,25.9090909 33.9916613,25.9090909 Z M35.1465376,22.4318182 C35.1465376,22.6636364 34.9925541,22.8181818 34.7615788,22.8181818 L33.2217438,22.8181818 C32.9907685,22.8181818 32.836785,22.6636364 32.836785,22.4318182 L32.836785,17.4090909 C32.836785,17.1772727 32.9907685,17.0227273 33.2217438,17.0227273 L34.7615788,17.0227273 C34.9925541,17.0227273 35.1465376,17.1772727 35.1465376,17.4090909 L35.1465376,22.4318182 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

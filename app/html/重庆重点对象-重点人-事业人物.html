@@ -1,0 +1,207 @@
+<%- include('../templates/head') %>
+<body>
+	<%- include('../templates/header') %>
+	<div class="content case cqzdr">
+        <%- include('../templates/zddx-left') %>
+		<div class="zddx-right zddx-undertakings">
+            <div class="zddx-right-box">
+				<div class="breadCrumb">
+					<a href="#">重点人</a>/
+					<a href="#">监控情况</a>
+				</div>
+				<div class="control-nav">
+					<div class="con-top">
+						<p class="name">王健林</p>
+						<div class="co-searchBox">
+							<input class="int" type="text" placeholder="请输入"/>
+							<a class="aBtn" href="#">检索</a>
+						</div>
+					</div>
+					<div class="con-navBox">
+						<ul>
+							<li class="active">
+								<a href="#">
+									<i>icon</i>
+									监控情况
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i>icon</i>
+									基本信息
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i>icon</i>
+									关注情况
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+	            <div class="zddx-undertakings-cont control-content">
+					<div class="undertakings-title">
+						<ul class="clearfix">
+							<li>	
+								信源类型:
+									<div class="dropdown">
+										<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #757575">网站 <span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><a href="javascript:;">网站</a></li>
+											<li><a href="javascript:;">微博</a></li>
+											<li><a href="javascript:;">论坛</a></li>
+											<li><a href="javascript:;">贴吧</a></li>
+											<li><a href="javascript:;">公众号</a></li>
+										</ul>
+								</div>
+							</li>
+							<li>
+								<div class="dropdown">
+										<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #757575">时间倒序<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><a href="javascript:;">时间倒序</a></li>
+											<li><a href="javascript:;">时间顺序</a></li>
+										
+										</ul>
+								</div>
+							</li>
+							<li>
+								<div class="dropdown">
+										<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #757575">近七天 <span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><a href="javascript:;">近七天</a></li>
+											<li><a href="javascript:;">近一个月</a></li>
+										</ul>
+								</div>
+							</li>
+							<li >
+								<div class="layout-data">
+										<input id="d01" class="u-data" type="text" onclick="DatePicker.dateId1()" placeholder="选择日期" readonly="">至<input id="d02" class="u-data" type="text" onclick="DatePicker.dateId2()" placeholder="选择日期" readonly="">
+								</div>
+									
+							</li>
+						</ul>
+					</div>
+					<div class="undertakings-tab">
+								<table class="tables tables-hover">
+									<tr>
+										<th width="20"><input type="checkbox" /></th>
+										<th width="60">序号</th>
+										<th width="40%">标题</th>
+										<th>网站来源</th>
+										<th>时间</th>
+										<th>操作</th>
+									</tr>
+									<% for(var i = 0; i < 25; i ++){ %>
+									<tr>
+										<td><input type="checkbox" /></td>
+										<td>1</td>
+										<td class="txt">
+											<a class="tables-bt" href="###" title="李克卿与上冻达标团共同审议政府工作报告">李克卿与上冻达标团共同审议政府工作报告李克卿与上冻达标团共同审议政府工作报告李克卿与上冻达标团共同审议政府工作报告李克卿与上冻达标团共同审议政府工作报告李克卿与上冻达标团共同审议政府工作报告李克卿与上冻达标团共同审议政府工作报告</a>
+											<a href="#" class="pri green" target="_blank">[原链接]</a>
+										</td>
+										<td>中国新闻</td>
+										<td>2017-03-03</td>
+										<td>
+											<div class="u-icon">
+												<a class="u-b2" href="javascript:;" title="检索"></a>
+												<a class="u-b9" href="javascript:;" title="应急报送"></a>
+												<a class="u-changgui" href="javascript:;" title="常规报送"></a>
+											</div>
+										</td>
+									</tr>
+									<% } %>
+								</table>
+								<div class="zt-ft clearfix">
+									<div class="pull-left">
+										<div class="icheckbox_flat-blue" style="position: relative;"><input type="checkbox" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+										<a href="##" class="btn" data-toggle="modal" data-target="#export"><i class="fa fa-upload"></i> 导出</a>
+									</div>
+
+									<div class="pull-right zt-page">
+										<span>共222条</span>
+										<a class="btn">上一页</a>
+										<a class="btn">下一页</a>
+										<div class="dropup">
+											<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">10条 <span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu">
+												<li><a href="#">10条</a></li>
+												<li><a href="#">20条</a></li>
+												<li><a href="#">30条</a></li>
+												<li><a href="#">50条</a></li>
+											</ul>
+										</div>
+										<div class="quick">
+											<label>快速翻页</label>
+											<input type="text" value="5">
+										</div>
+										<a href="##" class="btn">确 认</a>
+									</div>
+								</div>
+					</div>
+				</div>	
+	            </div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 导出报告 -->
+	<div class="modal fade" id="export">
+			<div class="modal-dialog" role="document" style="width:500px;">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+						<h4 class="modal-title" id="myModalLabel">导出报告</h4>
+					</div>
+					<div class="modal-body">
+							<table class="tc-table">
+									<tr>
+										<th>导出方式：</th>
+										<td class="table-label">
+											<label><input type="radio" name="dcgs2" /> 自定义</label>
+											<label><input type="radio"  name="dcgs2"/> 已勾选</label>
+											<label><input type="radio"  name="dcgs2"/> 全部</label>
+										</td>
+									</tr>
+									<tr>
+										<th>信源范围：</th>
+										<td class="table-label">
+											<label><input type="radio" name="dcgs3" /> 当前信源</label>
+											<label><input type="radio"  name="dcgs3"/> 所有信源</label>
+										</td>
+									</tr>
+									<tr>
+										<th>信源范围：</th>
+										<td class="table-label">
+											<label><input type="radio" name="dcgs4" /> WORD</label>
+										
+										</td>
+									</tr>
+								</table>
+					</div>
+					<div class="modal-footer inline-button" style="padding-right: 15px;">
+						<a class="active" data-dismiss="modal" aria-label="Close">取消</a>
+						<a class="active">确定</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<%- include('../templates/foot') %>
+<script>
+	$(function () {
+        resize();
+        function resize(){
+            var height = $(".zddx-right").height() - $(".breadCrumb").outerHeight(true) - $(".control-nav").outerHeight(true) - 45;
+            $(".control-content").outerHeight(height);
+        }
+        $(window).resize(function(){
+            resize();
+        })
+    })
+</script>

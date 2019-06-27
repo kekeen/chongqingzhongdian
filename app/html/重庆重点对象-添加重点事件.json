@@ -1,0 +1,14 @@
+{
+  "title": "重庆重点对象-添加重点事件",
+  "zdsj":true,
+  "styles": [
+       "../css/table.css",
+       "../css/layout.css",
+       "../css/cq_zddx.css",
+       "../libs/jstree/themes/default/my_style.css"
+  ],
+  "scripts":[
+      "../js/table.js",
+      "../libs/jstree/jstree.min.js"
+  ]
+}

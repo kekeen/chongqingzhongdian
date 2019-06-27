@@ -1,0 +1,47 @@
+.ui-paging-container{
+    color: #333;
+    ul{
+        overflow: hidden;
+        text-align: center;
+        list-style: none;
+    }
+    li{
+        list-style: none;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 3px 6px;
+        margin-left: 5px;
+        color: #666;
+        &.ui-pager{
+            border: 1px solid #d3dbe3;
+            border-radius: 1px;
+            font-size: 12px;
+            color: #333;
+            cursor: pointer;
+            padding: 5px 10px;
+            &:hover{
+                background: #35afea;
+                border: 1px solid #35afea;
+                border-radius: 1px;
+                color:#fff;
+            }
+        }
+        &.ui-pager-disabled{
+            background-color: #f5f5f5;
+            cursor: default;
+            color: #999;
+            &:hover{
+                background-color: #f5f5f5;
+                cursor: default;
+                border: 1px solid #d3dbe3;
+                color: #999;
+            }
+        }
+        &.focus{
+            background: #35afea;
+            border: 1px solid #35afea;
+            border-radius: 1px;
+            color:#fff;
+        }
+    }
+}

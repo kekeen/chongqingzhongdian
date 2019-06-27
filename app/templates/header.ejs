@@ -1,25 +1,200 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
+<div class="header">
+    <div class="nav">
+        <ul class="clearfix">
+            <li class="<%= local.qj?'active':'' %>">
+                <a href="#">全局分析<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class="<%= local.qjfx?'active':'' %>"><a href="index.html">全局分析</a></li>
+                    <li class="<%= local.shyq?'active':'' %>"><a href="涉华舆情.html">涉华舆情</a></li>
+                    <li class="<%= local.gnyq?'active':'' %>"><a href="国内舆情.html">国内舆情</a></li>
+                    <li class="<%= local.bdyq?'active':'' %>"><a href="本地舆情.html">本地舆情</a></li>
+                </ul>
+            </li>
+            <li class="<%= local.gz?'active':'' %>">
+                <a href="#">关注点<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class="<%= local.oldgz?'active':'' %>"><a href="关注点0.html">关注点</a></li>
+                    <li class="<%= local.newgz?'active':'' %>"><a href="新版关注点.html">新版关注点</a></li>
+                    <li class="<%= local.newgz?'active':'' %>"><a href="关注点-无锡.html">关注点-无锡</a></li>
+                    <li class="<%= local.newgz?'active':'' %>"><a href="浙江首页.html">关注点-浙江</a></li>
+                </ul>
+            </li>
+            <li class="<%= local.rm?'active':'' %>"><a href="热点排行.html">热敏</a></li>
+            <li class="<%= local.zd?'active':'' %>">
+                <a href="#">重点监控<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class="<%= local.zdjk?'active':'' %>"><a href="重点监控.html">重点监控</a></li>
+                    <li class="<%= local.zdr?'active':'' %>"><a href="重点人.html">重点人浅色导航</a></li>
+                </ul>
+            </li>
+            <li class="<%= local.yqjk?'active':'' %>">
+                <a href="#">舆情分析<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class="<%= local.xwcbfx?'active':'' %>"><a href="舆情分析-新闻传播分析.html">新闻传播分析</a></li>
+                </ul>
+            </li>
+            <li class="<%= local.yqjk?'active':'' %>">
+                <a href="#">舆情简报<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class="<%= local.sck?'active':'' %>"><a href="素材库.html">素材库</a></li>
+                    <li class="<%= local.jbk?'active':'' %>"><a href="简报库.html">简报库</a></li>
+                    <li class="<%= local.mbgl?'active':'' %>"><a href="模板管理.html">模板管理</a></li>
+                    <li class="<%= local.zdymb?'active':'' %>"><a href="自定义模板.html">自定义模板</a></li>
+                    <li class="<%= local.cjmb?'active':'' %>"><a href="创建简报.html">创建简报</a></li>
+                    <li class="<%= local.cjmb?'active':'' %>"><a href="模板预览.html">模板预览</a></li>
+                </ul>
+            </li>
+            <li class="<%= local.xc?'active':'' %>"><a href="巡查.html">巡查</a></li>
+            <li class="<%= local.zddx?'active':'' %>">
+                <a href="#">重点对象<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class="<%= local.zddxwz?'active':'' %>"><a href="重点对象-网站.html">网站</a></li>
+                    <li class="<%= local.zddxwb?'active':'' %>"><a href="重点对象-微博.html">微博</a></li>
+                    <li class="<%= local.newzddxwb?'active':'' %>"><a href="重点对象-微博0.html">新微博</a></li>
+                    <li class="<%= local.zddxwx?'active':'' %>"><a href="重点对象-微信.html">微信</a></li>
+                    <li class="<%= local.zddxxc?'active':'' %>"><a href="重点对象-巡查.html">巡查</a></li>
+                     <li class="<%= local.nzddxwz?'active':'' %>"><a href="重点对象4.0-网站.html">重点对象4.0-网站</a></li>
+                </ul>
+            </li>
+            <li class="<%= local.zddx?'active':'' %>">
+                <a href="#">重点对象4.0<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class="<%= local.zddxwb?'active':'' %>"><a href="重点对象4.0-首页.html">网站</a></li>
+                    <li class="<%= local.newzddxwb?'active':'' %>"><a href="重点对象4.0-首页.html">微博</a></li>
+                    <li class="<%= local.zddxwx?'active':'' %>"><a href="重点对象4.0-首页.html">公众号</a></li>
+                </ul>
+            </li>
+            <li class="<%= local.yj?'active':'' %>">
+                <a href="###">预警<i class="fa fa-caret-down"></i></a>
+                <ul>
+                    <li class="<%= local.yj?'active':'' %>"><a href="预警.html">预警</a></li>
+                    <li class="<%= local.yjzy?'active':'' %>"><a href="预警主页.html">预警2.1</a></li>
+                    <li class="<%= local.grxx?'active':'' %>"><a href="个人信息2.1.html">个人信息</a></li>
+                    <li><a href="预警范围管理.html">预警范围管理</a></li>
+                    <li><a href="预警-有害信息配置页.html">有害信息配置</a></li>
+                    <li><a href="预警-热点排行配置页.html">热敏排行配置</a></li>
+                </ul>
+            </li>
+            <li class="<%= local.jw?'active':'' %>">
+                <a href="#">境外浏览<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class="<%= local.oldjw?'active':'' %>"><a href="境外浏览.html">境外浏览</a></li>
+                    <li class="<%= local.newjw?'active':'' %>"><a href="新版境外浏览.html">新版境外浏览</a></li>
+                </ul>
+            </li>
+            <li class="<%= local.yx?'active':'' %>"><a href="影响力分析.html">影响力分析</a></li>
+            <li class="<%= local.al?'active':'' %>">
+                <a href="#">专题分析<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class="<%= local.n15?'active':'' %>"><a href="案例-案例概况.html">专题old</a></li>
+                    <li class="<%= local.ztfx?'active':'' %>"><a href="专题分析.html">专题分析</a></li>
+                    <li class="<%= local.newztfx?'active':'' %>"><a href="新版专题分析.html">新版专题分析</a></li>
+                    <li class="<%= local.newztfxbg?'active':'' %>"><a href="新版专题分析报告.html">新版专题分析报告</a></li>
+                    <li class="<%= local.ksfx?'active':'' %>"><a href="快速分析.html">快速分析</a></li>
+                    <li class="<%= local.ztfxv4?'active':'' %>"><a href="专题分析4.0.html">快速分析4.0</a></li>
+                    <li class="<%= local.ztfxv4?'active':'' %>"><a href="专题分析-山西.html">专题分析-山西</a></li>
+                    <li class="<%= local.ztfxv4?'active':'' %>"><a href="专题分析4.1.html">专题分析4.1</a></li>
+                </ul>
+            </li>
+            <li class="<%= local.js?'active':'' %>">
+                <a href="#">检索<i class="fa fa-caret-down "></i></a>
+                <ul>
 
-            <a class="navbar-brand" href="#">Test</a>
+                    <li class="<%= local.xbjs?'active':'' %>"><a href="新版检索-本地检索-微博博主.html">新版检索2</a></li>
+                    <li class="<%= local.n15?'active':'' %>"><a href="检索.html">检索old</a></li>
+                    <li class="<%= local.ztfx?'active':'' %>"><a href="检索8.html">检索</a></li>
+                    <li class="<%= local.ztfx?'active':'' %>"><a href="检索new.html">检索new</a></li>
+                    <li class="<%= local.xbjs?'active':'' %>"><a href="新版检索.html">检索3.0</a></li>
+                    <li class="<%= local.xbjsn2?'active':'' %>"><a href="检索4.0.html">检索4.0</a></li>
+                    <li class="<%= local.xbjsn3?'active':'' %>"><a href="检索4.1.html">检索4.1</a></li>
+                    <li class="<%= local.xbjsn3?'active':'' %>"><a href="中萱检索-元搜索-微博博主.html">中萱检索</a></li>
+                </ul>
+            </li>
+            <li class="<%= local.ztjk?'active':'' %>">
+                <a href="#">专题监控<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class="<%= local.oldztjk?'active':'' %>"><a href="专题监控.html">专题监控</a></li>
+                    <li class="<%= local.newztjk?'active':'' %>"><a href="新版专题监控.html">专题监控3.0</a></li>
+                    <li class="<%= local.newztjk?'active':'' %>"><a href="新版专题监控-中部导航.html">新版专题监控-中部导航</a></li>
+                    <li class="<%= local.ztjkv4?'active':'' %>"><a href="专题监控4.0.html">专题监控4.0</a></li>
+                    <li class="<%= local.ztjkv4?'active':'' %>"><a href="专题监控-无锡.html">专题监控-无锡</a></li>
+                </ul>
+            </li>
+            <li class="<%= local.yhxx?'active':'' %>">
+                <a href="#">有害信息<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class="<%= local.n15?'active':'' %>"><a href="有害信息.html">有害信息</a></li>
+                    <li class="<%= local.ztjk?'active':'' %>"><a href="有害信息v1.2.html">有害信息v1.2</a></li>
+                </ul>
+            </li>
+            <li class="<%= local.flck?'active':'' %>">
+                <a href="#">分类查看<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class="<%= local.n15?'active':'' %>"><a href="分类查看.html">分类查看1</a></li>
+                    <li class="<%= local.ztjk?'active':'' %>"><a href="#">分类查看2</a></li>
+                </ul>
+            </li>
+            <li class="<%= local.sbxf?'active':'' %>"><a href="上报下发.html">上报下发</a></li>
+            <li class="<%= local.glpt?'active':'' %>"><a href="X-收到的指令.html">X管理平台</a></li>
+            <li class="<%= local.qwrd?'active':'' %>">
+                <a href="javascript:;">全网热点 <i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class="<%= local.n15?'active':'' %>"><a href="全网热点.html">全网热点</a></li>
+                    <li class="<%= local.ztjk?'active':'' %>"><a href="全网热点-新版.html">全网热点2.0</a></li>
+                </ul>
+            </li>
+            <li class="<%= local.sjgj?'active':'' %>"><a href="数据工具.html">数据工具</a></li>
+            <li class="<%= local.list?'active':'' %>"><a href="新闻微博列表.html">新闻微博列表</a></li>
+            <li class="<%= local.nfxbg?'active':'' %>">
+                <a href="javascript:;">分析报告 <i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class="<%= local.nbzfx?'active':'' %>"><a href="舆情分析-微博博主分析.html">博主分析</a></li>
+                    <li class="<%= local.nwbcbfx?'active':'' %>"><a href="舆情分析-微博传播分析.html">微博传播分析</a></li>
+                    <li class="<%= local.ngzhfx?'active':'' %>"><a href="舆情分析-微信公众号分析.html">微信公众号分析</a></li>
+                     <li class="<%= local.nwxwzfx?'active':'' %>"><a href="微信文章分析.html">微信文章分析</a></li>
+                     <li class="<%= local.zhcbfx?'active':'' %>"><a href="综合传播分析.html">综合传播分析</a></li>
+                </ul>
+            </li>
+            <li class="<%= local.ycts?'active':'' %>">
+                <a href="javascript:;">宜昌推送 <i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class="<%= local.ycsy?'active':'' %>"><a href="宜昌推送-首页.html">首页</a></li>
+                    <li class="<%= local.ycxx?'active':'' %>"><a href="宜昌推送-推送信息库.html">推送信息库</a></li>
+                </ul>
+            </li>
+            <li class="more"><a href="#"><span></span></a></li>
+        </ul>
+    </div>
+    <div class="logo">
+        <h1>
+            <span class="logo-btn pull-left"></span>
+            <a href="index.html" class="pull-left"></a>
+        </h1>
+    </div>
+    <div class="set">
+        <div class="search">
+            <input type="text" placeholder="搜索">
+            <span class="search-btn"><i class="fa fa-search"></i></span>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <form class="navbar-form navbar-right">
-            <div class="form-group">
-                <input type="text" placeholder="Email" class="form-control">
+        <div><a href="消息提醒.html"><i class="fa fa-bell"></i></a></div>
+        <div><a href="系统属地.html"><i class="fa fa-cog"></i></a></div>
+        <div class="user">
+            <a class="user-name" href="javascript:;">第一个用户</a>
+            <a href="javascript:;"><i class="fa fa-caret-down"></i></a>
+            <div class="user-box bgw">
+                <ul class="user-box-list">
+                    <li>
+                        <a href="个人信息.html"><i class="fa fa-user"></i>个人信息</a>
+                    </li>
+                    <li>
+                        <a href="login.html"><i class="fa fa-sign-out"></i>退出登录</a>
+                    </li>
+                </ul>
             </div>
-            <div class="form-group">
-                <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-            </form>
-        </div><!--/.navbar-collapse -->
         </div>
-    </nav>
+    </div>
+</div>
+<div class="nav2">
+    <ul class="clearfix">
+    </ul>
+</div>

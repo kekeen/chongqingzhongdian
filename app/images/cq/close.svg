@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>close</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-1.9%" y="-12.5%" width="103.9%" height="135.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.302960824 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="A-1-1-快速上报--URL-解析失败" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-943.000000, -1040.000000)">
+        <g id="Toast_Error" filter="url(#filter-1)" transform="translate(619.000000, 1030.000000)" fill="#FFFFFF">
+            <path d="M338.168022,19.7189189 L343.804878,14.0540541 C344.065041,13.7945946 344.065041,13.4054054 343.804878,13.1459459 L342.937669,12.2378378 C342.677507,11.9783784 342.287263,11.9783784 342.0271,12.2378378 L336.346883,17.9027027 C336.173442,18.0756757 335.913279,18.0756757 335.739837,17.9027027 L330.059621,12.1945946 C329.799458,11.9351351 329.409214,11.9351351 329.149051,12.1945946 L328.238482,13.1027027 C327.97832,13.3621622 327.97832,13.7513514 328.238482,14.0108108 L333.918699,19.6756757 C334.092141,19.8486486 334.092141,20.1081081 333.918699,20.2810811 L328.195122,25.9891892 C327.934959,26.2486486 327.934959,26.6378378 328.195122,26.8972973 L329.105691,27.8054054 C329.365854,28.0648649 329.756098,28.0648649 330.01626,27.8054054 L335.696477,22.1405405 C335.869919,21.9675676 336.130081,21.9675676 336.303523,22.1405405 L341.98374,27.8054054 C342.243902,28.0648649 342.634146,28.0648649 342.894309,27.8054054 L343.804878,26.8972973 C344.065041,26.6378378 344.065041,26.2486486 343.804878,25.9891892 L338.168022,20.3243243 C337.99458,20.1513514 337.99458,19.8918919 338.168022,19.7189189" id="close"></path>
+        </g>
+    </g>
+</svg>

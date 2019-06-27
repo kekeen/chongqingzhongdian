@@ -1,0 +1,78 @@
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191417:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191418:INFO:CONSOLE(0)] "Unsafe JavaScript attempt to access frame with URL file:///C:/Program%20Files%20(x86)/Common%20Files/Adobe/CEPServiceManager4/extensions/Cutterman/index.html from frame with URL http://www.cutterman.cn/app/Cutterman/content/index.html?t=1489749257079. Domains, protocols and ports must match.
+," source: (0)
+[0317/191418:INFO:CONSOLE(0)] "create jsx_dir failed," source: http://www.cutterman.cn/app/Cutterman/content/js/base.js?t=2.5.30(32)
+[0317/191418:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191418:INFO:CONSOLE(0)] "write constants.jsx success," source: http://www.cutterman.cn/app/Cutterman/content/js/base.js?t=2.5.30(51)
+[0317/191418:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191418:INFO:CONSOLE(0)] "write library.jsx success," source: http://www.cutterman.cn/app/Cutterman/content/js/base.js?t=2.5.30(51)
+[0317/191418:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0317/191418:INFO:CONSOLE(0)] "write export.jsx success," source: http://www.cutterman.cn/app/Cutterman/content/js/base.js?t=2.5.30(51)
+[0317/191445:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141852:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141852:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141852:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141852:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141852:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141852:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141852:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141852:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141852:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141852:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141852:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141852:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141852:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141852:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141852:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141853:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141853:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141853:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141853:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141853:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141853:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141853:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141853:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141853:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141853:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141853:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141853:INFO:CONSOLE(0)] "Unsafe JavaScript attempt to access frame with URL file:///C:/Program%20Files%20(x86)/Common%20Files/Adobe/CEPServiceManager4/extensions/Cutterman/index.html from frame with URL http://www.cutterman.cn/app/Cutterman/content/index.html?t=1490595532049. Domains, protocols and ports must match.
+," source: (0)
+[0327/141854:INFO:CONSOLE(0)] "create jsx_dir failed," source: http://www.cutterman.cn/app/Cutterman/content/js/base.js?t=2.5.30(32)
+[0327/141854:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141854:INFO:CONSOLE(0)] "write constants.jsx success," source: http://www.cutterman.cn/app/Cutterman/content/js/base.js?t=2.5.30(51)
+[0327/141854:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141854:INFO:CONSOLE(0)] "write library.jsx success," source: http://www.cutterman.cn/app/Cutterman/content/js/base.js?t=2.5.30(51)
+[0327/141854:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141855:INFO:CONSOLE(0)] "write export.jsx success," source: http://www.cutterman.cn/app/Cutterman/content/js/base.js?t=2.5.30(51)
+[0327/141859:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141943:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/141959:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/142003:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/142650:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/142739:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167
+[0327/144702:ERROR:proxy_resolver_winhttp.cc(79)] WinHttpGetProxyForUrl failed: 12167

@@ -1,0 +1,12 @@
+{
+  "title": "重点监控-添加重点人",
+  "zdr":true,
+  "styles": [
+       "../css/table.css",
+       "../css/layout.css",
+       "../css/cq_zddx.css"
+  ],
+  "scripts":[
+      "../js/table.js"
+  ]
+}
