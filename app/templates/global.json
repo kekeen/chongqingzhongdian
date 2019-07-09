@@ -6,8 +6,7 @@
         "../libs/icheck/flat/_all.css",
         "../libs/datetimepicker/jquery.datetimepicker.min.css",
         "../css/ui-paging-container.css",
-        "../css/global.css",
-        "../css/temple.css"
+        "../css/global.css"
     ],
     "scripts": [
         "../libs/jquery/jquery.min.js",

@@ -1577,3 +1577,36 @@ $("[data-prompt]").on('click', function(event) {
         $('#'+idname).fadeOut();
     }, 2000);
 });
+
+$(function () {
+    /*滚动条高度计算1*/
+    resize();
+    function resize(){
+        var height = $(".zddx-right").height() - $(".breadCrumb").outerHeight(true) - $(".control-nav").outerHeight(true) - 45;
+        $(".rollHeight").outerHeight(height);
+    }
+    /*滚动条高度计算2*/
+    resize2();
+    function resize2(){
+        var height2 = $(".zddx-right").height() - $(".breadCrumb").outerHeight(true) - $(".zddx-right-title").outerHeight(true) - 45;
+        $(".rollHeight2").outerHeight(height2);
+    }
+    /*滚动条高度计算3*/
+    resize3();
+    function resize3(){
+        var height3 = $(".zddx-right").height() - $(".zddx-right-title").outerHeight(true) - 30;
+        $(".rollHeight3").outerHeight(height3);
+    }
+    /*滚动条高度计算4*/
+    resize4();
+    function resize4(){
+        var height4 = $(".zddx-right").height() - $(".breadCrumb").outerHeight(true) - $(".control-nav").outerHeight(true) - 30;
+        $(".rollHeight4").outerHeight(height4);
+    }
+    $(window).resize(function(){
+        resize();
+        resize2();
+        resize3();
+        resize4();
+    })
+});

@@ -20,37 +20,37 @@
 					<div class="con-navBox">
 						<ul>
 							<li class="active">
-								<a href="#">
-									<i>icon</i>
+								<a href="重庆重点对象-重点人-事业人物.html">
+									<i class="zdr-jiankong"></i>
 									监控情况
 								</a>
 							</li>
 							<li>
-								<a href="#">
-									<i>icon</i>
+								<a href="重庆重点对象-重点人-基本信息.html">
+									<i class="zdr-xinxi"></i>
 									基本信息
 								</a>
 							</li>
 							<li>
-								<a href="#">
-									<i>icon</i>
+								<a href="重庆重点对象-重点人-关注情况.html">
+									<i class="zdr-guanzhu"></i>
 									关注情况
 								</a>
 							</li>
 						</ul>
 					</div>
 				</div>
-	            <div class="zddx-undertakings-cont control-content">
+	            <div class="zddx-undertakings-cont control-content rollHeight">
 					<div class="undertakings-title">
 						<ul class="clearfix">
-							<li>	
+							<li>
 								信源类型:
 									<div class="dropdown">
 										<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #757575">网站 <span class="caret"></span>
 										</button>
 										<ul class="dropdown-menu">
 											<li><a href="javascript:;">网站</a></li>
-											<li><a href="javascript:;">微博</a></li>
+											<li><a href="重庆重点对象-重点人-监控情况-微博.html">微博</a></li>
 											<li><a href="javascript:;">论坛</a></li>
 											<li><a href="javascript:;">贴吧</a></li>
 											<li><a href="javascript:;">公众号</a></li>
@@ -64,7 +64,7 @@
 										<ul class="dropdown-menu">
 											<li><a href="javascript:;">时间倒序</a></li>
 											<li><a href="javascript:;">时间顺序</a></li>
-										
+
 										</ul>
 								</div>
 							</li>
@@ -82,7 +82,7 @@
 								<div class="layout-data">
 										<input id="d01" class="u-data" type="text" onclick="DatePicker.dateId1()" placeholder="选择日期" readonly="">至<input id="d02" class="u-data" type="text" onclick="DatePicker.dateId2()" placeholder="选择日期" readonly="">
 								</div>
-									
+
 							</li>
 						</ul>
 					</div>
@@ -194,14 +194,4 @@
 
 <%- include('../templates/foot') %>
 <script>
-	$(function () {
-        resize();
-        function resize(){
-            var height = $(".zddx-right").height() - $(".breadCrumb").outerHeight(true) - $(".control-nav").outerHeight(true) - 45;
-            $(".control-content").outerHeight(height);
-        }
-        $(window).resize(function(){
-            resize();
-        })
-    })
 </script>

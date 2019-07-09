@@ -13,10 +13,7 @@
 <link rel="stylesheet" href="../libs/datetimepicker/jquery.datetimepicker.min.css">
 <link rel="stylesheet" href="../css/ui-paging-container.css">
 <link rel="stylesheet" href="../css/global.css">
-<link rel="stylesheet" href="../css/temple.css">
 <link rel="stylesheet" href="../css/table.css">
-
-<link rel="stylesheet" href="../css/layout.css">
 
 <link rel="stylesheet" href="../css/cq_zddx.css">
 
@@ -479,25 +476,33 @@
 		<div class="zddx-right zdr-bj-box">
             <div class="zddx-right-box" >
                 <div class="zddx-right-title clearfix">
-                    <div class="title-aleft">
-                        <h3>重点人信息详情</h3>
-                    </div>
                     <div class="title-aright pull-right">
+                        <a href="../html/重庆重点对象-重点人-编辑.html" class="btn active">基本信息编辑</a>
                         <a href="../html/重庆重点对象-关注情况编辑.html" class="btn">关注情况编辑</a>
-                        <a href="../html/重庆重点对象-重点人-事业人物.html" class="btn">返回</a>
                     </div>
                 </div>
-                <div class="zdr-bj-con nicescroll" id="zdr-jbxx2">
+                <div class="new-editCont nicescroll" id="zdr-jbxx2">
+                    <div class="tit">
+                        <p class="blue-title">基本信息</p>
+                    </div>
                     <ul class="g-zlm-phone">
                         <li>
                             <div class="bj-left w10">头像：</div>
                             <div class="bj-right">
-                                <img src="../images/cqdnk/touxiang.png" alt="">
-                                <em class="touxiang-em"> <i>!</i> 仅支持JPG、PNG格式，文件小于100KB</em>
+                                <div class="imgBox">
+                                    <img src="../images/cqdnk/touxiang.png" alt="">
+                                </div>
+                                <div class="uploadBox">
+                                    <div class="upload-headPic">
+                                        <input type="file" class="upload-pic" value="上传图片">
+                                        <i class="upload-icon">上传头像</i>
+                                    </div>
+                                    <p class="touxiang-p"> (仅支持JPG、PNG格式，文件小于100KB)</p>
+                                </div>
                             </div>
                         </li>
                         <li class="pull-left ww50">
-                                <label class="bj-left w20">姓名：</label>
+                                <label class="bj-left w20"><i class="redStar">*</i>姓名：</label>
 
                                 <div class="bj-right">
                                        
@@ -532,14 +537,21 @@
                                     </div>
 
                         </li>
-                        <li  class="pull-left ww50 lxfs">
-                            <label class="bj-left w20">联系方式：</label>
+                        <li class="pull-left ww50">
+                            <div class="bj-left"><i class="redStar">*</i>组织：</div>
                             <div class="bj-right">
-                                <input class="u-ipt" type="text" placeholder="输入重点对象的联系方式">
-                            </div>
-                            <div class="btnbox">
-                                <i class="i1"></i>
-                                <i class="i2"></i>
+                                <div class="dropdown pull-left">
+                                    <button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #757575">请选择 <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:;">重点人组1</a></li>
+                                        <li><a href="javascript:;">重点人组2</a></li>
+                                        <li><a href="javascript:;">重点人组3</a></li>
+                                    </ul>
+                                </div>
+                                <div class="Prompt">?
+                                    <span class="Prompt-right with235">重点人归纳重点群体组织，每个重点人最多归纳5个重点群体组织。</span>
+                                </div>
                             </div>
                         </li>
                         <li  class="pull-left ww50">
@@ -551,62 +563,46 @@
                                     </div>
 
                         </li>
-                        <li>
-                            <div class="bj-left w10">  管控级别：</div>
+                        <li  class="pull-left ww50 lxfs">
+                            <label class="bj-left w20">联系方式：</label>
                             <div class="bj-right">
-                                <div class="dropdown pull-left">
-                                    <button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #757575">请选择 <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="javascript:;">一级</a></li>
-                                        <li><a href="javascript:;">二级</a></li>
-                                        <li><a href="javascript:;">三级</a></li>
-                                    </ul>
+                                <div class="num86">
+                                    <i class="shuzi">+86</i>
+                                    <i class="heng">-</i>
                                 </div>
+                                <input class="u-ipt" type="text" placeholder="输入重点对象的联系方式">
+                            </div>
+                            <div class="addNum">(可添加上限为9个联系方式)</div>
+                            <div class="btnbox">
+                                <i class="i1"></i>
+                                <i class="i2"></i>
                             </div>
                         </li>
                         <li>
                             <div class="bj-left w10">  个人情况：</div>
                             <div class="bj-right">
-                                    <textarea class="form-control u-ipt" style="min-height: 70px" ></textarea>
+                                    <textarea class="form-control u-ipt tArea" placeholder="请输入个人情况，字数上限为500字符" style="min-height: 70px" ></textarea>
                             </div>
                         </li>
-                        <li>
-                                <div class="bj-left w10"><i class="red">*</i>  分组：</div>
-                                <div class="bj-right">
-                                    <div class="dropdown pull-left">
-                                        <button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #333333">添加分组 <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="javascript:;">事业人物</a></li>
-                                            <li><a href="javascript:;">分组2</a></li>
-                                            <li><a href="javascript:;">分组3</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="Prompt">? 
-                                        <span class="Prompt-top">重点对象归纳重点群体，每个重点 对象最多归纳5个重点群体。 </span>
-                                    </div>
-                                    <ul class="option-ul clearfix">
-                                        <li>事业人物 <i>x</i> </li>
-                                        <li>事业人物 <i>x</i> </li>
-                                        <li>事业人物 <i>x</i> </li>
-                                        <li>事业人物 <i>x</i> </li>
-                                        <li>事业人物 <i>x</i> </li>
-                                        
-                                    </ul>
-                                </div>
+                        <li class="gkjb">
+                            <div class="bj-left w10">管控级别：</div>
+                            <div class="bj-right">
+                                <label><input type="radio" name="jibie"/>一级</label>
+                                <label><input type="radio" name="jibie"/>二级</label>
+                                <label><input type="radio" name="jibie"/>三级</label>
+                            </div>
                         </li>
                         <li class="fjsc">
-                            <div class="bj-left w10">  附件上传：</div>
+                            <div class="bj-left w10"> 上传附件：</div>
                             <div class="g-upload-wrap">
-                                <input type="file" class="upload-pic" value="上传图片">
+                                <input type="file" class="upload-pic" value="上传附件">
                                 <i class="soutu-icon upload-icon"></i>
                             </div>
-                            <div style="color: #8DA5C1;margin-top: 5px;">（附件大小不超过20MB)</div></br>
+                            <div style="color: #8DA5C1;margin-top: 5px; font-size: 12px">（仅支持扩展名：.rar .zip .doc .docx .pdf .jpg.和总文件小于20MB)</div></br>
                             <div class="xs xs1">照片09987554如55255.JPG   <i></i></div>
                             <div class="xs xs2">照片09987554如55255.JPG   <i></i></div>
                         </li>
-                        <li>
+                        <li class="mbottom12">
                             <div class="bj-left w10">  活跃平台：</div>
                             <div class="bj-right">
                                    <a href="javascript:;" class="btn bj_add"></a>
@@ -619,187 +615,77 @@
                             <div class="bj-left w10"></div>
                             <div class="bj-right">
                                   <ul class="site_detection">
-                                        <li>
-                                            <div class="Prompt pull-left">? 
-                                                    <span class="Prompt-left">系统对该人物在网络平台发布的信息进行检测，每个平台限20个站点/账号， 布局新加入的网站需要时间，请耐心等待。  </span>
-                                            </div>
-                                            <div class="dropdown pull-left">
-                                                <button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #333333">三级 <span class="caret"></span>
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="javascript:;">特级</a></li>
-                                                    <li><a href="javascript:;">一级</a></li>
-                                                    <li><a href="javascript:;">二级</a></li>
-                                                    <li><a href="javascript:;">三级</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="dropdown pull-left">
-                                                <button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #333333;min-width: 100px">网站 <span class="caret"></span>
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="javascript:;">网站</a></li>
-                                                    <li><a href="javascript:;">微博</a></li>
-                                                    <li><a href="javascript:;">公众号</a></li>
-                                                    <li><a href="javascript:;">论坛</a></li>
-                                                    <li><a href="javascript:;">百度贴吧</a></li>
-                                                </ul>
-                                            </div>
-                                            <label> <input class="w190" type="text" placeholder="用户账号名称"></label>
-                                            <label class="del-input"> <input class="w350" type="text" placeholder="输入网站"> <i>x</i> </label>
-                                        </li>
-                                        <li>
-                                            <div class="Prompt pull-left">? 
-                                                    <span class="Prompt-left">系统对该人物在网络平台发布的信息进行检测，每个平台限20个站点/账号， 布局新加入的网站需要时间，请耐心等待。  </span>
-                                            </div>
-                                            <div class="dropdown pull-left">
-                                                <button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #333333">三级 <span class="caret"></span>
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="javascript:;">特级</a></li>
-                                                    <li><a href="javascript:;">一级</a></li>
-                                                    <li><a href="javascript:;">二级</a></li>
-                                                    <li><a href="javascript:;">三级</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="dropdown pull-left">
-                                                <button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #333333;min-width: 100px">网站 <span class="caret"></span>
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="javascript:;">网站</a></li>
-                                                    <li><a href="javascript:;">微博</a></li>
-                                                    <li><a href="javascript:;">公众号</a></li>
-                                                    <li><a href="javascript:;">论坛</a></li>
-                                                    <li><a href="javascript:;">百度贴吧</a></li>
-                                                </ul>
-                                            </div>
-                                            <label> <input class="w190" type="text" placeholder="用户账号名称"></label>
-                                            <label class="del-input"> <input class="w350" type="text" placeholder="输入博主首页地址"> <i>x</i> </label>
-                                        </li>
-                                        <li>
-                                            <div class="Prompt pull-left">? 
-                                                    <span class="Prompt-left">系统对该人物在网络平台发布的信息进行检测，每个平台限20个站点/账号， 布局新加入的网站需要时间，请耐心等待。  </span>
-                                            </div>
-                                            <div class="dropdown pull-left">
-                                                <button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #333333">三级 <span class="caret"></span>
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="javascript:;">特级</a></li>
-                                                    <li><a href="javascript:;">一级</a></li>
-                                                    <li><a href="javascript:;">二级</a></li>
-                                                    <li><a href="javascript:;">三级</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="dropdown pull-left">
-                                                <button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #333333;min-width: 100px">网站 <span class="caret"></span>
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="javascript:;">网站</a></li>
-                                                    <li><a href="javascript:;">微博</a></li>
-                                                    <li><a href="javascript:;">公众号</a></li>
-                                                    <li><a href="javascript:;">论坛</a></li>
-                                                    <li><a href="javascript:;">百度贴吧</a></li>
-                                                </ul>
-                                            </div>
-                                            <label> <input class="w190" id="w190" type="text" placeholder="用户账号名称"></label>
-                                            <label class="del-input"> <input class="w350" type="text" placeholder="输入贴吧地址"> <i>x</i> </label>
-                                        </li>
-                                        <li>
-                                            <div class="Prompt pull-left">? 
-                                                    <span class="Prompt-left">系统对该人物在网络平台发布的信息进行检测，每个平台限20个站点/账号， 布局新加入的网站需要时间，请耐心等待。  </span>
-                                            </div>
-                                            <div class="dropdown pull-left">
-                                                <button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #333333">三级 <span class="caret"></span>
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="javascript:;">特级</a></li>
-                                                    <li><a href="javascript:;">一级</a></li>
-                                                    <li><a href="javascript:;">二级</a></li>
-                                                    <li><a href="javascript:;">三级</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="dropdown pull-left">
-                                                <button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #333333;min-width: 100px">网站 <span class="caret"></span>
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="javascript:;">网站</a></li>
-                                                    <li><a href="javascript:;">微博</a></li>
-                                                    <li><a href="javascript:;">公众号</a></li>
-                                                    <li><a href="javascript:;">论坛</a></li>
-                                                    <li><a href="javascript:;">百度贴吧</a></li>
-                                                </ul>
-                                            </div>
-                                            <label> <input class="w190" type="text" placeholder="用户账号名称"></label>
-                                            <label class="del-input"> <input class="w350" type="text" placeholder="输入微信号"> <i>x</i> </label>
-                                        </li>
-                                        <li>
-                                            <div class="Prompt pull-left">? 
-                                                    <span class="Prompt-left">系统对该人物在网络平台发布的信息进行检测，每个平台限20个站点/账号， 布局新加入的网站需要时间，请耐心等待。  </span>
-                                            </div>
-                                            <div class="dropdown pull-left">
-                                                <button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #333333">三级 <span class="caret"></span>
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="javascript:;">特级</a></li>
-                                                    <li><a href="javascript:;">一级</a></li>
-                                                    <li><a href="javascript:;">二级</a></li>
-                                                    <li><a href="javascript:;">三级</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="dropdown pull-left">
-                                                <button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #333333;min-width: 100px">网站 <span class="caret"></span>
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="javascript:;">网站</a></li>
-                                                    <li><a href="javascript:;">微博</a></li>
-                                                    <li><a href="javascript:;">公众号</a></li>
-                                                    <li><a href="javascript:;">论坛</a></li>
-                                                    <li><a href="javascript:;">百度贴吧</a></li>
-                                                </ul>
-                                            </div>
-                                            <label> <input class="w190"  type="text" placeholder="用户账号名称"></label>
-                                            <label class="del-input"> <input class="w350" type="text" placeholder="输入论坛账号首页地址"> <i>x</i> </label>
-                                        </li>
+                                      <li>
+                                          <div class="dropdown pull-left grayBg">
+                                              <button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #333333;min-width: 100px">网站 <span class="caret"></span>
+                                              </button>
+                                              <ul class="dropdown-menu">
+                                                  <li><a href="javascript:;">网站</a></li>
+                                                  <li><a href="javascript:;">微博</a></li>
+                                                  <li><a href="javascript:;">公众号</a></li>
+                                                  <li><a href="javascript:;">论坛</a></li>
+                                                  <li><a href="javascript:;">百度贴吧</a></li>
+                                              </ul>
+                                          </div>
+                                          <label> <input class="w190" type="text" placeholder="请输入账号"></label>
+                                          <div class="wangzhan">网站地址</div>
+                                          <label class="del-input"> <input class="w440" type="text" placeholder="请输入该网站地址，支持子频道，如http://politics.people.com.cn/"> <i>×</i> </label>
+                                      </li>
+                                      <li>
+                                          <div class="dropdown pull-left grayBg">
+                                              <button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #333333;min-width: 100px">网站 <span class="caret"></span>
+                                              </button>
+                                              <ul class="dropdown-menu">
+                                                  <li><a href="javascript:;">网站</a></li>
+                                                  <li><a href="javascript:;">微博</a></li>
+                                                  <li><a href="javascript:;">公众号</a></li>
+                                                  <li><a href="javascript:;">论坛</a></li>
+                                                  <li><a href="javascript:;">百度贴吧</a></li>
+                                              </ul>
+                                          </div>
+                                          <label> <input class="w190" type="text" placeholder="请输入账号"></label>
+                                          <div class="wangzhan">网站地址</div>
+                                          <label class="del-input"> <input class="w440" type="text" placeholder="请输入该网站地址，支持子频道，如http://politics.people.com.cn/"> <i>×</i> </label>
+                                      </li>
                                   </ul>
-                                    
                             </div>
                         </li>
-                        <li>
+                        <li class="mbottom12">
                             <div class="bj-left w10">  虚拟身份：</div>
                             <div class="bj-right">
                                    <a href="javascript:;" class="btn bj_add"></a>
                                    <div class="Prompt">? 
-                                        <span class="Prompt-right">系统对该人物虚拟身份做记录，虚拟身份限20个。  </span>
+                                        <span class="Prompt-right oneline">系统对该人物虚拟身份做记录，虚拟身份限20个。  </span>
                                     </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="mbottom12">
                             <div class="bj-left w10"></div>
                             <div class="bj-right">
                                   <ul class="site_detection">
                                         <li>
-                                            <div class="dropdown pull-left">
-                                                <button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #333333">QQ <span class="caret"></span>
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="javascript:;">QQ</a></li>
-                                                    <li><a href="javascript:;">微信</a></li>
-                                                    <li><a href="javascript:;">微博</a></li>
-                                                    <li><a href="javascript:;">Facebook</a></li>
-                                                    <li><a href="javascript:;">Twitter</a></li>
-                                                    <li><a href="javascript:;">其他社交</a></li>
-                                                    <li><a href="javascript:;">论坛</a></li>
-                                                    <li><a href="javascript:;">贴吧</a></li>
-                                                </ul>
-                                            </div>
-                                            <label>账号：<input style="margin-left: 4px;" class="w190" type="text" placeholder="请输入用户账号名称"></label>
-                                            <label class="del-input">昵称：<input class="w350" type="text" placeholder="请输入昵称"><i>x</i></label>
-                                        </br>
-                                            <label style="margin-top: 11px">
-                                                备注： 
-                                                <textarea class="form-control u-ipt" placeholder="输入备注，字数上限200字符" maxlength="200" style="min-height: 70px;width: 586px;vertical-align: top;color:#666;"></textarea>
-                                            </label>
+                                          <div class="dropdown pull-left grayBg">
+                                              <button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #333333;min-width: 100px">网站 <span class="caret"></span>
+                                              </button>
+                                              <ul class="dropdown-menu">
+                                                  <li><a href="javascript:;">网站</a></li>
+                                                  <li><a href="javascript:;">微博</a></li>
+                                                  <li><a href="javascript:;">公众号</a></li>
+                                                  <li><a href="javascript:;">论坛</a></li>
+                                                  <li><a href="javascript:;">百度贴吧</a></li>
+                                              </ul>
+                                          </div>
+                                          <label> <input class="w310" type="text" placeholder="请输入用户账号"></label>
+                                          <div class="wangzhan">昵称</div>
+                                          <label class="del-input"> <input class="w310" type="text" placeholder="请输入用户昵称"> <i>×</i> </label>
                                         </li>
                                   </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bj-left w10">   备注：</div>
+                            <div class="bj-right">
+                                <textarea class="form-control u-ipt" placeholder="输入备注，字数上限200字符" maxlength="200" style="min-height: 70px;width: 586px;vertical-align: top;color:#666;"></textarea>
                             </div>
                         </li>
                     </ul>
@@ -842,17 +728,20 @@
         });
         $(".g-zlm-phone").on("click",".lxfs .i1",function(){
             var len = $(".g-zlm-phone .lxfs").length;
-            var str=`
-                            <li  class="pull-left ww50 lxfs">
-                                <label class="bj-left w20">联系方式：</label>
-                                <div class="bj-right">
-                                    <input class="u-ipt" type="text" placeholder="输入重点对象的联系方式">
-                                </div>
-                                <div class="btnbox">
-                                    <i class="i1"></i>
-                                    <i class="i2"></i>
-                                </div>
-                            </li>`;
+            var str = `<li  class="pull-left ww50 lxfs">
+                        <label class="bj-left w20">联系方式：</label>
+                        <div class="bj-right">
+                            <div class="num86">
+                                <i class="shuzi">+86</i>
+                                <i class="heng">-</i>
+                            </div>
+                            <input class="u-ipt" type="text" placeholder="输入重点对象的联系方式">
+                        </div>
+                        <div class="btnbox">
+                            <i class="i1"></i>
+                            <i class="i2"></i>
+                        </div>
+                       </li>`
             // if(len<5){
                 $(this).parents(".lxfs").after(str);
             // }

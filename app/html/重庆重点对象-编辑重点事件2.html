@@ -1,0 +1,250 @@
+<%- include('../templates/head') %>
+<body>
+	<%- include('../templates/header') %>
+	<div class="content case cqzdr">
+        <%- include('../templates/zddx-zdsj-left') %>
+		<div class="zddx-right">
+            <div class="zddx-right-box">
+				<div class="breadCrumb">
+					<a href="#">重点事件</a>/
+					<a href="#">添加事件</a>
+				</div>
+				<div class="zddx-right-title clearfix">
+					<div class="navWrap">
+						<div class="detail-navBox">
+							<ul>
+								<li>
+									<a href="重庆重点对象-编辑重点事件.html">
+										<i class="sj-xiangqing"></i>
+										事件详情
+									</a>
+								</li>
+								<li class="active">
+									<a href="重庆重点对象-编辑重点事件2.html">
+										<i class="sj-xinxi"></i>
+										事件信息
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+	            <div class="bottom-mesCont attention-edit2 rollHeight2" style="margin-top: 15px">
+					<div class="middle-control">
+						<ul class="clearfix">
+							<li class="input_li pull-right">
+								<div class="layut-input">
+									<input class="form-control" type="text" placeholder="请输入关键词">
+									<a href="javascript:;"><i class="fa fa-search"></i></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="tableWrap">
+						<table class="message-table">
+							<tr>
+								<th width="30"></th>
+								<th width="20%">标题</th>
+								<th width="50%">内容</th>
+								<th width="15%">状态更新时间</th>
+								<th width="100">操作</th>
+							</tr>
+							<tr>
+								<td><input type="checkbox"/></td>
+								<td class="text-left">国网重庆电力联合涪陵警方开展反恐怖袭击实战演练</td>
+								<td class="text-left">月13日，国网重庆市电力公司反恐办联合涪陵区警方，在涪陵区某变电站成功举行警企联动处置暴恐袭击实战演练。国网重庆电力反恐办、涪陵区公安局、国网重庆川东供电公司和国网重庆检修公司共60余人参加了本次演练。
+									特警和“歹徒”对抗
+									在演练中，2名“暴恐分子”携爆炸物品、砍刀，欲闯入变电站实施爆炸，国网重庆电力立即启动反恐应急预案，变电站安保人员迅速开展先期处置并及时报警。公安机关3人快反小组、反恐、特警、谈判专家、治安排爆、辖区派出所等警种相关处置人员快速到达现场，对其中1名“暴恐分子”实施了抓捕，在谈判无效的情况下，果断开枪击毙了另1名欲引爆爆炸物的“暴恐分子”，并对爆炸物进行了排除。
+									特警制伏“歹徒”
+									据悉，本次演练检验了反恐应急预案的可行性，固化了警企联动反恐机制，进一步提升了参与人员的反恐意识和反恐应急处置能力，达到了提高实战处置变电站暴恐袭击的目的</td>
+								<td>2017-03-10 00:00</td>
+								<td>
+									<div class="u-icon">
+										<a href="#" title="编辑" data-toggle="modal" data-target="#editEvent"><i class="fa fa-pencil icon-pencil" aria-hidden="true"></i></a>
+										<a class="u-q2" href="javascript:;" title="删除" data-toggle="modal" data-target="#delete"></a>
+									</div>
+								</td>
+							</tr>
+							<% for(var i = 0; i < 10; i ++){ %>
+							<tr>
+								<td><input type="checkbox"/></td>
+								<td class="text-left">标题可换行，字数限制200字数</td>
+								<td class="text-left">内容可换行，字数限制2000字数</td>
+								<td>2017-03-10 00:00</td>
+								<td>
+									<div class="u-icon">
+										<a href="#" title="编辑" data-toggle="modal" data-target="#editEvent"><i class="fa fa-pencil icon-pencil" aria-hidden="true"></i></a>
+										<a class="u-q2" href="javascript:;" title="删除" data-toggle="modal" data-target="#delete"></a>
+									</div>
+								</td>
+							</tr>
+							<% } %>
+						</table>
+					</div>
+					<div class="addTeam borderBot">
+						<a href="#" class="addTeam-btn" data-toggle="modal" data-target="#addEvent"><i class="add">+</i>添加事件</a>
+					</div>
+					<div class="zt-ft clearfix">
+						<div class="pull-left">
+							<div class="icheckbox_flat-blue" style="position: relative;"><div class="icheckbox_flat-blue" style="position: relative;"><input type="checkbox" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+							<a href="##" class="btn" data-toggle="modal" data-target="#export"><i class="fa fa-upload"></i> 导出</a>
+							<a href="##" class="btn" data-toggle="modal" data-target="#moreDele">批量删除</a>
+						</div>
+
+						<div class="pull-right zt-page">
+							<span>共222条</span>
+							<a class="btn">上一页</a>
+							<a class="btn">下一页</a>
+							<div class="dropup">
+								<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">10条 <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#">10条</a></li>
+									<li><a href="#">20条</a></li>
+									<li><a href="#">30条</a></li>
+									<li><a href="#">50条</a></li>
+								</ul>
+							</div>
+							<div class="quick">
+								<label>快速翻页</label>
+								<input type="text" value="5">
+							</div>
+							<a href="##" class="btn">确 认</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 导出报告 -->
+	<div class="modal fade" id="export">
+		<div class="modal-dialog" role="document" style="width:500px;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title" id="myModalLabel">导出报告</h4>
+				</div>
+				<div class="modal-body">
+					<table class="tc-table">
+						<tr>
+							<th>导出方式：</th>
+							<td class="table-label">
+								<label><input type="radio" name="dcgs2" /> 自定义</label>
+								<label><input type="radio"  name="dcgs2"/> 已勾选</label>
+								<label><input type="radio"  name="dcgs2"/> 全部</label>
+							</td>
+						</tr>
+						<tr>
+							<th>信源范围：</th>
+							<td class="table-label">
+								<label><input type="radio" name="dcgs3" /> 当前信源</label>
+								<label><input type="radio"  name="dcgs3"/> 所有信源</label>
+							</td>
+						</tr>
+						<tr>
+							<th>信源范围：</th>
+							<td class="table-label">
+								<label><input type="radio" name="dcgs4" /> WORD</label>
+
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="modal-footer inline-button" style="padding-right: 15px;">
+					<a class="active" data-dismiss="modal" aria-label="Close">取消</a>
+					<a class="active">确定</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 删除 -->
+	<div class="modal fade" id="delete">
+		<div class="modal-dialog" role="document" style="width: 500px;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title" id="myModalLabel">删除</h4>
+				</div>
+				<div class="modal-body">
+					<h3 style="text-align:center;padding: 35px 0;">是否删除该事件信息</h3>
+				</div>
+				<div class="modal-footer">
+					<button id="btn" type="button" class="btn" data-dismiss="modal" aria-label="Close">取消</button>
+					<button id="btn" type="button" class="btn yes">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 批量删除 -->
+	<div class="modal fade" id="moreDele">
+		<div class="modal-dialog" role="document" style="width: 500px;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title" id="myModalLabel">删除</h4>
+				</div>
+				<div class="modal-body">
+					<h3 style="text-align:center;padding: 35px 0;">是否删除选中的事件信息</h3>
+				</div>
+				<div class="modal-footer">
+					<button id="btn" type="button" class="btn" data-dismiss="modal" aria-label="Close">取消</button>
+					<button id="btn" type="button" class="btn yes">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 添加事件 -->
+	<div class="modal fade addModal" id="addEvent">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title" id="myModalLabel">新增事件</h4>
+				</div>
+				<div class="modal-body">
+					<ul class="addUl">
+						<li>
+							<span class="sp"><i class="redStar">*</i>标题：</span>
+							<input class="int" placeholder="请输入标题名称，字数不超过15字"/>
+						</li>
+						<li>
+							<span class="sp"><i class="redStar">*</i>内容：</span>
+							<textarea class="tArea" placeholder="请输入内容描述，字数不超过500字"></textarea>
+						</li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button id="btn" type="button" class="btn" data-dismiss="modal" aria-label="Close">取消</button>
+					<button id="btn" type="button" class="btn yes">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 编辑事件 -->
+	<div class="modal fade addModal" id="editEvent">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title" id="myModalLabel">编辑事件</h4>
+				</div>
+				<div class="modal-body">
+					<ul class="addUl">
+						<li>
+							<span class="sp"><i class="redStar">*</i>标题：</span>
+							<input class="int" value="总队重点阵地"/>
+						</li>
+						<li>
+							<span class="sp"><i class="redStar">*</i>内容：</span>
+							<textarea class="tArea">市委总队重点阵地</textarea>
+						</li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button id="btn" type="button" class="btn" data-dismiss="modal" aria-label="Close">取消</button>
+					<button id="btn" type="button" class="btn yes">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<%- include('../templates/foot') %>

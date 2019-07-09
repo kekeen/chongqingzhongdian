@@ -3,7 +3,6 @@
   "zdsj":true,
   "styles": [
        "../css/table.css",
-       "../css/layout.css",
        "../css/cq_zddx.css"
   ],
   "scripts":[

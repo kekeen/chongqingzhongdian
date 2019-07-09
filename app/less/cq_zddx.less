@@ -1,5 +1,12 @@
 @import "./base/base.less";
 
+.redStar{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  margin-right: 2px;
+  color: #f54545;
+}
 /*重庆重点对象*/ 
 .cqzdr{
     padding-left: 50px;
@@ -494,14 +501,13 @@
 
 .zddx-right-title{
     background: #fff;
-    height: 52px;
-    border-bottom: 1px solid #d3dbe3;
-    line-height: 50px;
+    height: 50px;
+    border: 1px solid #d3dbe3;
     padding: 0 20px;
     .title-aleft{
-        display: inline-block;
+        float: left;
         h3{
-            line-height: 52px;
+            line-height: 48px;
             font-weight: bold;
             color: #029be5;
             display: inline-block;
@@ -514,6 +520,7 @@
 
 .cqzdr{
     .title-aright{
+      line-height:48px;
         .btn{
             background: linear-gradient(#fff, #f3f5f8);
             &.active,&:hover{
@@ -531,261 +538,259 @@
 /*重庆重点对象 end*/ 
 
 
-/*重点人编辑 start*/ 
-
+/*重点人编辑 start*/
 .zdr-bj-box{
-    .zdr-bj-con{
-        background: #fff;
-        height: 795px;
-        padding-top: 20px;
-        .g-zlm-phone{
-            .lxfs:last-child{
-                .i1{
-                    display: block;
-                }
-            }
-            .lxfs{
-                .btnbox{
-                    position: relative;left: 20px;top: 8px;margin-left: -17px;
-                    i{
-                        display: inline-block;
-                        width: 18px;
-                        height: 18px;
-                        cursor: pointer;
-                    }
-                    .i1{
-                        background: url(../images/zlm732_03.png);
-                        background-repeat: no-repeat;
-                        display: none;  
-                    }
-                    .i2{
-                        background: url(../images/icon_del.png);
-                        background-repeat: no-repeat;
-                        // display: none;  
-                    }
-                }
-            }
+  .zdr-bj-con{
+    background: #fff;
+    height: 795px;
+    padding-top: 20px;
+    .g-zlm-phone{
+      .lxfs:last-child{
+        .i1{
+          display: block;
         }
-        >ul{
-            padding: 0 16% 0 15%;
-            >li.fjsc{
-                position: relative;
-                height: 100px;
-                .xs{
-                    i{
-                        display: inline-block;
-                        width: 14px;
-                        height:14px;
-                        background: url(../images/zlm732_07.png);
-                        cursor: pointer;
-                        position:relative;
-                        top: 3px;
-                        margin-left: 20px;
-                    }
-                }
-                .xs1{
-                    position:absolute;
-                    top: 53px;
-                    left: 127px;
-                }
-                .xs2{
-                    position:absolute;
-                    top: 83px;
-                    left: 127px;
-                }
-            }
-            >li{
-                margin-bottom: 20px;
-                display: flex;
-                width: 100%;
-                >div{
-                  
-                }
-                // .w10{
-                //     width: 10%;
-                // }
-                // .w20{
-                //     width: 20%;
-                // }
-                &.ww50{
-                    width: 50%;
-                }
-                .bj-left{
-                    width: 120px;
-                    margin-right:10px;
-                    line-height: 30px;
-                    text-align: right;
-                }
-                .bj-right{
-                    .l_flex;
-                    .u-ipt{
-                        display: inline-block;
-                        width: 100%;
-                        height: 30px;
-                        line-height: 30px;
-                        padding-left: 10px;
-                    }
-                    img{
-                        display: inline-block;
-                        vertical-align: unset;
-                    }
-                    .touxiang-em{
-                        margin-left: 10px;
-                        color: #C1CDDE;
-                        font-size: 12px;
-                        i{
-                            display: inline-block;
-                            width: 15px;
-                            height: 15px;
-                            text-align: center;
-                            line-height: 15px;
-                            border-radius: 50%;
-                            border: 1px solid #C1CDDE;
-                        }
-                    }
-                  
-              
-                    .Prompt{
-                        display: inline-block;
-                        position: relative;
-                        width: 20px;
-                        height: 20px;
-                        background-color: #FFD584;
-                        color: #9F7422;
-                        line-height: 20px;
-                        text-align: center;
-                        border-radius: 50%;
-                        margin-left: 10px;
-                        margin-top: 5px;
-                        &:hover{
-                            span{
-                                display: block;
-                            }
-                        }
-                        span{
-                            display: none;
-                            position: absolute;
-                            padding: 5px;
-                            background-color: #F7F1E5;
-                            text-align: left;
-                            &.Prompt-top{
-                                width: 234px;
-                                bottom: 30px;
-                                transform: translateX(-47%);
-                            }
-                            &.Prompt-right{
-                                width: 495px;
-                                left: 30px;
-                                bottom: -67%;
-                            }
-                            &.Prompt-left{
-                                width: 180px;
-                                left: -190px;
-                                bottom: -210%;
-                            }
-                        }
-                    }
-
-
-                    .option-ul{
-                        display: inline-block;
-                        margin-left: 15px;
-                        li{
-                            position: relative;
-                            margin-right: 10px;
-                            padding: 4px 10px;
-                            border: 1px solid #d3dbe3;
-                            border-radius: 2px;
-                            color: #333;
-                            min-width: 60px;
-                            text-align: center;
-                            display: inline-block;
-                            background: #fff;
-                            i{
-                                position: absolute;
-                                right: -5px;
-                                top: -5px;
-                                width: 14px;
-                                height: 14px;
-                                line-height: 14px;
-                                text-align: center;
-                                color: #fff;
-                                border-radius: 50%;
-                                background: #f56969;
-                                display: inline-block;
-                                cursor: pointer;
-                            }
-                        }
-                    }
-
-                    .bj_add{
-                        width: 60px;
-                        height: 30px;
-                        background-color: #1389D0;
-                        background-image: url(../images/cqdnk/icon_bjadd.png);
-                        background-repeat: no-repeat;
-                        // background-size: contain;
-                        background-position: center center;
-                    }
-
-                   
-                    
-                    .site_detection{
-                        >li{
-                            margin-bottom: 10px;
-                            >div,>label{
-                                margin-right: 10px;
-                            }
-                            >label{
-                                 input{
-                                     padding-left: 10px;
-                                 } 
-                                 .w190{
-                                     width: 180px;
-                            
-                                 }  
-                                 .w350{
-                                     width: 350px;
-                            
-                                 }  
-                            }
-                            .del-input{
-                                position: relative;
-                                i{
-                                    position: absolute;
-                                    right: -5px;
-                                    top: -5px;
-                                    width: 14px;
-                                    height: 14px;
-                                    line-height: 14px;
-                                    text-align: center;
-                                    color: #fff;
-                                    border-radius: 50%;
-                                    background: #f56969;
-                                    display: inline-block;
-                                    cursor: pointer;
-                                }
-                            }
-                        }
-                    }
-
-
-
-                }
-            }
+      }
+      .lxfs{
+        .btnbox{
+          position: relative;left: 20px;top: 8px;margin-left: -17px;
+          i{
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+          }
+          .i1{
+            background: url(../images/zlm732_03.png);
+            background-repeat: no-repeat;
+            display: none;
+          }
+          .i2{
+            background: url(../images/icon_del.png);
+            background-repeat: no-repeat;
+            // display: none;
+          }
         }
-     
-       input{
-            border: 1px solid #D6E1E5;
-            border-radius: 2px;
-
-        }
-        
+      }
     }
+    >ul{
+      padding: 0 16% 0 15%;
+      >li.fjsc{
+        position: relative;
+        height: 100px;
+        .xs{
+          i{
+            display: inline-block;
+            width: 14px;
+            height:14px;
+            background: url(../images/zlm732_07.png);
+            cursor: pointer;
+            position:relative;
+            top: 3px;
+            margin-left: 20px;
+          }
+        }
+        .xs1{
+          position:absolute;
+          top: 53px;
+          left: 127px;
+        }
+        .xs2{
+          position:absolute;
+          top: 83px;
+          left: 127px;
+        }
+      }
+      >li{
+        margin-bottom: 20px;
+        display: flex;
+        width: 100%;
+        >div{
+
+        }
+        // .w10{
+        //     width: 10%;
+        // }
+        // .w20{
+        //     width: 20%;
+        // }
+        &.ww50{
+          width: 50%;
+        }
+        .bj-left{
+          width: 120px;
+          margin-right:10px;
+          line-height: 30px;
+          text-align: right;
+        }
+        .bj-right{
+          .l_flex;
+          .u-ipt{
+            display: inline-block;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            padding-left: 10px;
+          }
+          img{
+            display: inline-block;
+            vertical-align: unset;
+          }
+          .touxiang-em{
+            margin-left: 10px;
+            color: #C1CDDE;
+            font-size: 12px;
+            i{
+              display: inline-block;
+              width: 15px;
+              height: 15px;
+              text-align: center;
+              line-height: 15px;
+              border-radius: 50%;
+              border: 1px solid #C1CDDE;
+            }
+          }
+
+
+          .Prompt{
+            display: inline-block;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            background-color: #FFD584;
+            color: #9F7422;
+            line-height: 20px;
+            text-align: center;
+            border-radius: 50%;
+            margin-left: 10px;
+            margin-top: 5px;
+            &:hover{
+              span{
+                display: block;
+              }
+            }
+            span{
+              display: none;
+              position: absolute;
+              padding: 5px;
+              background-color: #F7F1E5;
+              text-align: left;
+              &.Prompt-top{
+                width: 234px;
+                bottom: 30px;
+                transform: translateX(-47%);
+              }
+              &.Prompt-right{
+                width: 495px;
+                left: 30px;
+                bottom: -67%;
+              }
+              &.Prompt-left{
+                width: 180px;
+                left: -190px;
+                bottom: -210%;
+              }
+            }
+          }
+
+
+          .option-ul{
+            display: inline-block;
+            margin-left: 15px;
+            li{
+              position: relative;
+              margin-right: 10px;
+              padding: 4px 10px;
+              border: 1px solid #d3dbe3;
+              border-radius: 2px;
+              color: #333;
+              min-width: 60px;
+              text-align: center;
+              display: inline-block;
+              background: #fff;
+              i{
+                position: absolute;
+                right: -5px;
+                top: -5px;
+                width: 14px;
+                height: 14px;
+                line-height: 14px;
+                text-align: center;
+                color: #fff;
+                border-radius: 50%;
+                background: #f56969;
+                display: inline-block;
+                cursor: pointer;
+              }
+            }
+          }
+
+          .bj_add{
+            width: 60px;
+            height: 30px;
+            background-color: #1389D0;
+            background-image: url(../images/cqdnk/icon_bjadd.png);
+            background-repeat: no-repeat;
+            // background-size: contain;
+            background-position: center center;
+          }
+
+
+
+          .site_detection{
+            >li{
+              margin-bottom: 10px;
+              >div,>label{
+                margin-right: 10px;
+              }
+              >label{
+                input{
+                  padding-left: 10px;
+                }
+                .w190{
+                  width: 180px;
+
+                }
+                .w350{
+                  width: 350px;
+
+                }
+              }
+              .del-input{
+                position: relative;
+                i{
+                  position: absolute;
+                  right: -5px;
+                  top: -5px;
+                  width: 14px;
+                  height: 14px;
+                  line-height: 14px;
+                  text-align: center;
+                  color: #fff;
+                  border-radius: 50%;
+                  background: #f56969;
+                  display: inline-block;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+
+
+
+        }
+      }
+    }
+
+    input{
+      border: 1px solid #D6E1E5;
+      border-radius: 2px;
+
+    }
+
+  }
 
 
 }
-
 
 /*重点人编辑 end*/ 
 
@@ -1034,7 +1039,7 @@
                             width: 250px;
                         }
                     }
-                    margin-right: 10px;
+                    margin-right: 20px;
                 }
             }
         }
@@ -1636,14 +1641,14 @@
         background: #fff;
         .diagram_box_title{
             background: #fff;
-            height: 52px;
+            height: 50px;
             border-bottom: 1px solid #d3dbe3;
             line-height: 50px;
             padding: 0 20px;
             .title-aleft{
                 display: inline-block;
                 h3{
-                    line-height: 52px;
+                    line-height: 50px;
                     font-weight: bold;
                     color: #029be5;
                     display: inline-block;
@@ -1728,11 +1733,11 @@
 
     }
 
-	.zdr-oths{
+	/*.zdr-oths{
 		.zdr-bj-con > ul {
 			padding: 0 12% 0 10% !important;
 		}
-	}
+	}*/
 }
 
 
@@ -1763,13 +1768,13 @@
 
  }
 
- @media screen and (max-width: 1530px){
+ /*@media screen and (max-width: 1530px){
 	.zdr-oths{
 		.zdr-bj-con > ul {
 			padding: 0 4% 0 3%!important;
 		}
 	}
-}
+}*/
 
 
 
@@ -1783,7 +1788,7 @@
 			}
 		}
 	}
-	.zdr-bj-box{
+	/*.zdr-bj-box{
 		.zdr-bj-con{
 			>ul{
 				padding: 0 2% 0 2% !important;
@@ -1795,7 +1800,7 @@
 			
 		}
 		
-	}
+	}*/
 }
 @media screen and (max-width: 1300px){
 	.zddx-left{
@@ -1820,20 +1825,20 @@
 
     }
 
-	.zdr-oths{
+	/*.zdr-oths{
 		.zdr-bj-con > ul {
 			padding: 0 2% 0 1%!important;
 		}
-	}
+	}*/
 }
 
-@media screen and (max-width: 1173px){
+/*@media screen and (max-width: 1173px){
 	.zdr-oths{
 		.zdr-bj-con > ul {
 			padding: 0 1% 0 0%!important;
 		}
 	}
-}
+}*/
 .zm-triangle1{
     width: 0;
     height: 0;
@@ -1909,9 +1914,198 @@
         background: url(../images/zlm731_03.png);
     }
 }
+/*上传头像按钮美化*/
+.upload-headPic{
+  display: inline-block;
+  position:relative;
+  .upload-pic{
+    position: absolute;
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    z-index: 1;
+    cursor: pointer;
+  }
+  .upload-icon{
+    display: inline-block;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    background: linear-gradient(to bottom,white 0,#f2f4f8 100%);
+    border: 1px solid #c6d0db;
+    border-radius: 2px;
+  }
+}
 
 /*v3.0版*/
-/*重庆重点对象-重点人-事业人物开始*/
+/*公共部分开始*/
+.u-b9{
+  background: url(../images/u_b9.png) no-repeat center center;
+  &:hover{
+    background: url(../images/u_9.png) no-repeat center center;
+  }
+}
+.u-b10{
+  background: url(../images/u_b10.png) no-repeat center center;
+  &:hover{
+    background: url(../images/u_10.png) no-repeat center center;
+  }
+}
+.zdr-jiankong{
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 17px;
+  background: url("../images/v3.0-cqzddx/zdr-jiankong1.png") no-repeat center center;
+  margin-top: -3px;
+}
+.zdr-xinxi{
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 18px;
+  background: url("../images/v3.0-cqzddx/zdr-xinxi1.png") no-repeat center center;
+  margin-top: -3px;
+}
+.zdr-guanzhu{
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 18px;
+  background: url("../images/v3.0-cqzddx/zdr-guanzhu1.png") no-repeat center center;
+  margin-top: -3px;
+}
+.gzqk-chakan{
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px !important;
+  height: 19px !important;
+  line-height: normal !important;
+  background: url("../images/v3.0-cqzddx/gzqk-chakan.png") no-repeat center center;
+  margin-top: -10px !important;
+}
+.blue-title{
+  position: relative;
+  padding-left: 10px;
+  font-size: 16px;
+  color: #333333;
+  &::before{
+    width: 4px;
+    height: 16px;
+    background: #029be5;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+  }
+}
+.mt10{
+  margin-top: 10px;
+}
+.mt15{
+  margin-top: 15px;
+}
+  /*问好提示开始*/
+.Prompt{
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: #FFD584;
+  color: #333333;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-top: 5px;
+  &:hover{
+    span{
+      display: block;
+    }
+  }
+  span{
+    display: none;
+    position: absolute;
+    padding: 5px;
+    background-color: #F7F1E5;
+    text-align: left;
+    z-index: 3;
+    &.Prompt-top{
+      width: 234px;
+      bottom: 30px;
+      transform: translateX(-47%);
+      &::after{
+        content: '';
+        position: absolute;
+        left: -6px;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border-right: 6px solid #F7F1E5;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        margin-top: -3px;
+      }
+    }
+    &.Prompt-right{
+      width: 495px;
+      left: 30px;
+      bottom: -67%;
+      &.oneline{
+        bottom: -20%;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        left: -6px;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border-right: 6px solid #F7F1E5;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        margin-top: -3px;
+      }
+    }
+    &.Prompt-left{
+      width: 180px;
+      left: -190px;
+      bottom: -210%;
+    }
+  }
+}
+ /*问好提示结束*/
+.rollHeight{
+  overflow: auto;
+}
+.rollHeight2{
+  overflow: auto;
+}
+.rollHeight3{
+  overflow: auto;
+}
+.rollHeight4{
+  overflow: auto;
+}
+  /*文件列表开始*/
+.b-fileList{
+  padding-left: 20px;
+  .down{
+    display: inline-block;
+    vertical-align: middle;
+    width: 19px;
+    height: 14px;
+    background: url("../images/zlm730_06.png") no-repeat center center;
+    margin-left: 5px;
+    &:hover{
+      background: url("../images/zlm730_03.png") no-repeat center center;
+    }
+  }
+}
+  /*文件列表结束*/
 .u-changgui{
   display: inline-block;
   vertical-align: middle;
@@ -1923,6 +2117,90 @@
     background: url("../images/icon_submit_y.png") no-repeat center center;
   }
 }
+.u-changgui2{
+  display: inline-block;
+  vertical-align: middle;
+  width: 19px !important;
+  height: 16px !important;
+  background: url("../images/icon_submit_b.png") no-repeat center center;
+  margin: -9px 5px 0 !important;
+}
+.icon-cata{
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 13px;
+  background: url("../images/v3.0-cqzddx/icon-cata.png") no-repeat center center;
+  margin-top: -3px;
+}
+.icon-pencil{
+  font-size: 17px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -12px;
+  color: #1389d0;
+  &:hover{
+    color: #ffa640;
+  }
+}
+.gray-btn{
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 8px;
+  height: 30px;
+  line-height: 30px;
+  background: -webkit-linear-gradient(top, white 0, #f7f9fc 100%);
+  background: linear-gradient(to bottom, white 0, #f7f9fc 100%);
+  border: 1px solid #d3dbe3;
+  border-radius: 2px;
+}
+.u-q2{
+  width: 18px;
+  height: 18px;
+  line-height: 20px;
+  display: inline-block;
+  color: #029be5;
+  background: url("../images/u_b11.png") no-repeat center center;
+  &:hover{
+    background: url("../images/u_11.png") no-repeat center center;
+  }
+}
+.u-q3{
+  width: 18px;
+  height: 18px;
+  line-height: 20px;
+  display: inline-block;
+  color: #029be5;
+  background: url(../images/u-q3.png) no-repeat center center;
+  &:hover {
+    background: url(../images/u-q33.png) no-repeat center center;
+  }
+}
+.tables-hover tr:hover {
+  background: #93CFF3!important;
+}
+.timeControl{
+  display: inline-block;
+  vertical-align: middle;
+  a{
+    display: block;
+    width: 15px;
+    height: 15px;
+  }
+  .fa{
+    display: block;
+    height: 5px;
+    color: #818488;
+    &.active{
+      color: #019be5;
+    }
+  }
+  .down{
+    margin-top: -5px;
+  }
+}
+/*公共部分结束*/
+/*重庆重点对象-重点人-事业人物开始*/
 .breadCrumb{
   height: 26px;
   color: #767676;
@@ -1938,6 +2216,7 @@
   .con-top{
     position: relative;
     margin-bottom: 30px;
+    min-height: 38px;
     .name{
       position: absolute;
       left: 0;
@@ -1957,7 +2236,6 @@
   border-radius: 3px;
   overflow: hidden;
   .int{
-    /*width: 535px;*/
     flex: 1;
     height: 100%;
     padding: 0 10px;
@@ -1997,6 +2275,15 @@
           color: #1389d0;
           border-bottom: 2px solid #1389d0;
         }
+        .zdr-jiankong{
+          background: url("../images/v3.0-cqzddx/zdr-jiankong2.png") no-repeat center center;
+        }
+        .zdr-xinxi{
+          background: url("../images/v3.0-cqzddx/zdr-xinxi2.png") no-repeat center center;
+        }
+        .zdr-guanzhu{
+          background: url("../images/v3.0-cqzddx/zdr-guanzhu2.png") no-repeat center center;
+        }
       }
     }
   }
@@ -2004,8 +2291,1245 @@
 .control-content{
   margin-top: 15px;
   overflow: auto;
+  border: 1px solid #d3dbe3;
 }
 .zddx-right{
   height: 100%;
 }
 /*重庆重点对象-重点人-事业人物结束*/
+/*重庆重点对象-重点人-基本信息开始*/
+.basic-content{
+  width: 100%;
+  margin-top: 15px;
+  background: white;
+  border: 1px solid #d3dbe3;
+  padding: 20px 20px 50px;
+  overflow: auto;
+  .bas-xinxi{
+    font-size: 0;
+    &>div{
+      display: inline-block;
+      vertical-align: bottom;
+      margin-right: 20px;
+    }
+    .img{
+      width: 80px;
+      height: 106px;
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .mes{
+      font-size: 14px;
+      >p{
+        margin-bottom: 7px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .bas-zuzhi{
+    .lab{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .sp{
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0 8px;
+      height: 28px;
+      line-height: 28px;
+      background: linear-gradient(to bottom,white 0,#f7f9fc 100%);
+      border: 1px solid #d3dbe3;
+      border-radius: 2px;
+    }
+  }
+  .geren{
+    color: #767676;
+  }
+  .b-fileList{
+    padding-left: 20px;
+    .down{
+      display: inline-block;
+      vertical-align: middle;
+      width: 19px;
+      height: 14px;
+      background: url("../images/zlm730_06.png") no-repeat center center;
+      margin-left: 5px;
+      &:hover{
+        background: url("../images/zlm730_03.png") no-repeat center center;
+      }
+    }
+  }
+  .wangzhan-table{
+    text-align: center;
+    th{
+      text-align: center;
+      font-weight: normal;
+      font-size: 14px;
+      color: #333333;
+    }
+    td{
+      padding: 5px;
+      .gray-sp{
+        padding: 3px 8px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #eef1f7;
+        border: 1px solid #d3dbe3;
+        color: #767676;
+      }
+    }
+    .paddingLeft{
+      padding-left: 35px;
+    }
+  }
+  .bas-qq{
+    .smallTit{
+      font-size: 14px;
+      color: #029be5;
+    }
+    .detUl{
+      margin-top: 5px;
+      font-size: 0;
+      li{
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 15px;
+        label{
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 14px;
+          color: #333333;
+        }
+        span{
+          display: inline-block;
+          vertical-align: middle;
+          padding: 0 8px;
+          height: 28px;
+          line-height: 28px;
+          min-width: 130px;
+          background: #eef1f7;
+          border: 1px solid #d3dbe3;
+          font-size: 14px;
+          color: #767676;
+        }
+      }
+    }
+    .detail{
+      margin-top: 5px;
+      span{
+        color: #767676;
+      }
+    }
+  }
+}
+/*重庆重点对象-重点人-基本信息结束*/
+/*重庆重点对象-重点人-关注情况开始*/
+
+/*重庆重点对象-重点人-关注情况结束*/
+/*重庆重点对象-重点事件详情开始*/
+.sj-xiangqing{
+  display: inline-block;
+  vertical-align: middle;
+  width: 13px;
+  height: 16px;
+  background: url("../images/v3.0-cqzddx/sj-xiangqing1.png") no-repeat center center;
+  margin-top: -3px;
+}
+.sj-xinxi{
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  background: url("../images/v3.0-cqzddx/sj-xinxi1.png") no-repeat center center;
+  margin-top: -2px;
+}
+.detail-navBox{
+  >ul{
+    font-size: 0;
+    >li{
+      display: inline-block;
+      margin-right: 50px;
+      a{
+        display: block;
+        height: 48px;
+        line-height: 48px;
+        font-size: 16px;
+        color: #8da4c4;
+      }
+      &.active{
+        a{
+          color: #1389d0;
+          border-bottom: 2px solid #1389d0;
+        }
+        .sj-xiangqing{
+          background: url("../images/v3.0-cqzddx/sj-xiangqing2.png") no-repeat center center;
+        }
+        .sj-xinxi{
+          background: url("../images/v3.0-cqzddx/sj-xinxi2.png") no-repeat center center;
+        }
+      }
+    }
+  }
+}
+.detail-rightTit{
+  .title-aright{
+    line-height: 48px;
+    .btn{
+      margin: 0;
+    }
+  }
+}
+.bottom-detailCont{
+  margin-top: 15px;
+  background: white;
+  padding: 20px;
+  border: 1px solid #d3dbe3;
+}
+.detail-table{
+  width: 80%;
+  border: 1px solid #d3dbe3;
+  tr{
+    td{
+      padding: 15px 12px;
+      border-bottom: 1px solid #d3dbe3;
+      .p2{
+        margin-top: 3px;
+        color: #767676;
+      }
+    }
+  }
+  .b-fileList{
+    margin-top: 3px;
+  }
+}
+
+.middle-control{
+  >ul{
+    height: 50px;
+    padding: 10px 20px 0;
+    >li{
+      float: left;
+      margin-right: 10px;
+      &:last-child{
+        margin-right: 0;
+      }
+      &.input_li{
+        .layut-input{
+          width: 250px;
+        }
+      }
+    }
+  }
+}
+.bottom-mesCont{
+  margin-top: 15px;
+  background: white;
+  border: 1px solid #d3dbe3;
+  .zt-ft{
+    height: 50px;
+    padding: 10px 20px 30px;
+  }
+}
+.message-table{
+  width: 100%;
+  border-top: 1px solid #d3dbe3;
+  border-bottom: 1px solid #d3dbe3;
+  tr{
+    th{
+      background: #eef1f7;
+      padding: 12px 15px;
+      font-weight: normal;
+      text-align: center;
+      border-bottom: 1px solid #d3dbe3;
+    }
+    td{
+      padding: 12px 15px;
+      text-align: center;
+      border-bottom: 1px solid #d3dbe3;
+      border-right: 1px solid #d3dbe3;
+      &.text-left{
+        text-align: left;
+      }
+    }
+  }
+}
+/*重庆重点对象-重点事件详情结束*/
+/*重庆重点对象-重点人-编辑开始*/
+.with235{
+  width: 235px !important;
+}
+.zdr-bj-box{
+  .new-editCont{
+    background: #fff;
+    height: 795px;
+    padding-top: 15px;
+    border: 1px solid #d3dbe3;
+    border-top: none;
+    .tit{
+      padding: 0 20px;
+    }
+    .g-zlm-phone{
+      padding-top: 15px;
+      .lxfs:last-child{
+        .i1{
+          display: block;
+        }
+      }
+      .lxfs{
+        margin-bottom: 40px;
+        .addNum{
+          position: absolute;
+          left: 130px;
+          top: 31px;
+          font-size: 12px;
+          color: #8ea5c3;
+        }
+        .btnbox{
+          position: absolute;
+          right: 4px;
+          top: 5px;
+          width: 42px;
+          i{
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+          }
+          .i1{
+            background: url(../images/zlm732_03.png);
+            background-repeat: no-repeat;
+            display: none;
+          }
+          .i2{
+            background: url(../images/icon_del.png);
+            background-repeat: no-repeat;
+            // display: none;
+          }
+        }
+        .bj-right{
+          display: flex;
+          .num86{
+            width: 95px;
+            font-size: 0;
+            i{
+              display: inline-block;
+              vertical-align: middle;
+              color: #767676;
+              font-size: 14px;
+            }
+            .shuzi {
+              height: 30px;
+              line-height: 28px;
+              width: 80px;
+              background: #eef1f7;
+              text-align: center;
+              border: 1px solid #D6E1E5;
+              border-radius: 2px;
+            }
+            .heng{
+              width: 15px;
+              text-align: center;
+            }
+          }
+          .u-ipt{
+            flex: 1;
+          }
+        }
+      }
+    }
+    >ul{
+      width: 80%;
+      >li.fjsc{
+        position: relative;
+        height: 100px;
+        .xs{
+          i{
+            display: inline-block;
+            width: 14px;
+            height:14px;
+            background: url(../images/zlm732_07.png);
+            cursor: pointer;
+            position:relative;
+            top: 3px;
+            margin-left: 20px;
+          }
+        }
+        .xs1{
+          position:absolute;
+          top: 53px;
+          left: 127px;
+        }
+        .xs2{
+          position:absolute;
+          top: 83px;
+          left: 127px;
+        }
+      }
+      >li{
+        margin-bottom: 28px;
+        display: flex;
+        width: 100%;
+        padding-right: 50px;
+        position: relative;
+        .btn{
+          margin: 0;
+        }
+        &.mbottom12{
+          margin-bottom: 12px;
+        }
+        &.gkjb{
+          .bj-right{
+            label{
+              margin-right: 40px;
+              cursor: pointer;
+              &:last-child{
+                margin-right: 0;
+              }
+            }
+            .iradio_flat-blue{
+              display: inline-block;
+              vertical-align: middle;
+              margin-top: -2px;
+            }
+          }
+        }
+        &.ww50{
+          width: 50%;
+        }
+        .bj-left{
+          width: 120px;
+          margin-right:10px;
+          line-height: 30px;
+          text-align: right;
+        }
+        .bj-right{
+          .l_flex;
+          .u-ipt{
+            display: inline-block;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            padding-left: 10px;
+          }
+          .imgBox{
+            display: inline-block;
+            vertical-align: bottom;
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+            img{
+              display: inline-block;
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .uploadBox{
+            margin-left: 10px;
+            display: inline-block;
+          }
+          .touxiang-p{
+            margin-top: 5px;
+            color: #8ea5c3;
+            font-size: 12px;
+          }
+
+
+          .Prompt{
+            display: inline-block;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            background-color: #FFD584;
+            color: #333333;
+            line-height: 20px;
+            text-align: center;
+            border-radius: 50%;
+            margin-left: 10px;
+            margin-top: 5px;
+            &:hover{
+              span{
+                display: block;
+              }
+            }
+            span{
+              display: none;
+              position: absolute;
+              padding: 5px;
+              background-color: #F7F1E5;
+              text-align: left;
+              z-index: 3;
+              &.Prompt-top{
+                width: 234px;
+                bottom: 30px;
+                transform: translateX(-47%);
+              }
+              &.Prompt-right{
+                width: 495px;
+                left: 30px;
+                bottom: -67%;
+                &.oneline{
+                  bottom: -20%;
+                }
+                &::after{
+                  content: '';
+                  position: absolute;
+                  left: -6px;
+                  top: 50%;
+                  width: 0;
+                  height: 0;
+                  border-right: 6px solid #F7F1E5;
+                  border-top: 5px solid transparent;
+                  border-bottom: 5px solid transparent;
+                  margin-top: -3px;
+                }
+              }
+              &.Prompt-left{
+                width: 180px;
+                left: -190px;
+                bottom: -210%;
+              }
+            }
+          }
+
+
+          .option-ul{
+            display: inline-block;
+            margin-left: 15px;
+            li{
+              position: relative;
+              margin-right: 10px;
+              padding: 4px 10px;
+              border: 1px solid #d3dbe3;
+              border-radius: 2px;
+              color: #333;
+              min-width: 60px;
+              text-align: center;
+              display: inline-block;
+              background: #fff;
+              i{
+                position: absolute;
+                right: -5px;
+                top: -5px;
+                width: 14px;
+                height: 14px;
+                line-height: 14px;
+                text-align: center;
+                color: #fff;
+                border-radius: 50%;
+                background: #f56969;
+                display: inline-block;
+                cursor: pointer;
+              }
+            }
+          }
+
+          .bj_add{
+            width: 60px;
+            height: 30px;
+            background-color: #1389D0;
+            background-image: url(../images/cqdnk/icon_bjadd.png);
+            background-repeat: no-repeat;
+            // background-size: contain;
+            background-position: center center;
+          }
+
+
+
+          .site_detection{
+            >li{
+              margin-bottom: 10px;
+              font-size: 0;
+              &:last-child{
+                margin-bottom: 0;
+              }
+              >div,>label{
+                margin-right: 0px;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 14px;
+              }
+              >label{
+                input{
+                  padding-left: 10px;
+                }
+                .w190{
+                  width: 180px;
+
+                }
+                .w440{
+                  width: 440px;
+
+                }
+                .w310{
+                  width: 310px;
+                }
+              }
+              .del-input{
+                position: relative;
+                i{
+                  position: absolute;
+                  right: -5px;
+                  top: -5px;
+                  width: 14px;
+                  height: 14px;
+                  line-height: 14px;
+                  text-align: center;
+                  color: #fff;
+                  border-radius: 50%;
+                  background: #f56969;
+                  display: inline-block;
+                  cursor: pointer;
+                }
+              }
+              .grayBg{
+                .dropdown-toggle{
+                  background: #eef1f7;
+                  border-right: none !important;
+                  .caret{
+                    color: #8ea5c3;
+                  }
+                }
+              }
+              .wangzhan{
+                display: inline-block;
+                vertical-align: middle;
+                min-width: 80px;
+                background: #eef1f7;
+                height: 30px;
+                line-height: 30px;
+                border-top: 1px solid #D6E1E5;
+                border-bottom: 1px solid #D6E1E5;
+                padding: 0 10px;
+                text-align: center;
+              }
+            }
+          }
+
+
+
+        }
+      }
+    }
+
+    input{
+      border: 1px solid #D6E1E5;
+      border-radius: 2px;
+      &::placeholder{
+        color: #8ea5c3;
+      }
+    }
+    .tArea{
+      color: #333333;
+      &::placeholder{
+        color: #8ea5c3;
+      }
+    }
+
+  }
+}
+@media screen and (max-width: 1650px){
+  .zdr-bj-box {
+    .new-editCont {
+      >ul{
+        width: 90%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1350px){
+  .zdr-bj-box {
+    .new-editCont {
+      >ul{
+        width: 98%;
+      }
+    }
+  }
+}
+/*重庆重点对象-重点人-编辑结束*/
+/*重庆重点对象-关注情况编辑开始*/
+.zdr-bj-box{
+  .attention-cont{
+    border: 1px solid #d3dbe3;
+    border-top: none;
+    padding-top: 0;
+    .navWrap{
+      padding: 0 20px;
+      .detail-navBox{
+        border-bottom: 1px dashed #d3dbe3;
+      }
+    }
+    >ul{
+      width: 80%;
+      padding: 25px 0 0;
+      >li{
+        margin-bottom: 28px;
+        padding-right: 50px;
+        .invo-all{
+          background: white;
+          max-width: 325px;
+          .u-pd {
+            overflow: auto !important;
+          }
+        }
+      }
+    }
+    .g-upload-wrap{
+      .uploadFile-icon{
+        display: inline-block;
+        width: 98px;
+        height: 30px;
+        background: url(../images/v3.0-cqzddx/icon-uploadFile.png) no-repeat -1px -1px;
+      }
+    }
+    .gray-tip{
+      padding-top: 7px;
+      font-size: 12px;
+      color: #8ea5c3;
+    }
+  }
+}
+@media screen and (max-width: 1650px){
+  .zdr-bj-box {
+    .attention-cont {
+      >ul{
+        width: 90%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1350px){
+  .zdr-bj-box {
+    .attention-cont {
+      >ul{
+        width: 98%;
+      }
+    }
+  }
+}
+ /*事件信息*/
+.attention-edit2{
+  margin-top: 0;
+  border-top: none;
+  .navWrap{
+    padding: 0 20px;
+    .detail-navBox{
+      border-bottom: 1px dashed #d3dbe3;
+    }
+  }
+  .blueA{
+    color: #1389d0;
+  }
+  .att-dele{
+    margin-left: 10px;
+  }
+  .att-sure{
+    display: none;
+  }
+}
+.borderBot{
+  border: none;
+  border-bottom: 1px solid #d3dbe3;
+}
+/*重庆重点对象-关注情况编辑结束*/
+/*重庆重点对象-重点人-监控情况-微博开始*/
+  /* 数据可视图文beta1.0 start*/
+.tu_con{
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url('../images/js/tu_tengxun.png') no-repeat center center;
+  vertical-align: middle;
+  margin-right: 2px;
+}
+.data-list{
+  background-color: #fff;
+  border-bottom: 1px solid #d3dbe3;
+  border-top: 1px solid #d3dbe3;
+  >li{
+    border-top: 1px solid #d3dbe3;
+    padding: 18px 20px 22px;
+    position: relative;
+    &:hover{
+      .handle-box{
+        display: block;
+      }
+    }
+    &:first-child{
+      border-top: none;
+    }
+    .data-list-right{
+      margin-left: 32px;
+    }
+    .data-list-right-top{
+      height: 24px;
+      .flex();
+    }
+    .data-list-right-top-l{
+      display: inline-block;
+    }
+    .data-list-right-top-md{
+      font-size: 16px;
+      line-height: 22px;
+      display: inline-block;
+      font-weight: bold;
+      .txt();
+      .l_flex();
+      &:hover{
+        color:#333;
+      }
+    }
+    .data-list-right-con{
+      margin-top: 5px;
+      .flex();
+      .data-list-img{
+        width: 100px;
+        height: 60px;
+        margin-right: 10px;
+      }
+      .data-list-main{
+        .l_flex();
+      }
+      .data-list-main-cont{
+        display: inline-block;
+        color:#767676;
+        line-height: 16px;
+        height: 32px;
+        margin: 7px 0;
+        .txtmore(2);
+      }
+      .data-list-main-foot{
+        color:#8ea5c3;
+        font-size: 12px;
+        .data-source{
+          color:#029be5;
+          position: relative;
+          i{
+            margin-right: 5px;
+            &.fa-weibo{
+              color:#f65757;
+            }
+            &.fa-weixin{
+              color:#01b90d;
+            }
+          }
+          &:hover{
+            .monitor-box{
+              display: inline-block;
+            }
+          }
+        }
+        .conform-btn,.before-link{
+          color:#8ea5c3;
+        }
+        .conform-btn{
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+.tag-label{
+  display: inline-block;
+  border-radius:1px;
+  line-height: 16px;
+  font-size: 12px;
+  padding:0 3px;
+  vertical-align: text-bottom;
+  margin-right: 5px;
+}
+.tag-red{
+  color:#f65757;
+  border: 1px solid #f65757;
+}
+.tag-orange{
+  color:#ffa640;
+  border: 1px solid #ffa640;
+}
+.handle-box{
+  display: none;
+  .handle-list{
+    border: none;
+    li{
+      float: left;
+      padding: 0 5px;
+      border: none;
+    }
+  }
+}
+.before-link{
+  text-decoration:underline;
+}
+.btn-blue{
+  display: inline-block;
+  background-color: #fff;
+  width: 65px;
+  line-height: 22px;
+  text-align: center;
+  font-size: 12px;
+  border: 1px solid #d6e1e5;
+  border-radius:1px;
+  &:hover,&.active{
+    color:#fff;
+    background-color: #029be5;
+    border-color: #029be5;
+  }
+}
+.monitor-box{
+  display: none;
+  position: absolute;
+  top: -35px;
+  left: 10px;
+  padding-bottom: 6px;
+  .monitor{
+    display: inline-block;
+    color:#fff;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius:3px;
+    line-height: 28px;
+    padding:0 10px;
+    &:after{
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid rgba(0, 0, 0, 0.75);
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+    &.monitor-be{
+      width: 80px;
+    }
+    &.monitor-af{
+      width: 56px;
+    }
+  }
+}
+.keyword-list{
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+  li{
+    float: left;
+    margin-left: 5px;
+    &:first-child{
+      margin-left: 0;
+    }
+    a{
+      display: inline-block;
+      color:#ffa640;
+      border: 1px solid #ffa640;
+      border-radius:15px;
+      line-height: 14px;
+      padding:0 5px;
+      background-color: rgba(255,166,64,0.1);
+    }
+  }
+}
+  /* 数据可视图文beta1.0 end*/
+/*重庆重点对象-重点人-监控情况-微博结束*/
+/*重庆重点对象-重点阵地-微博开始*/
+.u-b2 {
+  background: url(../images/u_b2.png) no-repeat center center;
+}
+/*重庆重点对象-重点阵地-微博结束*/
+/*重庆重点对象-重点阵地-目录管理开始*/
+.catalog-top{
+  .gray-btn{
+    position: absolute;
+    right: 0;
+    top: 4px;
+  }
+}
+.addTeam{
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: #e5eef6;
+  border: 1px solid #d3dbe3;
+  border-top: none;
+  text-align: center;
+}
+.addTeam-btn{
+  color: #029be5;
+  font-weight: bold;
+  .add{
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 28px;
+  }
+}
+
+.g-zlm-zdrfzgg{
+  .modal-body{
+    ul{
+      li{
+        margin-bottom: 12px;
+        textarea{
+          vertical-align:top;
+          width: 494px;
+        }
+        span{
+          display: inline-block;
+          width:284px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+}
+
+.addModal{
+  .modal-content{
+    width: 600px;
+  }
+  .addUl{
+    padding: 20px 20px 0;
+    li{
+      display: flex;
+      margin-bottom: 20px;
+      .sp{
+        width: 85px;
+      }
+      .int{
+        flex: 1;
+        display: inline-block;
+        vertical-align: middle;
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid #d6e1e5;
+        padding: 0 12px;
+        &::placeholder{
+          color: #8ea5c3;
+        }
+      }
+      .tArea{
+        flex: 1;
+        height: 60px;
+        border: 1px solid #d6e1e5;
+        padding: 2px 12px;
+        &::placeholder{
+          color: #8ea5c3;
+        }
+      }
+    }
+  }
+}
+/*重庆重点对象-重点阵地-目录管理结束*/
+/*重庆重点对象-重点阵地-添加分组开始*/
+.addTeam-nav{
+  .con-top{
+    margin-bottom: 15px;
+  }
+}
+.s-int{
+  display: inline-block;
+  vertical-align: middle;
+  width: 395px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #D6E1E5;
+  border-radius: 2px;
+  padding: 0 10px;
+  &::placeholder{
+    color: #8ea5c3;
+  }
+}
+.addTeam-ul{
+  li{
+    float: left;
+    margin-right: 25px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+.addTeam-content{
+  padding: 20px;
+}
+.blueColor-title{
+  font-size: 16px;
+  color: #1389d0;
+}
+  /*标签目录开始*/
+.g-font-blue {
+  color: #1389d0;
+}
+.modal-dialog.g-area{
+  width: 720px;
+  margin: 10% auto 0 auto;
+}
+.g-source-dialog{
+  display: block;
+  margin-top: 10px;
+}
+.g-nvolving-c{
+  width: 100%;
+  display: flex;
+}
+.g-nvolving-content{
+  flex: 1;
+  height: 300px;
+  border-radius: 2px;
+  border: 1px solid #d6e1e5;
+  padding: 10px;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.mr10{
+  margin-right: 10px;
+}
+.mb10{
+  margin-bottom: 10px;
+}
+.g-involving-tag{
+  display: inline-block;
+  border-radius: 2px;
+  border: 1px solid #d3dbe3;
+  margin-right: 12px;
+  margin-bottom: 10px;
+  position: relative;
+  padding: 3px 18px;
+  cursor: pointer;
+  color: #333;
+  .g-icon-del-tag{
+    display: inline-block;
+    position: absolute;
+    cursor: pointer;
+    background: url(../images/icon-del-tag.png) no-repeat;
+    width: 14px;
+    height: 14px;
+    right: -7px;
+    top: -7px;
+  }
+}
+.borderRight{
+  border-right: none;
+}
+.treeWrap{
+  margin-top: 5px;
+  width: 80%;
+  .jstree-default > .jstree-container-ul > .jstree-node{
+    padding: 0;
+  }
+}
+  /*标签目录结束*/
+.ad-footBtn{
+  width: 80%;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0;
+}
+.ad-blueBtn{
+  display: inline-block;
+  vertical-align: middle;
+  background: #1389d0;
+  padding: 0 30px;
+  color: #fff;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 5px;
+  border-radius: 4px;
+  font-size: 16px;
+  &:hover{
+    color: white;
+  }
+}
+/*重庆重点对象-重点阵地-添加分组结束*/
+/*重庆重点对象-重点阵地-微信开始*/
+.wx-grayTip{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4px;
+  margin-top: -2px;
+  .icon-tip{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    border: 1px solid #353636;
+    border-radius: 50%;
+    color: #797b7f;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .tip-cont{
+    position: absolute;
+    left: 50%;
+    margin-left: -130px;
+    top: -35px;
+    width: 260px;
+    padding: 5px 8px;
+    background: #eaf0f2;
+    font-weight: normal;
+    color: #556482;
+    font-size: 12px;
+    display: none;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 50%;
+      margin-left: -5px;
+      bottom: -5px;
+      width: 0;
+      height: 0;
+      border-top: 6px solid #eaf0f2;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+    }
+  }
+  &:hover{
+    .tip-cont{
+      display: block;
+    }
+  }
+}
+/*重庆重点对象-重点阵地-微信结束*/
+/*重庆重点对象-重点事件-分组管理开始*/
+.zddx-group {
+  .zddx-right-box{
+    .teamManage-cont{
+      padding: 0;
+      .group-tab{
+        td{
+          padding: 0 10px;
+          .icon-pencil{
+            vertical-align: middle;
+            margin-top: -10px;
+          }
+        }
+        .icon-wrap{
+          a{
+            margin: 0 5px;
+          }
+        }
+      }
+    }
+  }
+}
+/*重庆重点对象-重点事件-分组管理结束*/
+/*重庆重点对象-编辑重点事件开始*/
+
+/*重庆重点对象-编辑重点事件结束*/
+

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>重庆重点对象-重点人-分组管理 - ejs-demo</title>
+<meta name="renderer" content="webkit">
+
+<link rel="stylesheet" href="../css/custom-bootstrap.css">
+<link rel="stylesheet" href="../libs/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../libs/icheck/flat/_all.css">
+<link rel="stylesheet" href="../libs/datetimepicker/jquery.datetimepicker.min.css">
+<link rel="stylesheet" href="../css/ui-paging-container.css">
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/table.css">
+
+<link rel="stylesheet" href="../css/cq_zddx.css">
+
+
+<!--[if lt IE 9]>
+  <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="header">
+    <div class="nav">
+        <ul class="clearfix">
+            <li class="">
+                <a href="#">全局分析<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class=""><a href="index.html">全局分析</a></li>
+                    <li class=""><a href="涉华舆情.html">涉华舆情</a></li>
+                    <li class=""><a href="国内舆情.html">国内舆情</a></li>
+                    <li class=""><a href="本地舆情.html">本地舆情</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="#">关注点<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class=""><a href="关注点0.html">关注点</a></li>
+                    <li class=""><a href="新版关注点.html">新版关注点</a></li>
+                    <li class=""><a href="关注点-无锡.html">关注点-无锡</a></li>
+                    <li class=""><a href="浙江首页.html">关注点-浙江</a></li>
+                </ul>
+            </li>
+            <li class=""><a href="热点排行.html">热敏</a></li>
+            <li class="">
+                <a href="#">重点监控<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class=""><a href="重点监控.html">重点监控</a></li>
+                    <li class="active"><a href="重点人.html">重点人浅色导航</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="#">舆情分析<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class=""><a href="舆情分析-新闻传播分析.html">新闻传播分析</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="#">舆情简报<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class=""><a href="素材库.html">素材库</a></li>
+                    <li class=""><a href="简报库.html">简报库</a></li>
+                    <li class=""><a href="模板管理.html">模板管理</a></li>
+                    <li class=""><a href="自定义模板.html">自定义模板</a></li>
+                    <li class=""><a href="创建简报.html">创建简报</a></li>
+                    <li class=""><a href="模板预览.html">模板预览</a></li>
+                </ul>
+            </li>
+            <li class=""><a href="巡查.html">巡查</a></li>
+            <li class="">
+                <a href="#">重点对象<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class=""><a href="重点对象-网站.html">网站</a></li>
+                    <li class=""><a href="重点对象-微博.html">微博</a></li>
+                    <li class=""><a href="重点对象-微博0.html">新微博</a></li>
+                    <li class=""><a href="重点对象-微信.html">微信</a></li>
+                    <li class=""><a href="重点对象-巡查.html">巡查</a></li>
+                     <li class=""><a href="重点对象4.0-网站.html">重点对象4.0-网站</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="#">重点对象4.0<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class=""><a href="重点对象4.0-首页.html">网站</a></li>
+                    <li class=""><a href="重点对象4.0-首页.html">微博</a></li>
+                    <li class=""><a href="重点对象4.0-首页.html">公众号</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="###">预警<i class="fa fa-caret-down"></i></a>
+                <ul>
+                    <li class=""><a href="预警.html">预警</a></li>
+                    <li class=""><a href="预警主页.html">预警2.1</a></li>
+                    <li class=""><a href="个人信息2.1.html">个人信息</a></li>
+                    <li><a href="预警范围管理.html">预警范围管理</a></li>
+                    <li><a href="预警-有害信息配置页.html">有害信息配置</a></li>
+                    <li><a href="预警-热点排行配置页.html">热敏排行配置</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="#">境外浏览<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class=""><a href="境外浏览.html">境外浏览</a></li>
+                    <li class=""><a href="新版境外浏览.html">新版境外浏览</a></li>
+                </ul>
+            </li>
+            <li class=""><a href="影响力分析.html">影响力分析</a></li>
+            <li class="">
+                <a href="#">专题分析<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class=""><a href="案例-案例概况.html">专题old</a></li>
+                    <li class=""><a href="专题分析.html">专题分析</a></li>
+                    <li class=""><a href="新版专题分析.html">新版专题分析</a></li>
+                    <li class=""><a href="新版专题分析报告.html">新版专题分析报告</a></li>
+                    <li class=""><a href="快速分析.html">快速分析</a></li>
+                    <li class=""><a href="专题分析4.0.html">快速分析4.0</a></li>
+                    <li class=""><a href="专题分析-山西.html">专题分析-山西</a></li>
+                    <li class=""><a href="专题分析4.1.html">专题分析4.1</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="#">检索<i class="fa fa-caret-down "></i></a>
+                <ul>
+
+                    <li class=""><a href="新版检索-本地检索-微博博主.html">新版检索2</a></li>
+                    <li class=""><a href="检索.html">检索old</a></li>
+                    <li class=""><a href="检索8.html">检索</a></li>
+                    <li class=""><a href="检索new.html">检索new</a></li>
+                    <li class=""><a href="新版检索.html">检索3.0</a></li>
+                    <li class=""><a href="检索4.0.html">检索4.0</a></li>
+                    <li class=""><a href="检索4.1.html">检索4.1</a></li>
+                    <li class=""><a href="中萱检索-元搜索-微博博主.html">中萱检索</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="#">专题监控<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class=""><a href="专题监控.html">专题监控</a></li>
+                    <li class=""><a href="新版专题监控.html">专题监控3.0</a></li>
+                    <li class=""><a href="新版专题监控-中部导航.html">新版专题监控-中部导航</a></li>
+                    <li class=""><a href="专题监控4.0.html">专题监控4.0</a></li>
+                    <li class=""><a href="专题监控-无锡.html">专题监控-无锡</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="#">有害信息<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class=""><a href="有害信息.html">有害信息</a></li>
+                    <li class=""><a href="有害信息v1.2.html">有害信息v1.2</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="#">分类查看<i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class=""><a href="分类查看.html">分类查看1</a></li>
+                    <li class=""><a href="#">分类查看2</a></li>
+                </ul>
+            </li>
+            <li class=""><a href="上报下发.html">上报下发</a></li>
+            <li class=""><a href="X-收到的指令.html">X管理平台</a></li>
+            <li class="">
+                <a href="javascript:;">全网热点 <i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class=""><a href="全网热点.html">全网热点</a></li>
+                    <li class=""><a href="全网热点-新版.html">全网热点2.0</a></li>
+                </ul>
+            </li>
+            <li class=""><a href="数据工具.html">数据工具</a></li>
+            <li class=""><a href="新闻微博列表.html">新闻微博列表</a></li>
+            <li class="">
+                <a href="javascript:;">分析报告 <i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class=""><a href="舆情分析-微博博主分析.html">博主分析</a></li>
+                    <li class=""><a href="舆情分析-微博传播分析.html">微博传播分析</a></li>
+                    <li class=""><a href="舆情分析-微信公众号分析.html">微信公众号分析</a></li>
+                     <li class=""><a href="微信文章分析.html">微信文章分析</a></li>
+                     <li class=""><a href="综合传播分析.html">综合传播分析</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="javascript:;">宜昌推送 <i class="fa fa-caret-down "></i></a>
+                <ul>
+                    <li class=""><a href="宜昌推送-首页.html">首页</a></li>
+                    <li class=""><a href="宜昌推送-推送信息库.html">推送信息库</a></li>
+                </ul>
+            </li>
+            <li class="more"><a href="#"><span></span></a></li>
+        </ul>
+    </div>
+    <div class="logo">
+        <h1>
+            <span class="logo-btn pull-left"></span>
+            <a href="index.html" class="pull-left"></a>
+        </h1>
+    </div>
+    <div class="set">
+        <div class="search">
+            <input type="text" placeholder="搜索">
+            <span class="search-btn"><i class="fa fa-search"></i></span>
+        </div>
+        <div><a href="消息提醒.html"><i class="fa fa-bell"></i></a></div>
+        <div><a href="系统属地.html"><i class="fa fa-cog"></i></a></div>
+        <div class="user">
+            <a class="user-name" href="javascript:;">第一个用户</a>
+            <a href="javascript:;"><i class="fa fa-caret-down"></i></a>
+            <div class="user-box bgw">
+                <ul class="user-box-list">
+                    <li>
+                        <a href="个人信息.html"><i class="fa fa-user"></i>个人信息</a>
+                    </li>
+                    <li>
+                        <a href="login.html"><i class="fa fa-sign-out"></i>退出登录</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="nav2">
+    <ul class="clearfix">
+    </ul>
+</div>
+
+	<div class="content case cqzdr">
+        
+<div class="zddx_nav_box">
+    <div class="zddx-left">
+        <div class="left-top">
+            <div class="top-search-box">
+                <input type="text" placeholder="搜索"/>
+                <a href="javascript:;"><i class="fa fa-search"></i></a>
+            </div>
+        </div>
+        <ul class="herf-btn clearfix">
+            <li><a href="../html/重庆重点对象-重点人-分组管理.html"><i class="fa fa-users"></i>组织管理</a></li>
+            <li><a href="./重庆重点对象-重点人-编辑.html"><i class="fa fa-plus"></i>添加重点人</a></li>
+        </ul>
+        <div class="list-box">
+            <ul class="plista">
+                <li class="active">
+                    <a href="###" class="fz16">
+                        事业人物
+                        <i class="fa fa-caret-down pull-right"></i>  
+                    </a>
+                    <div class="operate-sj-box pull-right">
+                            <i class="fa fa-ellipsis-v"></i>
+                        <ul class="operate-btna clearfix">
+                                <li><a href="../html/重庆重点对象-重点人-事业人物.html"><i class="fa fa-pencil"></i>编辑</a></li>
+                                <li><a href="###"><i class="fa fa-times"></i>删除</a></li>
+                        </ul>
+                    </div>
+                    <ul class="clist">
+                        <li>
+                            <a href="../html/重庆重点对象-重点人-事业人物.html">
+                                <i class="fa fa-user-o"></i>
+                                <span>马云</span>
+                            </a>
+                            <div class="operate-box">
+                                <em class="operate-morea pull-right"><i class="fa fa-ellipsis-v"></i></em>
+                                <ul class="operate-btn clearfix">
+                                    <li><a href="../html/重庆重点对象-重点人-编辑.html"><i class="fa fa-pencil"></i>编辑</a></li>
+                                    <li><a href="###"><i class="fa fa-times"></i>删除</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="../html/重庆重点对象-重点人-事业人物.html">
+                                <i class="fa fa-user-o"></i>
+                                <span>王健林</span>
+                            </a>
+                            <div class="operate-box">
+                                <em class="operate-morea pull-right"><i class="fa fa-ellipsis-v"></i></em>
+                                <ul class="operate-btn clearfix">
+                                    <li><a href="../html/重庆重点对象-重点人-编辑.html"><i class="fa fa-pencil"></i>编辑</a></li>
+                                    <li><a href="###"><i class="fa fa-times"></i>删除</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="###" class="fz16">组织1<i class="fa fa-caret-right pull-right"></i></a>
+                    <div class="operate-sj-box pull-right">
+                            <i class="fa fa-ellipsis-v"></i>
+                        <ul class="operate-btna clearfix">
+                                <li><a href="../html/重庆重点对象-重点人-编辑.html"><i class="fa fa-pencil"></i>编辑</a></li>
+                                <li><a href="###"><i class="fa fa-times"></i>删除</a></li>
+                        </ul>
+                    </div>
+                    <ul class="clist">
+                        <li>
+                            <a href="../html/重庆重点对象-重点人-事业人物.html">
+                                <i class="fa fa-user-o"></i>
+                                <span>马化腾</span>
+                            </a>
+                            <div class="operate-box">
+                                <em class="operate-morea pull-right"><i class="fa fa-ellipsis-v"></i></em>
+                                <ul class="operate-btn clearfix">
+                                    <li><a href="../html/重庆重点对象-重点人-编辑.html"><i class="fa fa-pencil"></i>编辑</a></li>
+                                    <li><a href="###"><i class="fa fa-times"></i>删除</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="###" class="fz16">组织2<i class="fa fa-caret-right pull-right"></i></a>
+                    <div class="operate-sj-box pull-right">
+                            <i class="fa fa-ellipsis-v"></i>
+                        <ul class="operate-btna clearfix">
+                                <li><a href="../html/重庆重点对象-重点人-编辑.html"><i class="fa fa-pencil"></i>编辑</a></li>
+                                <li><a href="###"><i class="fa fa-times"></i>删除</a></li>
+                        </ul>
+                    </div>
+                    <ul class="clist">
+                        <li>
+                            < <a href="../html/重庆重点对象-重点人-事业人物.html">
+                                <i class="fa fa-user-o"></i>
+                                <span>贾跃亭</span>
+                            </a>
+                            <div class="operate-box">
+                                <em class="operate-morea pull-right"><i class="fa fa-ellipsis-v"></i></em>
+                                <ul class="operate-btn clearfix">
+                                     <li><a href="../html/重庆重点对象-重点人-编辑.html"><i class="fa fa-pencil"></i>编辑</a></li>
+                                    <li><a href="###"><i class="fa fa-times"></i>删除</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="../html/重庆重点对象-重点人-事业人物.html">
+                                <i class="fa fa-user-o"></i>
+                                <span>马化腾</span>
+                            </a>
+                            <div class="operate-box">
+                                <em class="operate-morea pull-right"><i class="fa fa-ellipsis-v"></i></em>
+                                <ul class="operate-btn clearfix">
+                                     <li><a href="../html/重庆重点对象-重点人-编辑.html"><i class="fa fa-pencil"></i>编辑</a></li>
+                                    <li><a href="###"><i class="fa fa-times"></i>删除</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="###">
+                                <i class="fa fa-user-o"></i>
+                                <span>马云</span>
+                            </a>
+                            <div class="operate-box">
+                                <em class="operate-morea pull-right"><i class="fa fa-ellipsis-v"></i></em>
+                                <ul class="operate-btn clearfix">
+                                     <li><a href="../html/重庆重点对象-重点人-编辑.html"><i class="fa fa-pencil"></i>编辑</a></li>
+                                    <li><a href="###"><i class="fa fa-times"></i>删除</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="###" class="fz16">组织3<i class="fa fa-caret-right pull-right"></i></a>
+                    <div class="operate-sj-box pull-right">
+                            <i class="fa fa-ellipsis-v"></i>
+                        <ul class="operate-btna clearfix">
+                                <li><a href="../html/重庆重点对象-重点人-编辑.html"><i class="fa fa-pencil"></i>编辑</a></li>
+                                <li><a href="###"><i class="fa fa-times"></i>删除</a></li>
+                        </ul>
+                    </div>
+                    <ul class="clist">
+                        <li>
+                            <a href="../html/重庆重点对象-重点人-事业人物.html">
+                                <i class="fa fa-user-o"></i>
+                                <span>王健林</span>
+                            </a>
+                            <div class="operate-box">
+                                <em class="operate-morea pull-right"><i class="fa fa-ellipsis-v"></i></em>
+                                <ul class="operate-btn clearfix">
+                                     <li><a href="../html/重庆重点对象-重点人-编辑.html"><i class="fa fa-pencil"></i>编辑</a></li>
+                                    <li><a href="###"><i class="fa fa-times"></i>删除</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="../html/重庆重点对象-重点人-事业人物.html">
+                                <i class="fa fa-user-o"></i>
+                                <span>贾跃亭</span>
+                            </a>
+                            <div class="operate-box">
+                                <em class="operate-morea pull-right"><i class="fa fa-ellipsis-v"></i></em>
+                                <ul class="operate-btn clearfix">
+                                     <li><a href="../html/重庆重点对象-重点人-编辑.html"><i class="fa fa-pencil"></i>编辑</a></li>
+                                    <li><a href="###"><i class="fa fa-times"></i>删除</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="../html/重庆重点对象-重点人-事业人物.html">
+                                <i class="fa fa-user-o"></i>
+                                <span>马云</span>
+                            </a>
+                            <div class="operate-box">
+                                <em class="operate-morea pull-right"><i class="fa fa-ellipsis-v"></i></em>
+                                <ul class="operate-btn clearfix">
+                                     <li><a href="../html/重庆重点对象-重点人-编辑.html"><i class="fa fa-pencil"></i>编辑</a></li>
+                                    <li><a href="###"><i class="fa fa-times"></i>删除</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="leftnavbar leftnavbar1 menu-box">
+        <div class="navtop">
+            <div class="menu"><i class="fa fa-navicon"></i></div>
+        </div>
+        <div class="nicescroll">
+            <ul class="menu-li">
+                <li class="">
+                        <a href="../html/重庆重点对象-重点关系图.html">
+                        <div><img src="../images/cqdnk/guanxi.png" alt=""></div>
+                        <em class="fz16">重点关系网</em>
+                    </a>
+                </li>
+                <li class="active">
+                        <a href="../html/重庆重点对象-重点人-事业人物.html">
+                        <div><img src="../images/cqdnk/guanzhu.png" alt=""></div>
+                        <em class="fz16">重点人</em>
+                    </a>
+                </li>
+                <li class="  zdzd-nav">
+                    <a href="javascript:;">
+                        <div><img src="../images/cqdnk/mudidi.png" alt=""></div>
+                        <em class="fz16">重点阵地</em>
+                    </a>
+                        <ul class="li-menu-li">
+                            <li style="border-radius: 0 3px 0 0;">
+                                <a href="../html/重庆重点对象-重点阵地-网站2.html">
+                                    <div><img src="../images/glm-wz.png" alt=""></div>
+                                    <p class="fz12" style="display: inline-block;margin-left:8px;">网站</p>
+                                </a>
+                            </li>
+                            <li>
+                                 <a href="../html/重庆重点对象-重点阵地-微博.html">
+                                    <div style="position: relative;left: -3px;"><img src="../images/zlm-wb.png" alt=""></div>
+                                    <p class="fz12" style="display: inline-block">微博</p>
+                                </a>
+                            </li>
+                            <li style="border-radius: 0 0 3px 0;">
+                                 <a href="../html/重庆重点对象-重点阵地-微信.html">
+                                    <div><img src="../images/zlm-wx.png" alt=""></div>
+                                    <p class="fz12" style="display: inline-block;margin-left:6px;">微信</p>
+                                </a>
+                                 <div class="zm-triangle1" style="position:absolute;top:44px;left:-6px;"></div>
+                            </li>       
+                        </ul>
+                </li>
+                <li class="">
+                        <a href="../html/重庆重点对象-重点事件.html">
+                        <div><img src="../images/cqdnk/shijian.png" alt=""></div>
+                        <em class="fz16">重点事件</em>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+		<div class="zddx-right zddx-undertakings">
+            <div class="zddx-right-box">
+				<div class="breadCrumb">
+					<a href="#">重点人</a>/
+					<a href="#">监控情况</a>
+				</div>
+				<div class="control-nav">
+					<div class="con-top">
+						<p class="name">王健林</p>
+						<div class="co-searchBox">
+							<input class="int" type="text" placeholder="请输入"/>
+							<a class="aBtn" href="#">检索</a>
+						</div>
+					</div>
+					<div class="con-navBox">
+						<ul>
+							<li class="active">
+								<a href="重庆重点对象-重点人-事业人物.html">
+									<i class="zdr-jiankong"></i>
+									监控情况
+								</a>
+							</li>
+							<li>
+								<a href="重庆重点对象-重点人-基本信息.html">
+									<i class="zdr-xinxi"></i>
+									基本信息
+								</a>
+							</li>
+							<li>
+								<a href="重庆重点对象-重点人-关注情况.html">
+									<i class="zdr-guanzhu"></i>
+									关注情况
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+	            <div class="zddx-undertakings-cont control-content rollHeight">
+					<div class="undertakings-title">
+						<ul class="clearfix">
+							<li>	
+								信源类型:
+									<div class="dropdown">
+										<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #757575">网站 <span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><a href="javascript:;">网站</a></li>
+											<li><a href="javascript:;">微博</a></li>
+											<li><a href="javascript:;">论坛</a></li>
+											<li><a href="javascript:;">贴吧</a></li>
+											<li><a href="javascript:;">公众号</a></li>
+										</ul>
+								</div>
+							</li>
+							<li>
+								<div class="dropdown">
+										<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #757575">时间倒序<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><a href="javascript:;">时间倒序</a></li>
+											<li><a href="javascript:;">时间顺序</a></li>
+										
+										</ul>
+								</div>
+							</li>
+							<li>
+								<div class="dropdown">
+										<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #757575">近七天 <span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><a href="javascript:;">近七天</a></li>
+											<li><a href="javascript:;">近一个月</a></li>
+										</ul>
+								</div>
+							</li>
+							<li >
+								<div class="layout-data">
+										<input id="d01" class="u-data" type="text" onclick="DatePicker.dateId1()" placeholder="选择日期" readonly="">至<input id="d02" class="u-data" type="text" onclick="DatePicker.dateId2()" placeholder="选择日期" readonly="">
+								</div>
+									
+							</li>
+						</ul>
+					</div>
+					<div class="undertakings-tab">
+						<div class="control-weibo">
+							<ul class="data-list">
+								<li>
+									<div class="data-list-left pull-left"><input type="checkbox"></div>
+									<div class="data-list-right">
+										<div class="data-list-right-top">
+											<div class="data-list-right-top-l">
+												<span class="tag-label tag-red">疑似负面</span>
+											</div>
+											<a href="javascript:;" class="data-list-right-top-md">俄世界杯主办城市<em class="red">酒店</em>受炸弹威胁 人员被紧急疏散</a>
+											<div class="handle-box">
+												<ul class="handle-list clearfix">
+													<li><a href="javascript:;" class="btn-blue">检索</a></li>
+													<li><a href="javascript:;" class="btn-blue">报送</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="data-list-right-con clearfix">
+											<img class="data-list-img" src="../images/bg-1.png" alt="">
+											<div class="data-list-main">
+												<a href="javascript:;" class="data-list-main-cont">受访专家学者一致认为，<em class="red">习近平</em>总书记高瞻远瞩、居安思危，充分展现出新时代中对于上述事件，新华社厦门9月5日电（记者受访专家学者一致认为，习近平总书记高瞻远瞩、居安思危，充分展现出新时代中对于上述事件，新华社厦门9月5日电（记者受访专家学者一致认为，习近平总书记高瞻远瞩、居安思危，充分展现出新时代中对于上述事件，新华社厦门9月5日电（记者受访专家学者一致认为，习近平总书记高瞻远瞩、居安思危，充分展现出新时代中对于上述事件，新华社厦门9月5日电（记者受访专家学者一致认为，习近平总书记高瞻远瞩、居安思危，充分展现出新时代中对于上述事件，新华社厦门9月5日电（记者 孙奕、许雪毅</a>
+												<div class="data-list-main-foot">
+													<a href="javascript:;" class="data-source"><i class="tu_con"></i>腾讯新闻<span class="monitor-box"><em class="monitor monitor-be">监控此对象</em></span></a>
+													<span class="time"> · 2018-08-19  19:00</span>
+													<span class="source-type">发布·<span>原创</span></span>
+													<ul class="keyword-list clearfix">
+														<li><a href="javascript:;">习近平</a></li>
+														<li><a href="javascript:;">发展</a></li>
+														<li><a href="javascript:;">新兴市场</a></li>
+														<li><a href="javascript:;">居安思危</a></li>
+													</ul>
+													<a href="javascript:;" class="conform-btn pull-right">约有相似咨询788条>></a>
+													<a href="javascript:;" class="before-link pull-right">(云润快照)</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="data-list-left pull-left"><input type="checkbox"></div>
+									<div class="data-list-right">
+										<div class="data-list-right-top">
+											<div class="data-list-right-top-l">
+												<span class="tag-label tag-orange">敏感</span>
+											</div>
+											<a href="javascript:;" class="data-list-right-top-md">还有一个很文艺的摄影师@哈雷恶棍李奇[酷]//@angelica张宇:两位</a>
+											<div class="handle-box">
+												<ul class="handle-list clearfix">
+													<li><a href="javascript:;" class="btn-blue">检索</a></li>
+													<li><a href="javascript:;" class="btn-blue">报送</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="data-list-right-con clearfix">
+											<img class="data-list-img" src="../images/bg-1.png" alt="">
+											<div class="data-list-main">
+												<a href="javascript:;" class="data-list-main-cont">还有一个很文艺的摄影师@哈雷恶棍李奇   @angelica张宇:两位很文艺的演员，拍了个很文艺的封面，还有个很文艺的Vog</a>
+												<div class="data-list-main-foot">
+													<a href="javascript:;" class="data-source"><i class="fa fa-weibo"></i>胡歌<span class="monitor-box"><em class="monitor monitor-af">已监控</em></span></a>
+													<span class="time"> · 19:00</span>
+													<span class="source-type"> 发布·<span>转发自：腾讯新闻</span> </span>
+													<a href="javascript:;" class="before-link">(查看该文)</a>
+													<ul class="keyword-list clearfix">
+														<li><a href="javascript:;">习近平</a></li>
+														<li><a href="javascript:;">发展</a></li>
+														<li><a href="javascript:;">新兴市场</a></li>
+														<li><a href="javascript:;">居安思危</a></li>
+													</ul>
+													<a href="javascript:;" class="conform-btn pull-right">约有相似咨询788条>></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="data-list-left pull-left"><input type="checkbox"></div>
+									<div class="data-list-right">
+										<div class="data-list-right-top">
+											<div class="data-list-right-top-l">
+												<span class="tag-label tag-red">疑似负面</span><span class="tag-label tag-orange">敏感</span>
+											</div>
+											<a href="javascript:;" class="data-list-right-top-md">俄世界杯主办城市<em class="red">酒店</em>受炸弹威胁 人员被紧急疏散</a>
+											<div class="handle-box">
+												<ul class="handle-list clearfix">
+													<li><a href="javascript:;" class="btn-blue">检索</a></li>
+													<li><a href="javascript:;" class="btn-blue">报送</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="data-list-right-con clearfix">
+											<div class="data-list-main">
+												<a href="javascript:;" class="data-list-main-cont">受访专家学者一致认为，<em class="red">习近平</em>总书记高瞻远瞩、居安思危，充分展现出新时代中对于上述事件，新华社厦门9月5日电（记者受访专家学者一致认为，习近平总书记高瞻远瞩、居安思危，充分展现出新时代中对于上述事件，新华社厦门9月5日电（记者受访专家学者一致认为，习近平总书记高瞻远瞩、居安思危，充分展现出新时代中对于上述事件，新华社厦门9月5日电（记者受访专家学者一致认为，习近平总书记高瞻远瞩、居安思危，充分展现出新时代中对于上述事件，新华社厦门9月5日电（记者受访专家学者一致认为，习近平总书记高瞻远瞩、居安思危，充分展现出新时代中对于上述事件，新华社厦门9月5日电（记者 孙奕、许雪毅</a>
+												<div class="data-list-main-foot">
+													<a href="javascript:;" class="data-source"><i class="tu_con"></i>腾讯新闻<span class="monitor-box"><em class="monitor monitor-be">监控此对象</em></span></a>
+													<span class="time"> · 2018-08-19  19:00</span>
+													<span class="source-type">发布·<span>原创</span></span>
+													<ul class="keyword-list clearfix">
+														<li><a href="javascript:;">习近平</a></li>
+														<li><a href="javascript:;">发展</a></li>
+														<li><a href="javascript:;">新兴市场</a></li>
+														<li><a href="javascript:;">居安思危</a></li>
+													</ul>
+													<a href="javascript:;" class="before-link pull-right">(云润快照)</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="data-list-left pull-left"><input type="checkbox"></div>
+									<div class="data-list-right">
+										<div class="data-list-right-top">
+											<div class="data-list-right-top-l">
+												<span class="tag-label tag-orange">敏感</span>
+											</div>
+											<a href="javascript:;" class="data-list-right-top-md">还有一个很文艺的摄影师@哈雷恶棍李奇[酷]//@angelica张宇:两位两位很文艺的演员，拍了个很文艺的封面，还有个很文艺的Vog两位很文艺的演员，拍了个很文艺的封面，还有个很文艺的Vog拍了个很文艺的封面，还有个很文艺的Vog</a>
+											<div class="handle-box">
+												<ul class="handle-list clearfix">
+													<li><a href="javascript:;" class="btn-blue">检索</a></li>
+													<li><a href="javascript:;" class="btn-blue">报送</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="data-list-right-con clearfix">
+											<img class="data-list-img" src="../images/bg-1.png" alt="">
+											<div class="data-list-main">
+												<a href="javascript:;" class="data-list-main-cont">还有一个很文艺的摄影师@哈雷恶棍李奇   @angelica张宇:两位很文艺的演员，拍了个很文艺的封面，还有个很文艺的Vog</a>
+												<div class="data-list-main-foot">
+													<a href="javascript:;" class="data-source"><i class="fa fa-weixin"></i>百家之号<span class="monitor-box"><em class="monitor monitor-af">已监控</em></span></a>
+													<span class="time"> · 2018-08-19  19:00 </span>
+													<span class="source-type"> 发布·<span>原创</span></span>
+													<ul class="keyword-list clearfix">
+														<li><a href="javascript:;">习近平</a></li>
+														<li><a href="javascript:;">发展</a></li>
+														<li><a href="javascript:;">新兴市场</a></li>
+														<li><a href="javascript:;">居安思危</a></li>
+													</ul>
+													<a href="javascript:;" class="conform-btn pull-right">约有相似咨询788条>></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="data-list-left pull-left"><input type="checkbox"></div>
+									<div class="data-list-right">
+										<div class="data-list-right-top">
+											<div class="data-list-right-top-l">
+												<span class="tag-label tag-orange">敏感</span>
+											</div>
+											<a href="javascript:;" class="data-list-right-top-md">还有一个很文艺的摄影师@哈雷恶棍李奇[酷]//@angelica张宇:两位两位很文艺的演员，拍了个很文艺的封面，还有个很文艺的Vog两位很文艺的演员，拍了个很文艺的封面，还有个很文艺的Vog拍了个很文艺的封面，还有个很文艺的Vog</a>
+											<div class="handle-box">
+												<ul class="handle-list clearfix">
+													<li><a href="javascript:;" class="btn-blue">检索</a></li>
+													<li><a href="javascript:;" class="btn-blue">报送</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="data-list-right-con clearfix">
+											<img class="data-list-img" src="../images/bg-1.png" alt="">
+											<div class="data-list-main">
+												<a href="javascript:;" class="data-list-main-cont">还有一个很文艺的摄影师@哈雷恶棍李奇   @angelica张宇:两位很文艺的演员，拍了个很文艺的封面，还有个很文艺的Vog</a>
+												<div class="data-list-main-foot">
+													<a href="javascript:;" class="data-source"><i class="fa fa-weixin"></i>百家之号<span class="monitor-box"><em class="monitor monitor-af">已监控</em></span></a>
+													<span class="time"> · 2018-08-19  19:00 </span>
+													<span class="source-type"> 发布·<span>原创</span></span>
+													<ul class="keyword-list clearfix">
+														<li><a href="javascript:;">习近平</a></li>
+														<li><a href="javascript:;">发展</a></li>
+														<li><a href="javascript:;">新兴市场</a></li>
+														<li><a href="javascript:;">居安思危</a></li>
+													</ul>
+													<a href="javascript:;" class="conform-btn pull-right">约有相似咨询788条>></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="zt-ft clearfix" style="padding: 10px 20px 30px;">
+							<div class="pull-left">
+								<div class="icheckbox_flat-blue" style="position: relative;"><input type="checkbox" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+								<a href="##" class="btn" data-toggle="modal" data-target="#export"><i class="fa fa-upload"></i> 导出</a>
+							</div>
+							<div class="pull-right zt-page">
+								<span>共222条</span>
+								<a class="btn">上一页</a>
+								<a class="btn">下一页</a>
+								<div class="dropup">
+									<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">10条 <span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu">
+										<li><a href="#">10条</a></li>
+										<li><a href="#">20条</a></li>
+										<li><a href="#">30条</a></li>
+										<li><a href="#">50条</a></li>
+									</ul>
+								</div>
+								<div class="quick">
+									<label>快速翻页</label>
+									<input type="text" value="5">
+								</div>
+								<a href="##" class="btn">确 认</a>
+							</div>
+						</div>
+					</div>
+				</div>	
+	            </div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 导出报告 -->
+	<div class="modal fade" id="export">
+			<div class="modal-dialog" role="document" style="width:500px;">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+						<h4 class="modal-title" id="myModalLabel">导出报告</h4>
+					</div>
+					<div class="modal-body">
+							<table class="tc-table">
+									<tr>
+										<th>导出方式：</th>
+										<td class="table-label">
+											<label><input type="radio" name="dcgs2" /> 自定义</label>
+											<label><input type="radio"  name="dcgs2"/> 已勾选</label>
+											<label><input type="radio"  name="dcgs2"/> 全部</label>
+										</td>
+									</tr>
+									<tr>
+										<th>信源范围：</th>
+										<td class="table-label">
+											<label><input type="radio" name="dcgs3" /> 当前信源</label>
+											<label><input type="radio"  name="dcgs3"/> 所有信源</label>
+										</td>
+									</tr>
+									<tr>
+										<th>信源范围：</th>
+										<td class="table-label">
+											<label><input type="radio" name="dcgs4" /> WORD</label>
+										
+										</td>
+									</tr>
+								</table>
+					</div>
+					<div class="modal-footer inline-button" style="padding-right: 15px;">
+						<a class="active" data-dismiss="modal" aria-label="Close">取消</a>
+						<a class="active">确定</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+<script src="../libs/jquery/jquery.min.js"></script>
+<script src="../libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../libs/My97DatePicker/WdatePicker.js"></script>
+<script src="../libs/icheck/icheck.min.js"></script>
+<script src="../libs/nicescroll/jquery.nicescroll.js"></script>
+<script src="../libs/laydate/laydate.js"></script>
+<script src="../libs/datetimepicker/jquery.datetimepicker.full.min.js"></script>
+<script src="../libs/echarts/echarts.js"></script>
+<script src="../libs/echarts/echarts-wordcloud.min.js"></script>
+<script src="../libs/echarts/china.js"></script>
+<script src="../js/global.js"></script>
+
+<script src="../js/table.js"></script>
+
+
+<script>
+</script>

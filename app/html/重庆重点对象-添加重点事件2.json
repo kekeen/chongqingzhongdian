@@ -1,0 +1,11 @@
+{
+  "title": "重庆重点对象- 关注情况编辑",
+  "zdsj":true,
+  "styles": [
+       "../css/table.css",
+       "../css/cq_zddx.css"
+  ],
+  "scripts":[
+      "../js/table.js"
+  ]
+}

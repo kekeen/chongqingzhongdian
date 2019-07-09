@@ -1,0 +1,859 @@
+<%- include('../templates/head') %>
+<body>
+	<%- include('../templates/header') %>
+	<div class="content case cqzdr">
+		<%- include('../templates/zdzd-left') %>
+		<div class="zddx-right zddx-undertakings">
+            <div class="zddx-right-box ">
+				<div class="breadCrumb">
+					<a href="#">重点阵地</a>/
+					<a href="#">区县重点阵地</a>
+				</div>
+				<div class="control-nav">
+					<div class="con-top catalog-top">
+						<p class="name">标签组名称</p>
+						<div class="co-searchBox">
+							<input class="int" type="text" placeholder="请输入"/>
+							<a class="aBtn" href="#">检索</a>
+						</div>
+						<a href="#" class="gray-btn">标签管理</a>
+					</div>
+				</div>
+	            <div class="zddx-undertakings-cont rollHeight4">
+					<div class="undertakings-title">
+						<ul class="clearfix">
+							<li>
+								<label><input type="checkbox"/>本地信息</label>
+							</li>
+							<li>
+								<div class="dropdown">
+									<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #757575">热点<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu">
+										<li><a href="javascript:;">热点</a></li>
+										<li><a href="javascript:;">时间</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="dropdown">
+									<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #757575">近七天 <span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu">
+										<li><a href="javascript:;">近七天</a></li>
+										<li><a href="javascript:;">近一个月</a></li>
+									</ul>
+								</div>
+							</li>
+							<li >
+								<div class="layout-data">
+									<input id="d01" class="u-data" type="text" onclick="DatePicker.dateId1()" placeholder="选择日期" readonly="">至<input id="d02" class="u-data" type="text" onclick="DatePicker.dateId2()" placeholder="选择日期" readonly="">
+								</div>
+
+							</li>
+						</ul>
+					</div>
+					<div class="undertakings-tab">
+							<table class="tables tables-hover">
+									<tr>
+										<th width="20"></th>
+										<th width="60">序号</th>
+										<th >目录名称</th>
+										<th >目录描述</th>
+										<th >创建时间</th>
+										<th>操作</th>
+									</tr>
+								    <% for(var i = 1; i < 15; i ++){ %>
+									<tr>
+										<td><input type="checkbox" /></td>
+										<td><%= i %></td>
+										<td>
+											<span>总队重点阵地</span>
+										</td>
+										<td>
+											<span>汉网_首页</span>
+										</td>
+										<td class="td200" title="2018-05-02 21:30:00">
+											<span>2018-05-02 21:30:00</span>
+										</td>
+										<td>
+											<div class="u-icon">
+												<a href="#" title="编辑" data-toggle="modal" data-target="#editTeam"><i class="fa fa-pencil icon-pencil" aria-hidden="true"></i></a>
+												<a class="u-q2" href="javascript:;" title="删除" data-toggle="modal" data-target="#delete"></a>
+											</div>
+										</td>
+									</tr>
+								    <% } %>
+								</table>
+						        <div class="addTeam">
+									<a href="#" class="addTeam-btn" data-toggle="modal" data-target="#addTeam"><i class="add">+</i>添加目录</a>
+								</div>
+								<div class="zt-ft clearfix">
+									<div class="pull-left">
+										<div class="icheckbox_flat-blue" style="position: relative;"><input type="checkbox" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+										<a href="##" class="btn" data-toggle="modal" data-target="#moreDele">批量删除</a>
+									</div>
+
+									<div class="pull-right zt-page">
+										<span>共222条</span>
+										<a class="btn">上一页</a>
+										<a class="btn">下一页</a>
+										<div class="dropup">
+											<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">10条 <span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu">
+												<li><a href="#">10条</a></li>
+												<li><a href="#">20条</a></li>
+												<li><a href="#">30条</a></li>
+												<li><a href="#">50条</a></li>
+											</ul>
+										</div>
+										<div class="quick">
+											<label>快速翻页</label>
+											<input type="text" value="5">
+										</div>
+										<a href="##" class="btn">确 认</a>
+									</div>
+								</div>
+					</div>
+				</div>	
+	            </div>
+			</div>
+		</div>
+	</div>
+
+	 <!-- 导出报告 -->
+	 <div class="modal fade" id="export">
+			<div class="modal-dialog" role="document" style="width:500px;">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+						<h4 class="modal-title" id="myModalLabel">导出报告</h4>
+					</div>
+					<div class="modal-body">
+							<table class="tc-table">
+									<tr>
+										<th>导出方式：</th>
+										<td class="table-label">
+											<label><input type="radio" name="dcgs2" /> 自定义</label>
+											<label><input type="radio"  name="dcgs2"/> 已勾选</label>
+											<label><input type="radio"  name="dcgs2"/> 全部</label>
+										</td>
+									</tr>
+									<tr>
+										<th>信源范围：</th>
+										<td class="table-label">
+											<label><input type="radio" name="dcgs3" /> 当前信源</label>
+											<label><input type="radio"  name="dcgs3"/> 所有信源</label>
+										</td>
+									</tr>
+									<tr>
+										<th>信源范围：</th>
+										<td class="table-label">
+											<label><input type="radio" name="dcgs4" /> WORD</label>
+										
+										</td>
+									</tr>
+								</table>
+					</div>
+					<div class="modal-footer inline-button" style="padding-right: 15px;">
+						<a class="active" data-dismiss="modal" aria-label="Close">取消</a>
+						<a class="active">确定</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<!-- 单个删除 -->
+	<div class="modal fade" id="delete">
+		<div class="modal-dialog" role="document" style="width: 500px;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title" id="myModalLabel">删除</h4>
+				</div>
+				<div class="modal-body">
+					<h3 style="text-align:center;padding: 35px 0;">确定删除该目录[总队重点阵地]？</h3>
+				</div>
+				<div class="modal-footer">
+					<button id="btn" type="button" class="btn" data-dismiss="modal" aria-label="Close">取消</button>
+					<button id="btn" type="button" class="btn yes">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 多个删除 -->
+	<div class="modal fade" id="moreDele">
+		<div class="modal-dialog" role="document" style="width: 500px;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title" id="myModalLabel">删除</h4>
+				</div>
+				<div class="modal-body">
+					<h3 style="text-align:center;padding: 35px 0;">确定删除选择的4个目录？</h3>
+				</div>
+				<div class="modal-footer">
+					<button id="btn" type="button" class="btn" data-dismiss="modal" aria-label="Close">取消</button>
+					<button id="btn" type="button" class="btn yes">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 添加目录 -->
+	<div class="modal fade addModal" id="addTeam">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title" id="myModalLabel">新增目录</h4>
+				</div>
+				<div class="modal-body">
+					<ul class="addUl">
+						<li>
+							<span class="sp"><i class="redStar">*</i>目录名称：</span>
+							<input class="int" placeholder="请输入目录名称，字数不超过15字"/>
+						</li>
+						<li>
+							<span class="sp"><i class="redStar">*</i>目录描述：</span>
+							<textarea class="tArea" placeholder="请输入目录描述，字数不超过500字"></textarea>
+						</li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button id="btn" type="button" class="btn" data-dismiss="modal" aria-label="Close">取消</button>
+					<button id="btn" type="button" class="btn yes">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 编辑目录 -->
+	<div class="modal fade addModal" id="editTeam">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title" id="myModalLabel">编辑目录</h4>
+				</div>
+				<div class="modal-body">
+					<ul class="addUl">
+						<li>
+							<span class="sp"><i class="redStar">*</i>目录名称：</span>
+							<input class="int" value="总队重点阵地"/>
+						</li>
+						<li>
+							<span class="sp"><i class="redStar">*</i>目录描述：</span>
+							<textarea class="tArea">市委总队重点阵地</textarea>
+						</li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button id="btn" type="button" class="btn" data-dismiss="modal" aria-label="Close">取消</button>
+					<button id="btn" type="button" class="btn yes">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<%- include('../templates/foot') %>
+<script type="text/javascript">
+    $(function () { $("[data-toggle='tooltip']").tooltip(); })
+
+
+
+	  // 自适应内容
+	  var timetxt=[];
+    for(var i=0;i<=$('.tables .time').length;i++){
+        timetxt.push($('.tables .time').eq(i).text());
+    }
+    changewidth();
+    function changewidth(){
+        var winw=$(window).width();
+        for(var i=0;i<=$('.tables .time').length;i++){
+            if(winw<1500){
+                $('.tables .time').eq(i).text(timetxt[i].substr(5,5));
+            }
+            else{
+                $('.tables .time').eq(i).text(timetxt[i]);
+            }
+        }
+        if(winw<1500){
+            $('.zddx .tab-box h3').hide();
+            $('.moreicon').css('display','inline-block');
+            $('.icon-box .u-icon').addClass('ellipsis-box').hide();
+        }
+        else{
+            $('.moreicon').hide();
+            $('.icon-box .u-icon').removeClass('ellipsis-box').show();
+            $('.zddx .tab-box h3').css('max-width','215px').show();
+        }
+	}
+	
+	 //点击列表触发
+	 showtree();
+    function showtree(){
+        $('.tree-ul').on('click', 'ul li', function() {
+            $(this).addClass('active').siblings('li').removeClass('active');
+            $(this).find('.de-tree').show();
+            $(this).siblings('li').find('.de-tree').hide();
+            $(this).find('.fa-caret-down').removeClass('fa-caret-down').addClass('fa-caret-up');
+            $(this).siblings('li').find('.fa-caret-up').removeClass('fa-caret-up').addClass('fa-caret-down');
+        });
+    }
+
+
+	  $(function () {
+        $('.jstree').jstree({'plugins':["wholerow","checkbox"], 'core' : {
+            'data' : [
+                {
+                    "text" : "某某新闻",
+                    "state" : { "opened" : false },
+                    "children" : [
+                        {
+                            "text" : "广东",
+                            "state" : { "opened" : true },
+                            "icon" : "../libs/jstree/themes/default/my/sec.png",
+                            "children" : [
+                                {
+                                    "text" : "广州",
+                                    "state" : { "opened" : true },
+                                    "icon" : "../libs/jstree/themes/default/my/thr.png",
+                                    "children" : [
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../images/img_01.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text" : "某某新闻",
+                    "state" : { "opened" : false },
+                    "children" : [
+                        {
+                            "text" : "广东",
+                            "state" : { "opened" : true },
+                            "icon" : "../libs/jstree/themes/default/my/sec.png",
+                            "children" : [
+                                {
+                                    "text" : "广州",
+                                    "state" : { "opened" : true },
+                                    "icon" : "../libs/jstree/themes/default/my/thr.png",
+                                    "children" : [
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text" : "某某新闻",
+                    "state" : { "opened" : false },
+                    "children" : [
+                        {
+                            "text" : "广东",
+                            "state" : { "opened" : true },
+                            "icon" : "../libs/jstree/themes/default/my/sec.png",
+                            "children" : [
+                                {
+                                    "text" : "广州",
+                                    "state" : { "opened" : true },
+                                    "icon" : "../libs/jstree/themes/default/my/thr.png",
+                                    "children" : [
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text" : "某某新闻",
+                    "state" : { "opened" : false },
+                    "children" : [
+                        {
+                            "text" : "广东",
+                            "state" : { "opened" : true },
+                            "icon" : "../libs/jstree/themes/default/my/sec.png",
+                            "children" : [
+                                {
+                                    "text" : "广州",
+                                    "state" : { "opened" : true },
+                                    "icon" : "../libs/jstree/themes/default/my/thr.png",
+                                    "children" : [
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text" : "某某新闻",
+                    "state" : { "opened" : false },
+                    "children" : [
+                        {
+                            "text" : "广东",
+                            "state" : { "opened" : true },
+                            "icon" : "../libs/jstree/themes/default/my/sec.png",
+                            "children" : [
+                                {
+                                    "text" : "广州",
+                                    "state" : { "opened" : true },
+                                    "icon" : "../libs/jstree/themes/default/my/thr.png",
+                                    "children" : [
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text" : "某某新闻",
+                    "state" : { "opened" : false },
+                    "children" : [
+                        {
+                            "text" : "广东",
+                            "state" : { "opened" : true },
+                            "icon" : "../libs/jstree/themes/default/my/sec.png",
+                            "children" : [
+                                {
+                                    "text" : "广州",
+                                    "state" : { "opened" : true },
+                                    "icon" : "../libs/jstree/themes/default/my/thr.png",
+                                    "children" : [
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text" : "某某新闻",
+                    "state" : { "opened" : false },
+                    "children" : [
+                        {
+                            "text" : "广东",
+                            "state" : { "opened" : true },
+                            "icon" : "../libs/jstree/themes/default/my/sec.png",
+                            "children" : [
+                                {
+                                    "text" : "广州",
+                                    "state" : { "opened" : true },
+                                    "icon" : "../libs/jstree/themes/default/my/thr.png",
+                                    "children" : [
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text" : "某某新闻",
+                    "state" : { "opened" : false },
+                    "children" : [
+                        {
+                            "text" : "广东",
+                            "state" : { "opened" : true },
+                            "icon" : "../libs/jstree/themes/default/my/sec.png",
+                            "children" : [
+                                {
+                                    "text" : "广州",
+                                    "state" : { "opened" : true },
+                                    "icon" : "../libs/jstree/themes/default/my/thr.png",
+                                    "children" : [
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        },
+                                        {
+                                            "text" : "custom icon URL",
+                                            "icon" : "../libs/jstree/themes/default/my/four.png"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }});
+    });
+
+   
+
+	
+</script>

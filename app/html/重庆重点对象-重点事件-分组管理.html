@@ -5,148 +5,81 @@
         <%- include('../templates/zddx-zdsj-left') %>
 		<div class="zddx-right zddx-group">
             <div class="zddx-right-box">
-                <div class="zddx-right-title">
-                    <div class="title-aleft">
-                        <h3>分组管理</h3>
-                    </div>
-                    <div class="title-aright pull-right">
-						<label><input type="text" placeholder="关键词"><a href="javascript:void(0)" class="btn"></a> </label>
-                         <a href="javascript:void(0)" class="btn" data-toggle="modal" data-target="#myModal">新增</a>
-                       
-                    </div>
-                </div>
-	            <div class="zddx-group-cont">
+				<div class="breadCrumb">
+					<a href="#">重点事件</a>/
+					<a href="#">分组管理</a>
+				</div>
+				<div class="control-nav">
+					<div class="con-top">
+						<p class="name">分组管理</p>
+						<div class="co-searchBox">
+							<input class="int" type="text" placeholder="请输入"/>
+							<a class="aBtn" href="#">检索</a>
+						</div>
+					</div>
+				</div>
+	            <div class="zddx-group-cont teamManage-cont rollHeight4">
 					<div class="group-tab">
 						<table id="tables">
 							<thead>
 								<tr>
-									<td>序号</td>
-									<td>集体名称</td>
+									<td width="20"></td>
+									<td width="60">序号</td>
+									<td>分组名称</td>
+									<td>分组描述</td>
+									<td>创建时间</td>
 									<td>操作</td>
 								</tr>
 							</thead>
 							<tbody>
+								<% for(i = 1; i < 15; i ++){ %>
 								<tr>
-									<td>01</td>
-									<td>事业人物</td>
+									<td><input type="checkbox" /></td>
+									<td><%= i %></td>
+									<td>涉稳</td>
+									<td>重庆事业关注人物事件</td>
+									<td>2016-09-21  08:50:08</td>
 									<td>
-										<i class="icon-aright-edit" data-toggle="modal" data-target="#myModal2"></i>
-										<i class="icon-aright-del" data-toggle="modal" data-target="#myModal3"></i>
+										<div class="icon-wrap">
+											<a href="#" title="编辑" data-toggle="modal" data-target="#editTeam"><i class="fa fa-pencil icon-pencil" aria-hidden="true"></i></a>
+											<a class="u-q3" href="#" title="查看" data-toggle="modal" data-target="#teamDetail"></a>
+											<a class="u-q2" href="javascript:;" title="删除" data-toggle="modal" data-target="#myModal3"></a>
+										</div>
 									</td>
 								</tr>
-								<tr>
-									<td>02</td>
-									<td>事业人物</td>
-									<td>
-										<i class="icon-aright-edit" data-toggle="modal" data-target="#myModal2"></i>
-										<i class="icon-aright-del" data-toggle="modal" data-target="#myModal3"></i>
-									</td>
-								</tr>
-								<tr>
-									<td>03</td>
-									<td>事业人物</td>
-									<td>
-										<i class="icon-aright-edit" data-toggle="modal" data-target="#myModal2"></i>
-										<i class="icon-aright-del" data-toggle="modal" data-target="#myModal3"></i>
-									</td>
-								</tr>
-								<tr>
-									<td>04</td>
-									<td>事业人物</td>
-									<td>
-										<i class="icon-aright-edit" data-toggle="modal" data-target="#myModal2"></i>
-										<i class="icon-aright-del" data-toggle="modal" data-target="#myModal3"></i>
-									</td>
-								</tr>
-								<tr>
-									<td>05</td>
-									<td>事业人物</td>
-									<td>
-										<i class="icon-aright-edit" data-toggle="modal" data-target="#myModal2"></i>
-										<i class="icon-aright-del" data-toggle="modal" data-target="#myModal3"></i>
-									</td>
-								</tr>
-								<tr>
-									<td>06</td>
-									<td>事业人物</td>
-									<td>
-											<i class="icon-aright-edit" data-toggle="modal" data-target="#myModal2"></i>
-											<i class="icon-aright-del" data-toggle="modal" data-target="#myModal3"></i>
-									</td>
-								</tr>
-								<tr>
-									<td>07</td>
-									<td>事业人物</td>
-									<td>
-											<i class="icon-aright-edit" data-toggle="modal" data-target="#myModal2"></i>
-											<i class="icon-aright-del" data-toggle="modal" data-target="#myModal3"></i>
-									</td>
-								</tr>
-								<tr>
-									<td>08</td>
-									<td>事业人物</td>
-									<td>
-											<i class="icon-aright-edit" data-toggle="modal" data-target="#myModal2"></i>
-											<i class="icon-aright-del" data-toggle="modal" data-target="#myModal3"></i>
-									</td>
-								</tr>
-								<tr>
-									<td>09</td>
-									<td>事业人物</td>
-									<td>
-											<i class="icon-aright-edit" data-toggle="modal" data-target="#myModal2"></i>
-											<i class="icon-aright-del" data-toggle="modal" data-target="#myModal3"></i>
-									</td>
-								</tr>
-								<tr>
-									<td>10</td>
-									<td>事业人物</td>
-									<td>
-											<i class="icon-aright-edit" data-toggle="modal" data-target="#myModal2"></i>
-											<i class="icon-aright-del" data-toggle="modal" data-target="#myModal3"></i>
-									</td>
-								</tr>
-								<tr>
-									<td>11</td>
-									<td>事业人物</td>
-									<td>
-											<i class="icon-aright-edit" data-toggle="modal" data-target="#myModal2"></i>
-											<i class="icon-aright-del" data-toggle="modal" data-target="#myModal3"></i>
-									</td>
-								</tr>
-								<tr>
-									<td>12</td>
-									<td>事业人物</td>
-									<td>
-											<i class="icon-aright-edit" data-toggle="modal" data-target="#myModal2"></i>
-											<i class="icon-aright-del" data-toggle="modal" data-target="#myModal3"></i>
-									</td>
-								</tr>
+								<% } %>
 							</tbody>
 						</table>
-						<div class="foot-paging clearfix">
-							<div class="zt-page pull-right">
-									<span>共222条</span>
-									<a class="btn">上一页</a>
-									<a class="btn">下一页</a>
-									<div class="dropup">
-										<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">10条 <span class="caret"></span>
-										</button>
-										<ul class="dropdown-menu">
-											<li><a href="#">10条</a></li>
-											<li><a href="#">20条</a></li>
-											<li><a href="#">30条</a></li>
-											<li><a href="#">50条</a></li>
-										</ul>
-									</div>
-									<div class="quick">
-										<label>快速翻页</label>
-										<input type="text" value="5">
-									</div>
-									<a href="##" class="btn">确 认</a>
-								</div>
+						<div class="addTeam">
+							<a href="#" class="addTeam-btn" data-toggle="modal" data-target="#addTeam"><i class="add">+</i>添加分组</a>
 						</div>
-								
+						<div class="zt-ft clearfix">
+							<div class="pull-left">
+								<div class="icheckbox_flat-blue" style="position: relative;"><input type="checkbox" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+								<a href="##" class="btn" data-toggle="modal" data-target="#export"><i class="fa fa-upload"></i> 导出</a>
+							</div>
+
+							<div class="pull-right zt-page">
+								<span>共222条</span>
+								<a class="btn">上一页</a>
+								<a class="btn">下一页</a>
+								<div class="dropup">
+									<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">10条 <span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu">
+										<li><a href="#">10条</a></li>
+										<li><a href="#">20条</a></li>
+										<li><a href="#">30条</a></li>
+										<li><a href="#">50条</a></li>
+									</ul>
+								</div>
+								<div class="quick">
+									<label>快速翻页</label>
+									<input type="text" value="5">
+								</div>
+								<a href="##" class="btn">确 认</a>
+							</div>
+						</div>
 						</div>
 					</div>	
 	            </div>
@@ -154,70 +87,150 @@
 		</div>
 	</div>
 
-	 <!-- 新增 -->
-	 <div class="modal fade" id="myModal">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-						<h4 class="modal-title" id="myModalLabel">新增分组</h4>
-					</div>
-					<div class="modal-body">
-						<table class="tc-table">
-							<tr>
-								<th style="width:130px;">分组名称：</th>
-								<td><input type="text" width="100%" placeholder="请输入分组名称" /></td>
-							</tr>
-						</table>
-					</div>
-					<div class="modal-footer">
-						<button id="btn" type="button" class="btn" data-dismiss="modal" aria-label="Close">取消</button>
-						<button id="btn" type="button" class="btn yes">创建</button>
-					</div>
+	<!-- 导出报告 -->
+	<div class="modal fade" id="export">
+		<div class="modal-dialog" role="document" style="width:500px;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title" id="myModalLabel">导出报告</h4>
+				</div>
+				<div class="modal-body">
+					<table class="tc-table">
+						<tr>
+							<th>导出方式：</th>
+							<td class="table-label">
+								<label><input type="radio" name="dcgs2" /> 自定义</label>
+								<label><input type="radio"  name="dcgs2"/> 已勾选</label>
+								<label><input type="radio"  name="dcgs2"/> 全部</label>
+							</td>
+						</tr>
+						<tr>
+							<th>信源范围：</th>
+							<td class="table-label">
+								<label><input type="radio" name="dcgs3" /> 当前信源</label>
+								<label><input type="radio"  name="dcgs3"/> 所有信源</label>
+							</td>
+						</tr>
+						<tr>
+							<th>信源范围：</th>
+							<td class="table-label">
+								<label><input type="radio" name="dcgs4" /> WORD</label>
+
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="modal-footer inline-button" style="padding-right: 15px;">
+					<a class="active" data-dismiss="modal" aria-label="Close">取消</a>
+					<a class="active">确定</a>
 				</div>
 			</div>
 		</div>
-	 <!-- 编辑 -->
-	 <div class="modal fade" id="myModal2">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-						<h4 class="modal-title" id="myModalLabel">编辑分组</h4>
-					</div>
-					<div class="modal-body">
-						<table class="tc-table">
-							<tr>
-								<th style="width:130px;">分组名称：</th>
-								<td><input type="text" width="100%" /></td>
-							</tr>
-						</table>
-					</div>
-					<div class="modal-footer">
-						<button id="btn" type="button" class="btn" data-dismiss="modal" aria-label="Close">取消</button>
-						<button id="btn" type="button" class="btn yes">确定</button>
-					</div>
+	</div>
+	<!-- 添加分组 -->
+	<div class="modal fade addModal" id="addTeam">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title" id="myModalLabel">添加分组</h4>
+				</div>
+				<div class="modal-body">
+					<ul class="addUl">
+						<li>
+							<span class="sp"><i class="redStar">*</i>分组名称：</span>
+							<input class="int" placeholder="请输入类型名称，字数不超过15字"/>
+						</li>
+						<li>
+							<span class="sp"><i class="redStar">*</i>分组描述：</span>
+							<textarea class="tArea" placeholder="请输入类型描述，字数不超过500字"></textarea>
+						</li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button id="btn" type="button" class="btn" data-dismiss="modal" aria-label="Close">取消</button>
+					<button id="btn" type="button" class="btn yes">确定</button>
 				</div>
 			</div>
 		</div>
-		<!-- 删除 -->
-		<div class="modal fade" id="myModal3">
-			<div class="modal-dialog" role="document" style="width: 500px;">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-						<h4 class="modal-title" id="myModalLabel">删除</h4>
-					</div>
-					<div class="modal-body">
-						<h3 style="text-align:center;padding: 35px 0;">确定删除该分组？</h3>
-					</div>
-					<div class="modal-footer">
-						<button id="btn" type="button" class="btn" data-dismiss="modal" aria-label="Close">取消</button>
-						<button id="btn" type="button" class="btn yes">确定</button>
-					</div>
+	</div>
+	<!-- 编辑分组 -->
+	<div class="modal fade addModal" id="editTeam">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title" id="myModalLabel">编辑分组</h4>
+				</div>
+				<div class="modal-body">
+					<ul class="addUl">
+						<li>
+							<span class="sp"><i class="redStar">*</i>分组名称：</span>
+							<input class="int" value="总队重点阵地"/>
+						</li>
+						<li>
+							<span class="sp"><i class="redStar">*</i>分组描述：</span>
+							<textarea class="tArea">市委总队重点阵地</textarea>
+						</li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button id="btn" type="button" class="btn" data-dismiss="modal" aria-label="Close">取消</button>
+					<button id="btn" type="button" class="btn yes">确定</button>
 				</div>
 			</div>
 		</div>
+	</div>
+	<!-- 分组详情 -->
+	<div class="modal fade addModal" id="teamDetail">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title" id="myModalLabel">分组详情</h4>
+				</div>
+				<div class="modal-body">
+					<ul class="addUl">
+						<li>
+							<span class="sp">分组名称：</span>
+							<input class="int" value="总队重点阵地"/>
+						</li>
+						<li>
+							<span class="sp">创建时间：</span>
+							<input class="int" value="2018-11-11 10:50:00"/>
+						</li>
+						<li>
+							<span class="sp">分组描述：</span>
+							<textarea class="tArea">市委总队重点阵地</textarea>
+						</li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button id="btn" type="button" class="btn" data-dismiss="modal" aria-label="Close">取消</button>
+					<button id="btn" type="button" class="btn yes">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 删除 -->
+	<div class="modal fade" id="myModal3">
+		<div class="modal-dialog" role="document" style="width: 500px;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title" id="myModalLabel">删除</h4>
+				</div>
+				<div class="modal-body">
+					<h3 style="text-align:center;padding: 35px 0;">确定删除该分组？</h3>
+				</div>
+				<div class="modal-footer">
+					<button id="btn" type="button" class="btn" data-dismiss="modal" aria-label="Close">取消</button>
+					<button id="btn" type="button" class="btn yes">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 		

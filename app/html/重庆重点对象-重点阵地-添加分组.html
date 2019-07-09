@@ -1,0 +1,216 @@
+<%- include('../templates/head') %>
+<body>
+	<%- include('../templates/header') %>
+	<div class="content case cqzdr">
+		<%- include('../templates/zdzd-left') %>
+		<div class="zddx-right zddx-undertakings">
+            <div class="zddx-right-box">
+				<div class="breadCrumb">
+					<a href="#">重点阵地</a>/
+					<a href="#">添加分组</a>
+				</div>
+				<div class="control-nav addTeam-nav">
+					<div class="con-top">
+						<ul class="addTeam-ul">
+							<li>
+								<span><i class="redStar">*</i>分组名称：</span>
+								<input type="text" class="s-int" placeholder="请输入">
+							</li>
+							<li>
+								<span><i class="redStar">*</i>所属目录：</span>
+								<div class="dropdown">
+									<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #757575">请选择<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu">
+										<li><a href="javascript:;">总队重点阵地</a></li>
+										<li><a href="javascript:;">区县重点阵地</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="con-navBox">
+						<ul>
+							<li class="active">
+								<a href="重庆重点对象-重点阵地-网站2.html">
+									境内网站
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									博主
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									公众号
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									境外社交
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									境外网站
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+	            <div class="zddx-undertakings-cont addTeam-content rollHeight4">
+					<p class="blueColor-title">标签目录</p>
+					<div class="treeWrap">
+						<div class="g-nvolving-c">
+							<div class="g-nvolving-content borderRight">
+								<div class="layut-input">
+									<input class="form-control" type="text" placeholder="请输入">
+									<a href="javascript:;"><i class="fa fa-search"></i></a>
+								</div>
+								<div class="jstree" id="jstree" style="height: 100%;"></div>
+							</div>
+							<div class="g-nvolving-content">
+								<div class="g-nvolving-input g-display-inline-block mb10">
+									<div class="fz14 hasTit">已选择：<span class="g-font-blue"><i class="chooseNum">0</i>/10</span></div>
+								</div>
+								<div class="g-checked-list">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ad-footBtn">
+						<a type="button" class="ad-blueBtn">取消</a>
+						<a type="button" class="ad-blueBtn">确定</a>
+					</div>
+				</div>	
+	            </div>
+			</div>
+		</div>
+	</div>
+	<!-- 删除 -->
+	<div class="modal fade" id="myModal3">
+		<div class="modal-dialog" role="document" style="width: 500px;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title" id="myModalLabel">删除</h4>
+				</div>
+				<div class="modal-body">
+					<h3 style="text-align:center;padding: 35px 0;">是否删除"马云又出手了这事件"</h3>
+				</div>
+				<div class="modal-footer">
+					<button id="btn" type="button" class="btn" data-dismiss="modal" aria-label="Close">取消</button>
+					<button id="btn" type="button" class="btn yes">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<%- include('../templates/foot') %>
+<script type="text/javascript">
+	$(function () {
+        // 指定用户
+        specificuser();
+        function specificuser(){
+            $('.jstree').jstree({'plugins':["wholerow","checkbox"], 'core' : {
+                'data' : [
+                    {
+                        "text" : "广东",
+                        "state" : { "opened" : false },
+                        "children" : [
+                            {
+                                "text" : "广州",
+                                "state" : { "opened" : true },
+                                "icon" : "../libs/jstree/themes/default/my/sec.png",
+                                "children" : [
+                                    {
+                                        "text" : "天河",
+                                        "state" : { "opened" : true },
+                                        "icon" : "../libs/jstree/themes/default/my/thr.png"
+                                    },
+                                    {
+                                        "text" : "越秀",
+                                        "state" : { "opened" : true },
+                                        "icon" : "../libs/jstree/themes/default/my/thr.png"
+                                    },
+                                    {
+                                        "text" : "荔湾",
+                                        "state" : { "opened" : true },
+                                        "icon" : "../libs/jstree/themes/default/my/thr.png"
+                                    }
+                                ]
+                            },
+                            {
+                                "text" : "佛山",
+                                "state" : { "opened" : true },
+                                "icon" : "../libs/jstree/themes/default/my/sec.png",
+                                "children" : [
+                                    {
+                                        "text" : "三水",
+                                        "state" : { "opened" : true },
+                                        "icon" : "../libs/jstree/themes/default/my/thr.png"
+                                    },
+                                ]
+                            },
+                        ]
+                    },
+                    {
+                        "text" : "海南",
+                        "state" : { "opened" : false },
+                        "children" : [
+                            {
+                                "text" : "三亚",
+                                "state" : { "opened" : true },
+                                "icon" : "../libs/jstree/themes/default/my/sec.png"
+                            },
+                            {
+                                "text" : "海口",
+                                "state" : { "opened" : true },
+                                "icon" : "../libs/jstree/themes/default/my/sec.png"
+                            },
+                        ]
+                    }
+                ]
+            }
+                ,
+                "checkbox": {
+                    "keep_selected_style": false //是否默认选中
+                }
+            });
+			//树勾选
+			$('.jstree').bind('changed.jstree',function () {
+                var arr = $(this).jstree().get_selected(true),
+                    spans = [],
+                    result = [],
+                    str = [],
+                    idArr = [];
+                if (arr.length > 0) {
+                    for (var i in arr) {
+                        if (arr[i].children.length == 0) {
+                            spans.push(arr[i].text);
+                            idArr.push(arr[i].id);
+                        }
+                    }
+                    for (var i in spans) {
+                        str.push('<span class="g-check-btn g-involving-tag" id="a'+idArr[i]+'">'+ spans[i] +'<i class="g-icon-del-tag"></i></span>');
+                    }
+					$('.treeWrap .g-checked-list').html(str.join(" "));
+                    var chooseNum = idArr.length;
+                    $('.treeWrap').find('.chooseNum').text(chooseNum );
+                } else {
+                    $('.treeWrap .g-checked-list').html("");
+                    $('.treeWrap').find('.chooseNum').text('0');
+                }
+            });
+			//树删除
+            $('body').on('click', '.g-check-btn i', function(event) {
+                var thisAttr = $(this).closest('span').attr('id');
+                var thisId = thisAttr.substr(1);
+                $('#jstree').jstree().deselect_node('#' + thisId);
+                $(this).closest('span').remove();
+            });
+        }
+    })
+</script>

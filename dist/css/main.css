@@ -41,6 +41,9 @@ span {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
+body {
+  position: relative;
+}
 input {
   margin: 0;
   padding: 0;
@@ -49,12 +52,12 @@ ul,
 ol {
   list-style: none;
 }
+strong {
+  font-weight: normal;
+}
 em,
 i {
   font-style: normal;
-}
-strong {
-  font-weight: normal;
 }
 img {
   max-width: 100%;
@@ -74,20 +77,85 @@ button:focus {
 }
 a {
   color: #364347;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
 }
-a,
-a:hover,
-a:focus {
+a:hover {
+  color: #06bdf2;
   text-decoration: none;
   outline: none;
 }
-a:hover,
 a:focus {
-  color: #029be5;
+  outline: none;
+  text-decoration: none;
 }
 .wrap {
   width: 100%;
   margin: 0 auto;
+}
+.btn:hover {
+  color: #06bdf2;
+  border-color: #06bdf2;
+}
+h3 {
+  font-size: 18px;
+}
+h4 {
+  font-size: 14px;
+}
+h5 {
+  font-size: 14px;
+}
+.fz24 {
+  font-size: 24px;
+}
+.fz20 {
+  font-size: 20px;
+}
+.fz18 {
+  font-size: 18px;
+}
+.fz16 {
+  font-size: 16px;
+}
+.fz14 {
+  font-size: 14px;
+}
+@media screen and (max-width: 1300px) {
+  body {
+    font-size: 12px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 12px;
+  }
+  h5 {
+    font-size: 12px;
+  }
+  .fz24 {
+    font-size: 20px;
+  }
+  .fz20 {
+    font-size: 18px;
+  }
+  .fz18 {
+    font-size: 16px;
+  }
+  .fz16 {
+    font-size: 14px;
+  }
+  .fz14 {
+    font-size: 12px;
+  }
+  .btn {
+    font-size: 12px!important;
+  }
+  .form-control {
+    font-size: 12px!important;
+  }
 }
 .logo > h1 .logo-nx {
   width: 100%;

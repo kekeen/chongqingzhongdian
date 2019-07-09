@@ -13,10 +13,7 @@
 <link rel="stylesheet" href="../libs/datetimepicker/jquery.datetimepicker.min.css">
 <link rel="stylesheet" href="../css/ui-paging-container.css">
 <link rel="stylesheet" href="../css/global.css">
-<link rel="stylesheet" href="../css/temple.css">
 <link rel="stylesheet" href="../css/table.css">
-
-<link rel="stylesheet" href="../css/layout.css">
 
 <link rel="stylesheet" href="../css/cq_zddx.css">
 
@@ -346,30 +343,49 @@
 
 	<div class="zddx-right zdr-oths zdr-bj-box">
 		<div class="zddx-right-box">
+			<div class="breadCrumb">
+				<a href="#">重点事件</a>/
+				<a href="#">添加事件</a>
+			</div>
 			<div class="zddx-right-title clearfix">
-				<div class="title-aleft">
-					<h3>编辑重点事件</h3>
+				<div class="navWrap">
+					<div class="detail-navBox">
+						<ul>
+							<li class="active">
+								<a href="重庆重点对象-编辑重点事件.html">
+									<i class="sj-xiangqing"></i>
+									事件详情
+								</a>
+							</li>
+							<li>
+								<a href="重庆重点对象-编辑重点事件2.html">
+									<i class="sj-xinxi"></i>
+									事件信息
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-			<div class="zdr-bj-con nicescroll">
+			<div class="zdr-bj-con attention-cont rollHeight2" style="margin-top: 15px">
 				<ul class="clearfix">
 					<li class="pull-left">
 						<label class="bj-left w20"><i class="red">*</i> 标题：</label>
 						<div class="bj-right">
-							<input class="u-ipt" type="text" placeholder="必填,字数限制15个字符" maxlength="15">
+							<input class="u-ipt" type="text" placeholder="必填,字数限制20个字符" maxlength="20">
 						</div>
 					</li>
 					<li class="pull-left">
 						<label class="bj-left w20">创建时间：</label>
 						<div class="bj-right">
-							<p class="oths-establish">2018-06-11</p>
+							<p class="oths-establish">2018-06-11 10:00</p>
 						</div>
 					</li>
 					<li class="pull-left">
 						<label class="bj-left w20">事件涉及地区：</label>
 						<div class="bj-right">
 							<div class="dropdown pull-left">
-								<button class="u-btn dropdown-toggle bs-drops" type="button">请选择标准地名（省、市、区、街道<span class="caret"></span></button>
+								<button class="u-btn dropdown-toggle bs-drops" type="button">请选择标准地名（省、市、区、街道)<span class="caret"></span></button>
 								<div class="day-show">
 									<div class="hd switch-a clearfix">
 										<input class="ichoose j-pres active" placeholder="省份">
@@ -495,12 +511,6 @@
 					<li class="pull-left">
 						<label class="bj-left w20"><i class="red">*</i> 事件分组：</label>
 						<div class="bj-right">
-							<!--<div class="u-zd involve objWords input-change" data-toggle="modal"
-							     data-target="#myModal2">
-								<input type="text" class="input-blue"  placeholder="请选择标准事件分类" readonly />
-								<div class="span-show hide site"></div>
-								<em class="triangle-ds"></em>
-							</div>-->
 							<div class="dropdown pull-left">
 								<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">请选择<span class="caret"></span></button>
 								<ul class="dropdown-menu">
@@ -516,95 +526,55 @@
 							<input class="time-range u-ipt" type="text" placeholder="输入事件的发生时间，精确到时分">
 						</div>
 					</li>
-					<li class="pull-left">
-						<div class="bj-left w10"><i class="red">*</i> 事件关键词：</div>
-						<div class="bj-right">
-							<input class="u-ipt" type="text" placeholder="最大长度字符为15字符" maxlength="15">
-							<div class="n-hd-tip">
-								<span class="n-circle">
-								    <i>?</i>
-							    </span>
-								<div class="n-tip-txt">
-									例子：（重庆|北京)+（幼儿园虐童）例子的配置结果为：结果页面
-									的文章必须同时出现“重庆和幼儿园虐童 两个词语”或者“北京和
-									幼儿园虐童 两个词语“如配置一些较长的，不常见的词组，使用中
-									括号 [ ] 把词组括起来.这样数据会更精确。
-								</div>
-							</div>
-						</div>
-					</li>
 					<li class="pull-left w100">
 						<label class="bj-left w20">事件描述：</label>
 						<div class="bj-right">
-							<textarea class="us" placeholder="最大长度限制为200" maxlength="200"></textarea>
+							<textarea class="us" placeholder="字数上限为500字符" maxlength="500"></textarea>
 						</div>
 					</li>
-					<li class="pull-left w100 fjsc">
-						<label class="bj-left w20">附件上传：</label>
+					<li class="fjsc w100">
+						<div class="bj-left">上传附件：</div>
 						<div class="g-upload-wrap">
-						    <input type="file" class="upload-pic" value="上传图片">
-						    <i class="soutu-icon upload-icon"></i>
+							<input type="file" class="upload-pic" value="上传图片">
+							<i class="soutu-icon uploadFile-icon"></i>
 						</div>
-						<div style="color: #8DA5C1;margin-top: 5px;">（附件大小不超过20MB)</div></br>
-						<div class="xs xs1">照片09987554如55255.JPG   <i></i></div>
-						<div class="xs xs2">照片09987554如55255.JPG   <i></i></div>
+						<div style="color: #8DA5C1;margin-top: 5px; font-size: 12px">（仅支持扩展名：.rar .zip .doc .docx .pdf .jpg.和总文件小于20MB)</div></br>
+						<div class="xs xs1">文件09987554如55255.JPG   <i></i></div>
+						<div class="xs xs2">文件09987554如55255.JPG   <i></i></div>
 					</li>
 					<li class="involve-person pull-left">
-						<label class="bj-left w20">涉及重点人：
-							<div class="n-hd-tip n-s-tip">
-								<span class="n-circle">
-								    <i>?</i>
-							    </span>
-								<div class="n-tip-txt">
-									关联重点人上限人数为5人
-								</div>
-							</div>
+						<label class="bj-left">关联重点人：
 						</label>
-						<div class="invo-all">
-							<div class="invo-search">
-								<input type="text" placeholder="检索重点人">
-							</div>
-							<div class="u-pd nicescroll">
-								<div class="jstree"></div>
+						<div class="bj-right">
+							<p class="gray-tip">默认选择编辑的重点人，关联重点人上限人数为100人。</p>
+							<div class="invo-all">
+								<div class="invo-search">
+									<input type="text" placeholder="请输入">
+								</div>
+								<div class="u-pd nicescroll">
+									<div class="jstree"></div>
+								</div>
 							</div>
 						</div>
 					</li>
 					<li class="involve-key pull-left">
 						<label class="bj-left w20">
 							关联重点阵地：
-							<div class="n-hd-tip n-s-tip2">
-							<span class="n-circle">
-								    <i>?</i>
-							    </span>
-								<div class="n-tip-txt">
-									一次关联阵地的每
-									个媒体类型上限为
-									5组。
-								</div>
-							</div>
 						</label>
-						<div class="key-websit">
-							<div class="hd switch-a clearfix">
-								<a href="javascript:void(0)" class="active">网站</a>
-								<a href="javascript:void(0)">微博</a>
-								<a href="javascript:void(0)">微信</a>
-							</div>
-							<div class="invo-search">
-								<input type="text" placeholder="检索网站类型或组名">
-							</div>
-							<div class="switch-show first bd u-pd nicescroll">
-								<div class="jstree2"></div>
-							</div>
-							<div class="switch-show bd u-pd nicescroll">
-								<div class="jstree3"></div>
-							</div>
-							<div class="switch-show bd u-pd nicescroll">
-								<div class="jstree4"></div>
+						<div class="bj-right">
+							<p class="gray-tip">一次关联阵地关联组上限为50。</p>
+							<div class="invo-all">
+								<div class="invo-search">
+									<input type="text" placeholder="请输入">
+								</div>
+								<div class="u-pd nicescroll">
+									<div class="jstree2"></div>
+								</div>
 							</div>
 						</div>
 					</li>
 				</ul>
-				<div class="inline-button clearfix">
+				<div class="inline-button clearfix" style="padding-bottom: 32px;">
 					<a href="javascript:;" class="active" data-toggle="modal" data-target="#close">取消</a>
 					<a href="javascript:;" class="active">确定</a>
 				</div>
