@@ -61,14 +61,14 @@
 				</div>
 	            <div class="zddx-undertakings-cont addTeam-content rollHeight4">
 					<p class="blueColor-title">标签目录</p>
-					<div class="treeWrap">
+					<div class="singleTree">
 						<div class="g-nvolving-c">
 							<div class="g-nvolving-content borderRight">
-								<div class="layut-input">
+								<div class="layut-input" style="width: 60%">
 									<input class="form-control" type="text" placeholder="请输入">
 									<a href="javascript:;"><i class="fa fa-search"></i></a>
 								</div>
-								<div class="jstree" id="jstree" style="height: 100%;"></div>
+								<div class="jstree" id="jstree"></div>
 							</div>
 							<div class="g-nvolving-content">
 								<div class="g-nvolving-input g-display-inline-block mb10">
@@ -80,7 +80,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="ad-footBtn">
+					<div class="ad-footBtn" style="width: 800px">
 						<a type="button" class="ad-blueBtn">取消</a>
 						<a type="button" class="ad-blueBtn">确定</a>
 					</div>
@@ -196,12 +196,12 @@
                     for (var i in spans) {
                         str.push('<span class="g-check-btn g-involving-tag" id="a'+idArr[i]+'">'+ spans[i] +'<i class="g-icon-del-tag"></i></span>');
                     }
-					$('.treeWrap .g-checked-list').html(str.join(" "));
+					$('.g-nvolving-content .g-checked-list').html(str.join(" "));
                     var chooseNum = idArr.length;
-                    $('.treeWrap').find('.chooseNum').text(chooseNum );
+                    $('.g-nvolving-content').find('.chooseNum').text(chooseNum );
                 } else {
-                    $('.treeWrap .g-checked-list').html("");
-                    $('.treeWrap').find('.chooseNum').text('0');
+                    $('.g-nvolving-content .g-checked-list').html("");
+                    $('.g-nvolving-content').find('.chooseNum').text('0');
                 }
             });
 			//树删除

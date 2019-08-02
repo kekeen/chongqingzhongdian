@@ -1,0 +1,402 @@
+<%- include('../templates/head') %>
+<body>
+<%- include('../templates/header') %>
+<div class="content case cqzdr Relation_diagram">
+	<%- include('../templates/zddx-left') %>
+	<div class="gxw-right">
+		<div class="breadCrumb">
+			<a href="#">重点关系网</a> /
+			<a href="#">配置</a>
+		</div>
+		<div class="big-blueTit">
+			<span>重点关系网</span>
+		</div>
+		<div class="pz-cont rollHeight5">
+			<p class="blueLetter-title">关系网订阅配置</p>
+			<div class="contWrap">
+				<div class="co-chooseWrap clearfix">
+					<div class="singleTree">
+						<p class="treeTit">重点人</p>
+						<div class="g-nvolving-content" style="border-bottom: none">
+							<div class="layut-input" style="width: 60%">
+								<input class="form-control" type="text" placeholder="请输入">
+								<a href="javascript:;"><i class="fa fa-search"></i></a>
+							</div>
+							<div id="jstree1"></div>
+						</div>
+						<div class="g-nvolving-content">
+							<div class="g-nvolving-input g-display-inline-block mb10">
+								<div class="fz14 hasTit">已选择：<span class="g-font-blue"><i class="chooseNum">0</i>/10</span></div>
+							</div>
+							<div class="g-checked-list">
+
+							</div>
+						</div>
+					</div>
+					<div class="singleTree">
+						<p class="treeTit">重点阵地</p>
+						<div class="g-nvolving-content" style="border-bottom: none">
+							<div class="layut-input" style="width: 60%">
+								<input class="form-control" type="text" placeholder="请输入">
+								<a href="javascript:;"><i class="fa fa-search"></i></a>
+							</div>
+							<div id="jstree2"></div>
+						</div>
+						<div class="g-nvolving-content">
+							<div class="g-nvolving-input g-display-inline-block mb10">
+								<div class="fz14 hasTit">已选择：<span class="g-font-blue"><i class="chooseNum">0</i>/10</span></div>
+							</div>
+							<div class="g-checked-list">
+
+							</div>
+						</div>
+					</div>
+					<div class="singleTree">
+						<p class="treeTit">重点事件</p>
+						<div class="g-nvolving-content" style="border-bottom: none">
+							<div class="layut-input" style="width: 60%">
+								<input class="form-control" type="text" placeholder="请输入">
+								<a href="javascript:;"><i class="fa fa-search"></i></a>
+							</div>
+							<div id="jstree3"></div>
+						</div>
+						<div class="g-nvolving-content">
+							<div class="g-nvolving-input g-display-inline-block mb10">
+								<div class="fz14 hasTit">已选择：<span class="g-font-blue"><i class="chooseNum">0</i>/10</span></div>
+							</div>
+							<div class="g-checked-list">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="inline-button" style="padding-bottom: 32px; padding-top: 40px">
+					<a href="重庆重点对象-重点人-事业人物.html" class="active" data-toggle="modal" data-target="#close">取消</a>
+					<a href="重庆重点对象-重点人-事业人物.html" class="active">确定</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<%- include('../templates/foot') %>
+<script>
+	$(function () {
+        //重点人
+        keyPerson();
+        function keyPerson(){
+            $('#jstree1').jstree({'plugins':["wholerow","checkbox"], 'core' : {
+                'data' : [
+                    {
+                        "text" : "事业人物",
+                        "state" : { "opened" : false },
+                        "children" : [
+                            {
+                                "text" : "重点人物名称1",
+                                "state" : { "opened" : true },
+                                "icon" : "../libs/jstree/themes/default/my/sec.png"
+                            },
+                            {
+                                "text" : "重点人物名称2",
+                                "state" : { "opened" : true },
+                                "icon" : "../libs/jstree/themes/default/my/sec.png"
+                            },
+                        ]
+                    },
+                    {
+                        "text" : "事业人物2",
+                        "state" : { "opened" : false },
+                        "children" : [
+                            {
+                                "text" : "名称",
+                                "state" : { "opened" : true },
+                                "icon" : "../libs/jstree/themes/default/my/sec.png",
+                                "children" : [
+                                    {
+                                        "text" : "姓名1",
+                                        "state" : { "opened" : true },
+                                        "icon" : "../libs/jstree/themes/default/my/thr.png"
+                                    },
+                                    {
+                                        "text" : "姓名2",
+                                        "state" : { "opened" : true },
+                                        "icon" : "../libs/jstree/themes/default/my/thr.png"
+                                    },
+                                    {
+                                        "text" : "姓名3",
+                                        "state" : { "opened" : true },
+                                        "icon" : "../libs/jstree/themes/default/my/thr.png"
+                                    }
+                                ]
+                            },
+                            {
+                                "text" : "名称2",
+                                "state" : { "opened" : true },
+                                "icon" : "../libs/jstree/themes/default/my/sec.png",
+                                "children" : [
+                                    {
+                                        "text" : "姓名1",
+                                        "state" : { "opened" : true },
+                                        "icon" : "../libs/jstree/themes/default/my/thr.png"
+                                    },
+                                ]
+                            },
+                        ]
+                    }
+                ]
+            }
+                ,
+                "checkbox": {
+                    "keep_selected_style": false //是否默认选中
+                }
+            });
+            //树勾选
+            $('#jstree1').bind('changed.jstree',function () {
+                var arr = $(this).jstree().get_selected(true),
+                    spans = [],
+                    result = [],
+                    str = [],
+                    idArr = [];
+                if (arr.length > 0) {
+                    for (var i in arr) {
+                        if (arr[i].children.length == 0) {
+                            spans.push(arr[i].text);
+                            idArr.push(arr[i].id);
+                        }
+                    }
+                    for (var i in spans) {
+                        str.push('<span class="g-check-btn g-involving-tag" id="a'+idArr[i]+'">'+ spans[i] +'<i class="g-icon-del-tag"></i></span>');
+                    }
+                    //$('.treeWrap .g-checked-list').html(str.join(" "));
+					$(this).closest('.g-nvolving-content').siblings('.g-nvolving-content').find('.g-checked-list').html(str.join(" "));
+                    var chooseNum = idArr.length;
+                    //$('.treeWrap').find('.chooseNum').text(chooseNum );
+                    $(this).closest('.g-nvolving-content').siblings('.g-nvolving-content').find('.chooseNum').text(chooseNum );
+                } else {
+                    //$('.treeWrap .g-checked-list').html("");
+                    $(this).closest('.g-nvolving-content').siblings('.g-nvolving-content').find('.g-checked-list').html("");
+                    //$('.treeWrap').find('.chooseNum').text('0');
+                    $(this).closest('.g-nvolving-content').siblings('.g-nvolving-content').find('.chooseNum').text('0');
+                }
+            });
+            //树删除
+            $('body').on('click', '.g-check-btn i', function(event) {
+                var thisAttr = $(this).closest('span').attr('id');
+                var thisId = thisAttr.substr(1);
+                $('#jstree1').jstree().deselect_node('#' + thisId);
+                $(this).closest('span').remove();
+            });
+        }
+        //重点阵地
+        keyPosition();
+        function keyPosition(){
+            $('#jstree2').jstree({'plugins':["wholerow","checkbox"], 'core' : {
+                'data' : [
+                    {
+                        "text" : "阵地目录名称",
+                        "state" : { "opened" : false },
+                        "children" : [
+                            {
+                                "text" : "名称1",
+                                "state" : { "opened" : true },
+                                "icon" : "../libs/jstree/themes/default/my/sec.png"
+                            },
+                            {
+                                "text" : "名称2",
+                                "state" : { "opened" : true },
+                                "icon" : "../libs/jstree/themes/default/my/sec.png"
+                            },
+                        ]
+                    },
+                    {
+                        "text" : "阵地目录名称2",
+                        "state" : { "opened" : false },
+                        "children" : [
+                            {
+                                "text" : "目录1",
+                                "state" : { "opened" : true },
+                                "icon" : "../libs/jstree/themes/default/my/sec.png",
+                                "children" : [
+                                    {
+                                        "text" : "名称1",
+                                        "state" : { "opened" : true },
+                                        "icon" : "../libs/jstree/themes/default/my/thr.png"
+                                    },
+                                    {
+                                        "text" : "名称2",
+                                        "state" : { "opened" : true },
+                                        "icon" : "../libs/jstree/themes/default/my/thr.png"
+                                    },
+                                    {
+                                        "text" : "名称3",
+                                        "state" : { "opened" : true },
+                                        "icon" : "../libs/jstree/themes/default/my/thr.png"
+                                    }
+                                ]
+                            },
+                            {
+                                "text" : "目录2",
+                                "state" : { "opened" : true },
+                                "icon" : "../libs/jstree/themes/default/my/sec.png",
+                                "children" : [
+                                    {
+                                        "text" : "名称1",
+                                        "state" : { "opened" : true },
+                                        "icon" : "../libs/jstree/themes/default/my/thr.png"
+                                    },
+                                ]
+                            },
+                        ]
+                    }
+                ]
+            }
+                ,
+                "checkbox": {
+                    "keep_selected_style": false //是否默认选中
+                }
+            });
+            //树勾选
+            $('#jstree2').bind('changed.jstree',function () {
+                var arr = $(this).jstree().get_selected(true),
+                    spans = [],
+                    result = [],
+                    str = [],
+                    idArr = [];
+                if (arr.length > 0) {
+                    for (var i in arr) {
+                        if (arr[i].children.length == 0) {
+                            spans.push(arr[i].text);
+                            idArr.push(arr[i].id);
+                        }
+                    }
+                    for (var i in spans) {
+                        str.push('<span class="g-check-btn g-involving-tag" id="a'+idArr[i]+'">'+ spans[i] +'<i class="g-icon-del-tag"></i></span>');
+                    }
+                    //$('.treeWrap .g-checked-list').html(str.join(" "));
+                    $(this).closest('.g-nvolving-content').siblings('.g-nvolving-content').find('.g-checked-list').html(str.join(" "));
+                    var chooseNum = idArr.length;
+                    //$('.treeWrap').find('.chooseNum').text(chooseNum );
+                    $(this).closest('.g-nvolving-content').siblings('.g-nvolving-content').find('.chooseNum').text(chooseNum );
+                } else {
+                    //$('.treeWrap .g-checked-list').html("");
+                    $(this).closest('.g-nvolving-content').siblings('.g-nvolving-content').find('.g-checked-list').html("");
+                    //$('.treeWrap').find('.chooseNum').text('0');
+                    $(this).closest('.g-nvolving-content').siblings('.g-nvolving-content').find('.chooseNum').text('0');
+                }
+            });
+            //树删除
+            $('body').on('click', '.g-check-btn i', function(event) {
+                var thisAttr = $(this).closest('span').attr('id');
+                var thisId = thisAttr.substr(1);
+                $('#jstree2').jstree().deselect_node('#' + thisId);
+                $(this).closest('span').remove();
+            });
+        }
+        //重点事件
+        keyEvents();
+        function keyEvents(){
+            $('#jstree3').jstree({'plugins':["wholerow","checkbox"], 'core' : {
+                'data' : [
+                    {
+                        "text" : "重点事件",
+                        "state" : { "opened" : false },
+                        "children" : [
+                            {
+                                "text" : "马云又出手了，这次是一万亿的贷款",
+                                "state" : { "opened" : true },
+                                "icon" : "../libs/jstree/themes/default/my/sec.png"
+                            },
+                            {
+                                "text" : "马云又出手了，这次是一万亿的贷款",
+                                "state" : { "opened" : true },
+                                "icon" : "../libs/jstree/themes/default/my/sec.png"
+                            },
+                        ]
+                    },
+                    {
+                        "text" : "重点事件2",
+                        "state" : { "opened" : false },
+                        "children" : [
+                            {
+                                "text" : "重点事件组",
+                                "state" : { "opened" : true },
+                                "icon" : "../libs/jstree/themes/default/my/sec.png",
+                                "children" : [
+                                    {
+                                        "text" : "事件1",
+                                        "state" : { "opened" : true },
+										"icon" : "../libs/jstree/themes/default/my/thr.png"
+                                    },
+                                    {
+                                        "text" : "事件2",
+                                        "state" : { "opened" : true },
+                                        "icon" : "../libs/jstree/themes/default/my/thr.png"
+                                    },
+                                    {
+                                        "text" : "事件3",
+                                        "state" : { "opened" : true },
+                                        "icon" : "../libs/jstree/themes/default/my/thr.png"
+                                    }
+                                ]
+                            },
+                            {
+                                "text" : "重点事件组2",
+                                "state" : { "opened" : true },
+                                "icon" : "../libs/jstree/themes/default/my/sec.png",
+                                "children" : [
+                                    {
+                                        "text" : "事件1",
+                                        "state" : { "opened" : true },
+                                        "icon" : "../libs/jstree/themes/default/my/thr.png"
+                                    },
+                                ]
+                            },
+                        ]
+                    }
+                ]
+            }
+                ,
+                "checkbox": {
+                    "keep_selected_style": false //是否默认选中
+                }
+            });
+            //树勾选
+            $('#jstree3').bind('changed.jstree',function () {
+                var arr = $(this).jstree().get_selected(true),
+                    spans = [],
+                    result = [],
+                    str = [],
+                    idArr = [];
+                if (arr.length > 0) {
+                    for (var i in arr) {
+                        if (arr[i].children.length == 0) {
+                            spans.push(arr[i].text);
+                            idArr.push(arr[i].id);
+                        }
+                    }
+                    for (var i in spans) {
+                        str.push('<span class="g-check-btn g-involving-tag" id="a'+idArr[i]+'">'+ spans[i] +'<i class="g-icon-del-tag"></i></span>');
+                    }
+                    //$('.treeWrap .g-checked-list').html(str.join(" "));
+                    $(this).closest('.g-nvolving-content').siblings('.g-nvolving-content').find('.g-checked-list').html(str.join(" "));
+                    var chooseNum = idArr.length;
+                    //$('.treeWrap').find('.chooseNum').text(chooseNum );
+                    $(this).closest('.g-nvolving-content').siblings('.g-nvolving-content').find('.chooseNum').text(chooseNum );
+                } else {
+                    //$('.treeWrap .g-checked-list').html("");
+                    $(this).closest('.g-nvolving-content').siblings('.g-nvolving-content').find('.g-checked-list').html("");
+                    //$('.treeWrap').find('.chooseNum').text('0');
+                    $(this).closest('.g-nvolving-content').siblings('.g-nvolving-content').find('.chooseNum').text('0');
+                }
+            });
+            //树删除
+            $('body').on('click', '.g-check-btn i', function(event) {
+                var thisAttr = $(this).closest('span').attr('id');
+                var thisId = thisAttr.substr(1);
+                $('#jstree3').jstree().deselect_node('#' + thisId);
+                $(this).closest('span').remove();
+            });
+        }
+	})
+</script>

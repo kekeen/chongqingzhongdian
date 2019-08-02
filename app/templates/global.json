@@ -6,7 +6,9 @@
         "../libs/icheck/flat/_all.css",
         "../libs/datetimepicker/jquery.datetimepicker.min.css",
         "../css/ui-paging-container.css",
-        "../css/global.css"
+        "../css/global.css",
+        "../css/jquery.paging.css",
+        "../css/time_data.css"
     ],
     "scripts": [
         "../libs/jquery/jquery.min.js",
@@ -19,6 +21,7 @@
         "../libs/echarts/echarts.js",
         "../libs/echarts/echarts-wordcloud.min.js",
         "../libs/echarts/china.js",
-        "../js/global.js"
+        "../js/global.js",
+        "../js/jquery.paging.js"
     ]
 }

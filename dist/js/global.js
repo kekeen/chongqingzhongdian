@@ -621,21 +621,21 @@ function contenti(){
 }
 
 // 左侧边栏重点阵地hover事件
-zzsjNav();
-function zzsjNav(){
-    $(".zdzd-nav").hover(function(){
-        var w=$(".menu-box").width();
-        if(w==40){
-            setTimeout(function () {
-                $(".zdzd-nav").children(".li-menu-li").show();
-            }, 300);
-        }else{
-            $(".zdzd-nav").children(".li-menu-li").show();
-        }
-    },function(){
-        $(".zdzd-nav").children(".li-menu-li").hide();
-    });
-}
+// zzsjNav();
+// function zzsjNav(){
+//     $(".zdzd-nav").hover(function(){
+//         var w=$(".menu-box").width();
+//         if(w==40){
+//             setTimeout(function () {
+//                 $(".zdzd-nav").children(".li-menu-li").show();
+//             }, 300);
+//         }else{
+//             $(".zdzd-nav").children(".li-menu-li").show();
+//         }
+//     },function(){
+//         $(".zdzd-nav").children(".li-menu-li").hide();
+//     });
+// }
 
 contentLeave();
 function contentLeave(){
@@ -1579,16 +1579,22 @@ $("[data-prompt]").on('click', function(event) {
 });
 
 $(function () {
-    /*滚动条高度计算1*/
+    /*滚动条高度计算*/
     resize();
     function resize(){
-        var height = $(".zddx-right").height() - $(".breadCrumb").outerHeight(true) - $(".control-nav").outerHeight(true) - 45;
+        var height = $(".zddx-right").height() - $(".breadCrumb").outerHeight(true) - $(".control-nav").outerHeight(true) - 37;
         $(".rollHeight").outerHeight(height);
+    }
+    /*滚动条高度计算1*/
+    resize1();
+    function resize1(){
+        var height1 = $(".zddx-right").height() - $(".breadCrumb").outerHeight(true) - $(".control-nav").outerHeight(true) - $(".undertakings-title").outerHeight(true) - 37;
+        $(".rollHeight1").outerHeight(height1);
     }
     /*滚动条高度计算2*/
     resize2();
     function resize2(){
-        var height2 = $(".zddx-right").height() - $(".breadCrumb").outerHeight(true) - $(".zddx-right-title").outerHeight(true) - 45;
+        var height2 = $(".zddx-right").height() - $(".breadCrumb").outerHeight(true) - $(".zddx-right-title").outerHeight(true) - 37;
         $(".rollHeight2").outerHeight(height2);
     }
     /*滚动条高度计算3*/
@@ -1603,10 +1609,92 @@ $(function () {
         var height4 = $(".zddx-right").height() - $(".breadCrumb").outerHeight(true) - $(".control-nav").outerHeight(true) - 30;
         $(".rollHeight4").outerHeight(height4);
     }
+    /*滚动条高度计算5*/
+    resize5();
+    function resize5(){
+        var height5 = $(".gxw-right").height() - $(".breadCrumb").outerHeight(true) - $(".big-blueTit").outerHeight(true) - 12;
+        $(".rollHeight5").outerHeight(height5);
+    }
+    /*滚动条高度计算6*/
+    resize6();
+    function resize6(){
+        var height6 = $(".gxw-right").height() - $(".breadCrumb").outerHeight(true) - $(".gxw-tab").outerHeight(true);
+        $(".rollHeight6").outerHeight(height6);
+    }
+    /*滚动条高度计算7*/
+    resize7();
+    function resize7(){
+        var height7 = $(".zddx-right").height() - $(".breadCrumb").outerHeight(true) - $(".control-nav").outerHeight(true) - $(".undertakings-title").outerHeight(true) - 30;
+        $(".rollHeight7").outerHeight(height7);
+    }
     $(window).resize(function(){
         resize();
+        resize1();
         resize2();
         resize3();
         resize4();
-    })
+        resize5();
+        resize6();
+        resize7();
+    });
+
+    //分页器
+    page();
+    function page(){
+        $(".pagging").Paging({
+            dom:{
+                pageno: true, // 页码：1、2、3、4、5
+                pagesize: false, // 每页显示多少条
+                datacount: true, // 数据总数
+                pagecount: false, // 页码总数
+                pagebtn: true, // 上一页，下一页按钮
+                pagefirst: false, // 首页按钮
+                pagelast: false, // 尾页按钮
+                fastgo: false // 快速跳转
+            },
+            pagesize: 5,
+            current: 1,
+            count: 100,
+            pageSizeList: [10, 20, 30, 40, 50],
+            prevTpl:"<",
+            nextTpl:">"
+        });
+    }
+
+    //时间控件
+    time();
+    function time() {
+        $(document).on('click', function(event) {
+            $(".dataList").hide();
+        });
+        jQuery('.ts-range,.ts-range2').datetimepicker({
+            format:'Y-m-d H:i',
+            lang:'ru',
+            onChangeDateTime:function(dp,$input){
+                $(".sure").click(function () {
+                    $(this).parents('.data-times').find(".allData").val($(this).parents('.data-times').find('.ts-range').val()+" 至 "+$(this).parents('.data-times').find('.ts-range2').val());
+                    $(this).parents(".dataList").siblings('.timebox').find(".allData").css({width:'295px'});
+                    $(this).parents(".dataList").hide();
+                })
+            }
+        });
+        $('.data-times').on('click',function(event){
+            event.stopPropagation();
+        });
+        $('.allData').on('click', function (event) {
+            $(".dataList").hide();
+            event.stopPropagation();
+            $(this).parent().siblings(".dataList").show();
+        });
+        $('.ts-range,.ts-range2').on('click',  function(event) {
+            event.stopPropagation();
+        });
+        $(".dataList ul li a").click(function (event) {
+            var $text=$(this).text();
+            $(this).parents(".data-times").find(".allData").val($text);
+            $(this).parents(".dataList").hide();
+            $(this).parents(".dataList").siblings('.timebox').find(".allData").css({width:'115px'});
+            event.stopPropagation();
+        });
+    }
 });

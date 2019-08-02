@@ -14,7 +14,7 @@
 							<p class="name">标签组名称</p>
 							<div class="co-searchBox">
 								<input class="int" type="text" placeholder="请输入"/>
-								<a class="aBtn" href="#">检索</a>
+								<a class="aBtn" href="#">搜索</a>
 							</div>
 						</div>
 						<div class="con-navBox">
@@ -47,41 +47,29 @@
 							</ul>
 						</div>
 					</div>
-					<div class="zddx-undertakings-cont rollHeight" style="margin-top: 15px">
-								<div class="undertakings-title">
+					<div class="zddx-undertakings-cont" style="margin-top: 7px">
+						<div class="undertakings-title">
 							<ul class="clearfix">
 								<li>
 									<label><input type="checkbox"/>本地信息</label>
 								</li>
 								<li>
 									<div class="dropdown">
-										<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #757575">热点<span class="caret"></span>
+										<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #757575">时间<span class="caret"></span>
 										</button>
 										<ul class="dropdown-menu">
-											<li><a href="javascript:;">热点</a></li>
 											<li><a href="javascript:;">时间</a></li>
+											<li><a href="javascript:;">转发</a></li>
+											<li><a href="javascript:;">评论</a></li>
 										</ul>
 									</div>
 								</li>
 								<li>
-									<div class="dropdown">
-										<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border: 1px solid rgb(211, 219, 227); color: #757575">近七天 <span class="caret"></span>
-										</button>
-										<ul class="dropdown-menu">
-											<li><a href="javascript:;">近七天</a></li>
-											<li><a href="javascript:;">近一个月</a></li>
-										</ul>
-									</div>
-								</li>
-								<li >
-									<div class="layout-data">
-										<input id="d01" class="u-data" type="text" onclick="DatePicker.dateId1()" placeholder="选择日期" readonly="">至<input id="d02" class="u-data" type="text" onclick="DatePicker.dateId2()" placeholder="选择日期" readonly="">
-									</div>
-
+									<%- include('../templates/data_times') %>
 								</li>
 							</ul>
 						</div>
-            					<div class="undertakings-tab resultBox xbjs-right-middle newweibo-box">
+            					<div class="undertakings-tab resultBox xbjs-right-middle newweibo-box rollHeight1">
             						<div class="li-bottom clearfix resultList">
             							<ul class="js-tab-list hover-bg">
             								<!-- 新闻查看相似文章开始 -->
@@ -1531,29 +1519,12 @@
             						</div>
             						<div class="zt-ft clearfix">
             							<div class="pull-left">
-            								<div class="icheckbox_flat-blue" style="position: relative;"><input type="checkbox" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+            								<div class="icheckbox_flat-blue"><input type="checkbox"></div>
             								<a href="##" class="btn" data-toggle="modal" data-target="#export"><i class="fa fa-upload"></i> 导出</a>
             							</div>
 
-            							<div class="pull-right zt-page">
-            								<span>共222条</span>
-            								<a class="btn">上一页</a>
-            								<a class="btn">下一页</a>
-            								<div class="dropup">
-            									<button class="u-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">10条 <span class="caret"></span>
-            									</button>
-            									<ul class="dropdown-menu">
-            										<li><a href="#">10条</a></li>
-            										<li><a href="#">20条</a></li>
-            										<li><a href="#">30条</a></li>
-            										<li><a href="#">50条</a></li>
-            									</ul>
-            								</div>
-            								<div class="quick">
-            									<label>快速翻页</label>
-            									<input type="text" value="5">
-            								</div>
-            								<a href="##" class="btn">确 认</a>
+            							<div class="pull-right" style="padding-right: 5px">
+											<div class="pagging"></div>
             							</div>
             						</div>
             					</div>
